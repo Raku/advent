@@ -8,7 +8,7 @@ See current and previous articles [here](https://perl6advent.wordpress.com/).
 
 1. Get a Perl 6 Wordpress account from an admin on IRC #perl6 (jmerelo, timotimo, moritz, ...).
 
-2. Choose one or more empty day slots in the schedule.
+2. Choose one or more empty day slots in the [current schedule](perl6advent-2018/schedule).
 
 3. Write your article using Github markdown.
 
