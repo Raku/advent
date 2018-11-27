@@ -2,7 +2,7 @@
 
 ## Background
 
-See current and previous articles [here]().
+See current and previous articles [here](https://perl6advent.wordpress.com/).
 
 ## Intructions
 
@@ -14,10 +14,10 @@ See current and previous articles [here]().
 
 4. Convert the file to Wordpress html format using one of the two tools here:
 
-   * Perl 6 module Acme::Advent::Highlighter
-   
-   * TBA
-   
+   * Perl 6 module Acme::Advent::Highlighter [may get errors]
+
+   * [tools/p6advent-md2html.p6](tools/p6advent-md2html.p6) Execute it to see instructions.
+
 5. Insert the converted file into Wordpress.
 
 6. Schedule the article to be published at 0001 UTC on its scheduled date.
