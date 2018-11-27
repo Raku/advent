@@ -6,7 +6,7 @@ See current and previous articles [here]().
 
 ## Intructions
 
-1. Get a Perl 6 Wordpress account from an admin on IRC #perl6 (timotimo, moritz, ...).
+1. Get a Perl 6 Wordpress account from an admin on IRC #perl6 (jmerelo, timotimo, moritz, ...).
 
 2. Choose one or more empty day slots in the schedule.
 
