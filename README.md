@@ -1,6 +1,6 @@
 # Perl6 Advent
 
-Since 2010 the Perl 6 project has hosted an annual Advent event, in
+Since 2009 the Perl 6 project has hosted an annual Advent event, in
 the spirit of Perl 5 and other projects, consisting of daily articles
 starting on 1 December and ending on 25 December, the date Christians
 celebrate the birth of Jesus Christ.
