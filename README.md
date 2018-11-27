@@ -8,3 +8,5 @@ celebrate the birth of Jesus Christ.
 Current and previous years' articles can be found [here](https://perl6advent.wordpress.com/).
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions for authors.
+
+## License: Artistic 2.0
