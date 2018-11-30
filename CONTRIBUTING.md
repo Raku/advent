@@ -18,6 +18,8 @@ See current and previous Advent article entries [here](https://perl6advent.wordp
 
    * [tools/p6advent-md2html.p6](tools/p6advent-md2html.p6) Execute it to see instructions.
 
+**Note that it is recommended to have each paragraph in the markdown source file collapsed into one long line in order to get the html formatting correct (Wordpress doesn't remove newlines in inside html text content)**.
+
 5. Insert the converted file into Wordpress.
 
 6. Schedule the article to be published at 0001 UTC on its scheduled date.
