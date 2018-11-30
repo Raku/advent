@@ -10,15 +10,13 @@ See current and previous Advent article entries [here](https://perl6advent.wordp
 
 2. Choose one or more empty day slots in the [Christmas 2018 schedule](perl6advent-2018/schedule).
 
-3. Write your article using Github markdown.
+3. Write your article using Github markdown.  **Note that it is recommended to have each paragraph in the markdown source file collapsed into one long line before using one of the html converter tools listed in the next step.  That is necessary in order to get the html formatting correct (Wordpress doesn't remove newlines in inside html text content)**.
 
-4. Convert the file to Wordpress html format using one of the two tools here:
+4. Convert the file to Wordpress html format using one of the two tools here (see para 3. for an important note before using one of these tools):
 
    * Perl 6 module Acme::Advent::Highlighter [may get errors]
 
    * [tools/p6advent-md2html.p6](tools/p6advent-md2html.p6) Execute it to see instructions.
-
-**Note that it is recommended to have each paragraph in the markdown source file collapsed into one long line in order to get the html formatting correct (Wordpress doesn't remove newlines in inside html text content)**.
 
 5. Insert the converted file into Wordpress.
 
