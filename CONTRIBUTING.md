@@ -2,7 +2,7 @@
 
 ## Background
 
-See current and previous articles [here](https://perl6advent.wordpress.com/).
+See current and previous Advent article entries [here](https://perl6advent.wordpress.com/).
 
 ## Intructions
 
@@ -21,3 +21,5 @@ See current and previous articles [here](https://perl6advent.wordpress.com/).
 5. Insert the converted file into Wordpress.
 
 6. Schedule the article to be published at 0001 UTC on its scheduled date.
+
+**For detailed *Wordpress* instructions see [this](https://codex.wordpress.org/Posts#Best_Practices_For_Posting) article.**
