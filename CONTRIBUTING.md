@@ -4,7 +4,7 @@
 
 See current and previous Advent article entries [here](https://perl6advent.wordpress.com/).
 
-## Intructions
+## Instructions
 
 1. Get a Perl 6 Wordpress account from an admin on IRC #perl6 (jmerelo, timotimo, moritz, ...).
 
