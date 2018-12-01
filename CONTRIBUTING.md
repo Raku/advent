@@ -16,7 +16,7 @@ See current and previous Advent article entries [here](https://perl6advent.wordp
 
    * Perl 6 module Acme::Advent::Highlighter [may get errors]
 
-   * [tools/p6advent-md2html.p6](tools/p6advent-md2html.p6) Execute it to see instructions.
+   * [tools/p6advent-md2html.p6](tools/p6advent-md2html.p6) Execute it without an argument to see instructions.
 
 5. Insert the converted file into Wordpress.
 
