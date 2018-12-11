@@ -2,8 +2,7 @@
 
 Since 2009 the Perl 6 project has hosted an annual Advent event, in
 the spirit of Perl 5 and other projects, consisting of daily articles
-starting on 1 December and ending on 25 December, the date Christians
-celebrate the birth of Jesus Christ.
+starting on 1 December and ending on 25 December.
 
 Current and previous years' articles can be found [here](https://perl6advent.wordpress.com/).
 
