@@ -20,6 +20,7 @@ See current and previous Advent article entries [here](https://perl6advent.wordp
 
 5. Insert the converted file into Wordpress.
 
-6. Schedule the article to be published at 00:01 UTC on its scheduled date.
+6. Schedule the article to be published at 00:01 (as configured on the
+   Wordpress site) on its scheduled date.
 
 **For detailed *Wordpress* instructions see [this](https://codex.wordpress.org/Posts#Best_Practices_For_Posting) article.**
