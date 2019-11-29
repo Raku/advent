@@ -11,6 +11,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions for
 authors.
 
 The current year's schedule is in file
-[perl6advent-2019/schedule](perl6advent-2019/schedule).
+[raku-advent-2019/schedule](raku-advent-2019/schedule).
 
 ## License: Artistic 2.0
