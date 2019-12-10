@@ -8,7 +8,7 @@ Please add your name (IRC #raku nickname preferred) and topic after each day tha
  6: JJ: Raku and GitHub Actions.
  7: tyil: Parsing Firefox' user.js with a Grammar (part 1)
  8: tyil: Parsing Firefox' user.js with a Grammar (part 2)
- 9: tbrowder: Raku from Perl: Transforming Old Perl Code (part 2)
+ 9: jmerelo: published a new article in place of tbrowder's
 10: lizmat: TBA
 11: ctilmes: TBA
 12: tyil: IRC::Client fun in less than 20 lines
@@ -22,7 +22,7 @@ Please add your name (IRC #raku nickname preferred) and topic after each day tha
 20: Xliff: TBA
 21: Mohammad: TBA
 22: SmokeMachine: TBA (probably something about Red)
-23:
+23: tbrowder: Raku from Perl: Transformng Old Perl Code (Part 2)
 24: Kaiepi: The Grinch of Perl 6, Part 2 (porting JSFuck)
 25: Christmas
 
