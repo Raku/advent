@@ -11,8 +11,6 @@ Please also send an easy and fast way to contact you at jjmerelo at
 gmail dot com or jjmerelo in Telegram. It will be used mainly for
 reminders. 
 
-
-* tbrowder: TBA
 * nige: 321 - a Raku powered start up generator
 * JJ: The importance of documentation
 * tmtvl: Literate Programming with Raku
