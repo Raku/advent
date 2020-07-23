@@ -9,3 +9,4 @@ In principle, commiting yourself to a day is not necessary, but I would need to 
 | Author    | RFC | Topic |
 |-----------|-----|-------|
 |[JJ](https://github.com/JJ)|[1](https://raku.org/archive/rfc/1.html)|Threads|
+|[Altai-man](https://github.com/Altai-man)|25, 68, 76, 83, 102, 90|Various small goodies|
