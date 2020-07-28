@@ -8,7 +8,9 @@ For example, let's look at [RFC32](https://raku.org/archive/rfc/32.html), which 
 	
 You can also choose some that weren't implemented, and what happened to them. The emphasis is on people that helped craft Raku the way it is now, and how the process was democratic and inclusive.
 
-In principle, commiting yourself to a day is not necessary, but I would need to have articles around Aug 1st so that we can publish them.
+In principle, commiting yourself to a day is not necessary, but I would really appreciate to have articles around Aug 1st so that we can publish them without gaps.
+
+The first article is there as an example of what can be done. Reuse structure, style, or nothing. 
 
 | Author    | RFC | Topic |
 |-----------|-----|-------|
