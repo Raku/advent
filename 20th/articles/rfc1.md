@@ -1,12 +1,12 @@
 # RFC 1, by Bryan C. Warnock: Threads
 
-It might ot might not be the case that the need for a real multithreaded architecture in Perl was the real motive behind the creation of what was initially called simply Perl, then Perl 6, and eventually [Raku](https://raku.org).
+It might or might not be the case that the need for a real multithreaded architecture in Perl was the real motive behind the creation of what was initially called simply Perl, then Perl 6, and eventually [Raku](https://raku.org).
 
 It was probably late 90s or early 10s, when we had a contract with a big company that needed to download stuff from the web really fast. We needed those threads, and they finally arrived in Perl 5.10. However, our threads were very basic, didn't need any kind of communication, just the bare parallel thing, and underneath them, operating system processes were used; there were no real *threads* at the Perl VM level. And they were sorely needed. Which is why [RFC1](https://raku.org/archive/rfc/1.html) read:
 
 > Implementation of Threads in Perl
 
-It was originally proposed in August 1th (hence the 20th aniversary thing), and finally *frozen* a couple of month later, by September 28th.
+It was originally proposed on August 1st (hence the 20th aniversary thing), and finally *frozen* a couple of month later, by September 28th.
 
 It basically proposes a way to implement low-level threads, including new namespaces (`global`, for sharing variables among threads) as well as the `Threads` class, with this example:
 
