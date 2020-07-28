@@ -17,3 +17,4 @@ The first article is there as an example of what can be done. Reuse structure, s
 |[JJ](https://github.com/JJ)|[1](https://raku.org/archive/rfc/1.html)|[Threads](articles/rfc1.md)|
 |[Altai-man](https://github.com/Altai-man)|25, 68, 76, 83, 102, 90|Various small goodies|
 |[ab5tract](https://github.com/ab5tract)|[43](https://raku.org/archive/rfc/43.html)|First-class BigInt & BigRat support|
+|[guifa](https://github.com/alabamenhu)|[223](https://raku.org/archive/rfc/225.html)|~~Superpositions~~ Junctions|
