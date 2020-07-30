@@ -20,3 +20,4 @@ The first article is there as an example of what can be done. Reuse structure, s
 |[guifa](https://github.com/alabamenhu)|[223](https://raku.org/archive/rfc/225.html)|~~Superpositions~~ Junctions|
 |[lizmat](https://github.com/lizmat)|26, 168|Everything is a sub|
 |[tobs](https://github.com/taboege)|[145](https://raku.org/archive/rfc/145.html)|Brace-matching for Regex|
+|[antoniogamiz](https://github.com/antoniogamiz)|[5](https://raku.org/archive/rfc/5.html)|Multiline comments|
