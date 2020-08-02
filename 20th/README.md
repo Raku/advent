@@ -22,3 +22,4 @@ The first article is there as an example of what can be done. Reuse structure, s
 |[tobs](https://github.com/taboege)|[145](https://raku.org/archive/rfc/145.html)|[Brace-matching for Regex](articles/rfc145.md)|
 |[antoniogamiz](https://github.com/antoniogamiz)|[5](https://raku.org/archive/rfc/5.html)|Multiline comments|
 |moritz|[112](https://raku.org/archive/rfc/112.html)|Assignment within a regex|
+|[vrurg](https://github.com/vrurg)|[137](https://raku.org/archive/rfc/137.html)|Perl OO should not be fundamentally changed.|
