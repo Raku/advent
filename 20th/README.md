@@ -22,6 +22,6 @@ The first article is there as an example of what can be done. Reuse structure, s
 |[tobs](https://github.com/taboege)|[145](https://raku.org/archive/rfc/145.html)|[Brace-matching for Regex](articles/rfc145.md)|
 |[antoniogamiz](https://github.com/antoniogamiz)|[5](https://raku.org/archive/rfc/5.html)|Multiline comments|
 |moritz|[112](https://raku.org/archive/rfc/112.html)|Assignment within a regex|
-|[vrurg](https://github.com/vrurg)|[137](https://raku.org/archive/rfc/137.html)|Perl OO should not be fundamentally changed.|
+|[vrurg](https://vrurg.github.io)|[137](https://raku.org/archive/rfc/137.html)|Perl OO should not be fundamentally changed.|
 |[Altai-man](https://github.com/Altai-man)|[188](https://raku.org/archive/rfc/188.html)|Private keys and methods|
 |[leont](https://github.com/leont)|[22](https://raku.org/archive/rfc/22.html)|Builtin switch statement|
