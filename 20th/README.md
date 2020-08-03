@@ -25,3 +25,4 @@ The first article is there as an example of what can be done. Reuse structure, s
 |[vrurg](https://vrurg.github.io)|[137](https://raku.org/archive/rfc/137.html)|Perl OO should not be fundamentally changed.|
 |[Altai-man](https://github.com/Altai-man)|[188](https://raku.org/archive/rfc/188.html)|Private keys and methods|
 |[leont](https://github.com/leont)|[22](https://raku.org/archive/rfc/22.html)|Builtin switch statement|
+|[vrurg](https://vrurg.github.io)|[265](https://raku.org/archive/rfc/265.html)|Interface polymorphism considered lovely|
