@@ -8,7 +8,7 @@ It described a frustration with comparison operations in perl. The expression:
 
 Perl (and now Raku) has excellent support for generic programming because of dynamic typing, generic data types and interface polymorphism. Just about the only place where that DWIM genericity breaks down is in comparisons. There is no generic way to specify an ordering on dynamically typed data. For example, one cannot simply code a generic BST insertion method. Using <=> for the comparison will work well for numeric keys, but fails miserably on most string-based keys because <=> will generally return 0 for most pairs of strings. The above code would work correctly however if <=> detected the string/string comparison and automagically used cmp instead.
 
-The Raku implementation is as follows:
+# The Raku implementation is as follows:
 
 There are three built-in comparison operators that can be used for sorting. They are sometimes called three-way comparators because they compare their operands and return a value meaning that the first operand should be considered less than, equal to or more than the second operand for the purpose of determining in which order these operands should be sorted. The leg operator coerces its arguments to strings and performs a lexicographic comparison. The <=> operator coerces its arguments to numbers (Real) and does a numeric comparison. The aforementioned cmp operator is the “smart” three-way comparator, which compares strings with string semantics and numbers with number semantics.[1]
 
@@ -22,7 +22,7 @@ Evaluates Lists by comparing element @a[$i] with @b[$i] (for some Int $i, beginn
 
 If $a eqv $b, then $a cmp $b always returns Order::Same. Keep in mind that certain constructs, such as Sets, Bags, and Mixes care about object identity, and so will not accept an allomorph as equivalent of its components alone.
 
-Now, we can leverage the Raku sort syntax to suit our needs:
+# Now, we can leverage the Raku sort syntax to suit our needs:
 
 	my @sorted = sort { $^a cmp $^b }, @values;
 	my @sorted = sort -> $a, $b { $a cmp $b }, @values;
