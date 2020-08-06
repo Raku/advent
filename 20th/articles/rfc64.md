@@ -22,4 +22,4 @@ One of the primary motivations for not wanting to declare variables was laziness
 * Self-declaring formal parameters with the `^` twigil also imply a declaration, for example `sub square { $^x * $^x }`.
 * There are many functional features in Raku that you can use to avoid explicit variables altogether, like meta operators, Whatever star currying etc.
 
-I am glad Raku requires variable declarations by default, and haven't seen any code in the wild that explicitly states `no strict;. And without declarations, where would you even fit the type constraint?
+I am glad Raku requires variable declarations by default, and haven't seen any code in the wild that explicitly states `no strict;. And without declarations, where would you even put the type constraint?
