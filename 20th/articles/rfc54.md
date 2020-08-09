@@ -18,7 +18,7 @@ The [allomorph](https://docs.raku.org/language/glossary#index-entry-Allomorph) t
 
 Returns either Order::Less, Order::Same or Order::More object. Compares Pair objects first by key and then by value etc.
 
-Evaluates Lists by comparing element @a[$i] with @b[$i] (for some Int $i, beginning at 0) and returning Order::Less, Order::Same, or Order::More depending on if and how the values differ. If the operation evaluates to Order::Same, @a[$i + 1] is compared with @b[$i + 1]. This is repeated until one is greater than the other or all elements are exhausted. If the Lists are of different lengths, at most only $n comparisons will be made (where $n = @a.elems min @b.elems). If all of those comparisons evaluate to Order::Same, the final value is selected based upon which List is longer.
+Evaluates Lists by comparing element `@a[$i]` with `@b[$i]` (for some `Int $i`, beginning at 0) and returning `Order::Less`, `Order::Same`, or `Order::More` depending on if and how the values differ. If the operation evaluates to Order::Same, `@a[$i + 1]` is compared with `@b[$i + 1]`. This is repeated until one is greater than the other or all elements are exhausted. If the Lists are of different lengths, at most only $n comparisons will be made (where `$n = @a.elems min @b.elems`). If all of those comparisons evaluate to Order::Same, the final value is selected based upon which List is longer.
 
 If `$a eqv $b`, then `$a cmp $b` always returns Order::Same. Keep in mind that certain constructs, such as Sets, Bags, and Mixes care about object identity, and so will not accept an allomorph as equivalent of its components alone.
 
