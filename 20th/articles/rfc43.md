@@ -36,19 +36,19 @@ Quoting the thrust of Jarkko's proposal, with emphasis added:
 
 Larry, it seems, decided to focus on a different phrase in the stated problem: _"because double floats are at their heart a lie"._ In a radical break from the dominant performance-first paradigm, it was decided that the core representation of fractional values would default to the most precise available -- regardless of the performance implications.
 
-Perl always had a focus on "losing as little information as possible" when it came to your data. Scalars dynamically change shape and type based on what you put into them at any given time in order to ensure that they can hold that new value.
+Perl has always had a focus on "losing as little information as possible" when it came to your data. Scalars dynamically change shape and type based on what you put into them at any given time in order to ensure that they can hold that new value.
 
-Perl also always had a focus on DWIM -- Do What I Mean. Combining DWIM with the "lose approximately nothing" principle in the case of division of numbers, Perl 6 would thus default to understanding your meaning to be a desire to have a precise fractional representation of this math that you just asked the computer to compute.
+Perl has lso always had a focus on DWIM -- Do What I Mean. Combining DWIM with the "lose approximately nothing" principle in the case of division of numbers, Perl 6 would thus default to understanding your meaning to be a desire to have a precise fractional representation of this math that you just asked the computer to compute.
 
 Likewise, Perl has also always had a focus on putting in curbs where other languages build walls. Nothing would force the user to perform their math at the "speed of rational" (to turn a new phrase) as they would have the still-essential `Num` type available.
 
-In this sense, nothing was removed -- rather, `Rat` was added and the default behavior of representing parsed decimal values was to create a `Rat` instead of a `Num`. Many languages introduce rationals as a separate syntax, thus making precision opt-in (a la `1r5` in J). In Perl 6, the opposite is true -- those who want imprecision must opt-in instead.
+In this sense, nothing was removed -- rather, `Rat` was added and the default behavior of representing parsed decimal values was to create a `Rat` instead of a `Num`. Many languages introduce rationals as a separate syntax, thus making precision opt-in (a la `1r5` in J). In Perl 6 (and eventually thus Raku), the opposite is true -- those who want imprecision must opt-in instead.
 
 ## A visual example thanks to a matrix named Hilbert
 
-In pursuit of a nice example of programming concerns solved by arbitrary precision rationals  that are a bit less abstract than the naturally unfathomable "we have no _actual_ idea how large the problem of imprecision is in effect on our individual systems let alone society as a whole", I came across the excellent presentation from 2011 by Roger Hui of Dyalog where he demonstrates a development version of Dyalog APL which included rational numbers.
+In pursuit of a nice example of programming concerns solved by arbitrary precision rationals  that are a bit less abstract than the naturally unfathomable "we have no _actual_ idea how large the problem of imprecision is in effect on our individual systems let alone society as a whole", I came across the [excellent presentation](https://www.youtube.com/watch?v=CkaQQYcxpfM) from 2011 by Roger Hui of Dyalog where he demonstrates a development version of Dyalog APL which included rational numbers.
 
-In his presentation he uses the example of Hilbert matrices, a very simple algorithm for generating a matrix that is notorious for the difficulty of getting a "clean" identity matrix (don't worry, the upcoming visual examples should make this clear enough to us non-experts in matrix algebra). 
+In his presentation he uses the example of Hilbert matrices, a very simple algorithm for generating a matrix of any size that will be of notorious difficulty for getting a "clean" identity matrix (if that's not clear at the moment, don't worry, the upcoming visual examples should make this clear enough to us non-experts in matrix algebra).
 
 Here is the (very) procedural for generating our Hilberts for comparison (full script in [this gist](https://gist.github.com/ab5tract/3e25e4a2ce63a349b7eb4601a85b6993#file-rationale-matrique-raku)):[^3]
 
@@ -125,8 +125,45 @@ Rational Hilbert ⋅ Inverse of Rational Hilbert
   0  0  0  0  1
 ```
 
-Notice the lack of ambiguity in both the initial Hilbert data set and the final output of the inverse dot product 
+Notice the lack of ambiguity in both the initial Hilbert data set and the final output of the inverse dot product. There is no need to choose any threshold values, thus no programmer decisions come in between the result of the equation provided by the computer and the result of the equation as stored by the computer or presented to the user.
 
+Consider again the fact that it is useless to do an equality comparison in floating point math -- the imprecision of the underlying representation forces users to choose some decimal place to end the number they check against. There is no possible model that can take into account the total degree of impact this human interaction (in aggregate) creates on top of the known and quantifiable imprecisions that are usually the basis of the "it's good enough" argument.
+
+## The cost of precision
+
+In summary, the nice equations about maximumum loss per equation are far from the entire story and it is in recognition of that fact that Raku does it's best to ensure that the eventual user of whatever Raku-powered system is not adversely impacted by unintentional or negligent errors in the underlying math used by the programmer.
+
+It nevertheless remains a controversial decision that has a significant impact on baseline Raku performance. Roger Hui's warning about rational math "leaking out" into the business application is well-served by the timing results I get for the current implementations in `Matrix::Math`:
+
+```
+(timings for 8x8 to get a bit more time spent)
+'Num' Hilbert inverse calculation: 0.1352471s
+'Num' dot product: 0.1432994s
+'Rat' Hilbert inverse calculation: 0.02654915s
+'Rat' dot product: 0.04200818s
+```
+
+Considering it is essentially impossible for the floating point version to be faster than the rational one, we are seeing both the effects of Roger's warning and the quality of Raku's internal optimizer -- somewhere along the line the intended floating point math hits a rational code path, slowing it down but also leaving enough behind for the optimizer to make the next set of encounters with the same rationals much faster.
+
+It is possible to verify this by running each benchmark in its own thread -- without the benefit of the optimizations, the rational version runs at exactly the same speed as the floating one.
+
+So even though we ourselves took the extra step to try and get floating point (im-)precision and thus speeds, we were thwarted in our attempts. I believe this is a valid concern for the plenty of use cases that benefit from floating point math without causing any harm.
+
+## Potential futures of even more rational and precise rationality
+
+The new capababilities provided by the upcoming introduction of Raku AST include the ability to modify/extend the behavior of dispatch. It then becomes quite feasible for a user-space module to be able to tweak the behavior of core to the extent that a more forceful approach to using floating point representation could be applied.
+
+In the current preliminary conceptual phase, the idea would be to provide means to test the necessity of rational representation to the outcome of a system. This could be achieved by making the underlying numeric type "promotion" logic configurable. It then becomes possible to imagine replacing the `Rat` type with a `Bell` representation that can track the overall loss of precision throughout the system.
+
+If that is below a given threshold, the same configurability could be used to remove `Rat` from the hierarchy entirely, thus ensuring floating point performance.
+
+## Conclusion
+
+The intention of defaulting to rational representation was not intended to force users to the performance floor of rationals and it is a natural extension of Perlish philosophy to strive towards being even better at giving the user exactly -- without surprises -- what they want.
+
+Rather, Raku chooses a precision-first philosophy because it fits into the overall philosophy of keeping the truest representation of a user's demands as possible regardless of current computation cost -- without locking them into the expectations of the language implementor either.
+
+To the extent that Raku does not yet get this quite perfect, there remains a certain quality of rebellion and original thinking on the topic that puts Raku closest in line to providing powerful yet seamless mechanisms for choosing the best fractional representation for any given system.
 
 [^1]: I say this because it implies that these are hardly the only two occasions where people have chosen an imprecise representation, have seen that imprecision manifest at significant scale, and have chosen to continue with the imprecise representation for mostly dubious reasons.
 [^2]: To date I'm not aware of any other programming languages designed and implemented in the 21st century that take this same "precision-first" approach. It apparently remains a controversial/unpopular choice in language design.
