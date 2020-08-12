@@ -21,6 +21,7 @@ The first article is there as an example of what can be done. Reuse structure, s
 |[lizmat](https://github.com/lizmat)|[26](https://raku.org/archive/rfc/26.html), [168](https://raku.org/archive/rfc/168.html)|Everything is a sub|
 |[lizmat](https://github.com/lizmat)|[200](https://raku.org/archive/rfc/200.html)|Revamp tie to support extensibility (Massive tie changes)|
 |[tobs](https://github.com/taboege)|[145](https://raku.org/archive/rfc/145.html)|[Brace-matching for Regex](articles/rfc145.md)|
+|[tobs](https://github.com/taboege)|[190](https://raku.org/archive/rfc/190.html), [8](https://raku.org/archive/rfc/8.html)|`NEXT` and method redispatch|
 |[antoniogamiz](https://github.com/antoniogamiz)|[5](https://raku.org/archive/rfc/5.html)|Multiline comments|
 |moritz|[112](https://raku.org/archive/rfc/112.html)|Assignment within a regex|
 |[vrurg](https://vrurg.github.io)|[137](https://raku.org/archive/rfc/137.html)|Perl OO should not be fundamentally changed.|
