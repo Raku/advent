@@ -49,3 +49,40 @@ This last method is interesting: it's called at a certain *phase* in
 
 > Ob-pun about the mixed metaphor of objects starting their life with
   a blessing and ending with simple destruction.
+
+So Perl had a single
+  [*phaser*](https://docs.raku.org/language/phasers). This RFC
+  advocated for getting, at least, a couple of symmetric ones. Which
+  was precisely in the turf of [RFC
+  189](https://raku.org/archive/rfc/189.html), which proposed a set of
+  hierarchical `BUILD` (lost chance to call them `INCEPT`) and
+  `DESTROY` calls, invocated up and down the object inheritance chain.
+
+But this RFC goes a little beyond that, or sideways from that, so it
+  made sense to pick it up for the apocalypsis 12, instead of
+  subsuming it into 189. In a way, `BUILD` is what it asks for off the
+  bat: it's the "prayer" that gets called from `bless`. But rephrase
+  it slightly, "what's called when somethin *has been blessed*" and it
+  becomes something totally different: not a building routine, but a,
+  wait for it, *tweaking* routine (or method, or *submethod*, which is
+  what it eventually became).
+
+In this way, Raku got
+  [`TWEAK`](https://docs.raku.org/language/objects#index-entry-TWEAK). RFC
+  189 begat BUILD, which creates a nice and bundled object. But
+  *after* this object has been created, and it's nicely wrapped into a
+  `self` data structure, you might still need to `TWEAK` it, and do
+  stuff that can only be done when and if the object is already
+  BUILT. This is what TWEAK is for. And it can be put to good use in
+  cases like [checking if the constructor has been called with an
+  unexisting attribute](https://stackoverflow.com/a/47954584/891440)
+  (which uses the `self` variable to grab all existing attributes), or
+  to register `self` with some external object, or, actually, anything
+  you might want to do with an object that has been aready blessed.
+
+This also says something about the process; an RFC that was rejected
+  eventually ended up as a nice, and interesting, feature of the final
+  language. Because, in the true open source spirits, with many eyes
+  all bugs are shallow, and also many eyes look stuff all over again
+  and find its real worth and meaning. Which is what you need when
+  designing a 100 year language, I guess.
