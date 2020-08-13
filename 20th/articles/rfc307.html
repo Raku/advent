@@ -1,0 +1,51 @@
+# RFC 307: PRAYER - what gets said when you bless something by Simon Cozens
+
+In a context with apocalypses and exegeses, no wonder there's also a
+PRAYER somewhere, in this [RFC
+307](https://raku.org/archive/rfc/307.html), by Simon Cozens, which
+was actually *rejected*, but somehow ended up anyway in [Apocalypse
+12](https://raku.org/archive/doc/design/apo/A12.html) together with
+the one it was rejected for, [RFC
+189](https://raku.org/archive/rfc/189.html). Both proposals talk about
+what is going ot happen when an object is created (*blessed*).
+
+So let's get first to the rejected one, which is simpler. It proposes
+
+> This RFC proposes a special sub, PRAYER, which is automatically
+called on blessing.
+
+The term *blessing* is Perlese for creating an object. In Perl
+[objects are little more than hashes with a tag tacked on
+them](https://perldoc.perl.org/perlobj.html), so you *bless* a data
+structure with the class it's going to belong to. However, that's
+pretty static, and it's only sticking together two pieces of data:
+
+```
+my %foo = bless { bar => "baz" }, "Foo";
+say %foo; # Foo=HASH(0x1b05558)
+```
+
+Not even a formal definition of a package (again, Perlese for classes)
+or attributes or whatever are needed. But imagine we need to ensure
+the data structure includes a certain attribute, or need to create an
+additional one from existing attribute values. Well, use one of the
+existing object orientation packages such as
+[Moo](https://metacpan.org/pod/Moo). [Moose](https://metacpan.org/pod/Moose#blessed)
+even has per-attribute triggers, that can be used to check them once
+they have been set. But really not an object-wide C<PRAYER>.
+
+So we really need one. And we need one WITH CAPITAL LETTERS because
+  that's how we call the IMPORTANT things, or actually the things that
+  happen under the hood when we do something. Perl already does have a
+  few of
+  those. [`UNIVERSAL`](https://perldoc.perl.org/perlobj.html#The-UNIVERSAL-Class)
+  is the ur-class (we call it [`Mu`](https://docs.raku.org/type/Mu) in
+  Raku). That class includes `DOES` and `VERSION`; there's also
+  `AUTOLOAD` which is called when a method does not exist in a class,
+  as well as `DESTROY`.
+
+This last method is interesting: it's called at a certain *phase* in
+  the object lifecycle; at the very end of it, namely.
+
+> Ob-pun about the mixed metaphor of objects starting their life with
+  a blessing and ending with simple destruction.
