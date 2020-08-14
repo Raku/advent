@@ -1,20 +1,22 @@
 # RFC 307: PRAYER - what gets said when you bless something by Simon Cozens
 
 In a context with apocalypses and exegeses, no wonder there's also a
-PRAYER somewhere, in this [RFC
+PRAYER somewhere: precisely in this [RFC
 307](https://raku.org/archive/rfc/307.html), by Simon Cozens, which
 was actually *rejected*, but somehow ended up anyway in [Apocalypse
 12](https://raku.org/archive/doc/design/apo/A12.html) together with
-the one it was rejected for, [RFC
+the one it that superseded it, [RFC
 189](https://raku.org/archive/rfc/189.html). Both proposals talk about
-what is going ot happen when an object is created (*blessed*).
+what is going ot happen when an object is created, an action that has
+traditionally been called [*blessing*](https://perldoc.perl.org/functions/bless.html) in the Perl world.
 
-So let's get first to the rejected one, which is simpler. It proposes
+So let's get first to the rejected one, which is simpler. It says
 
 > This RFC proposes a special sub, PRAYER, which is automatically
 called on blessing.
 
-The term *blessing* is Perlese for creating an object. In Perl
+The term *blessing* is Perlese for welcoming a data structure into the
+object world. In Perl
 [objects are little more than hashes with a tag tacked on
 them](https://perldoc.perl.org/perlobj.html), so you *bless* a data
 structure with the class it's going to belong to. However, that's
@@ -44,6 +46,11 @@ So we really need one. And we need one WITH CAPITAL LETTERS because
   `AUTOLOAD` which is called when a method does not exist in a class,
   as well as `DESTROY`.
 
+> Other RFCs, recently commented, proposed other seudo-classes that
+  used capital leters:
+  [`NEXT`](https://raku-advent.blog/2020/08/14/rfc-190-by-damian-conway-next-pseudoclass-for-method-redispatch/),
+  for instance.
+
 This last method is interesting: it's called at a certain *phase* in
   the object lifecycle; at the very end of it, namely.
 
@@ -52,17 +59,18 @@ This last method is interesting: it's called at a certain *phase* in
 
 So Perl had a single
   [*phaser*](https://docs.raku.org/language/phasers). This RFC
-  advocated for getting, at least, a couple of symmetric ones. Which
+  advocated for getting, at least, a couple of symmetric ones, at both
+  ends of the object lifecycle. Which
   was precisely in the turf of [RFC
   189](https://raku.org/archive/rfc/189.html), which proposed a set of
   hierarchical `BUILD` (lost chance to call them `INCEPT`) and
-  `DESTROY` calls, invocated up and down the object inheritance chain.
+  `DESTROY` calls, invoked up and down the object inheritance chain.
 
-But this RFC goes a little beyond that, or sideways from that, so it
+Which is why this RFC was rejected, I guess. However, this RFC goes a little beyond that, or sideways from that, so it
   made sense to pick it up for the apocalypsis 12, instead of
   subsuming it into 189. In a way, `BUILD` is what it asks for off the
   bat: it's the "prayer" that gets called from `bless`. But rephrase
-  it slightly, "what's called when somethin *has been blessed*" and it
+  it slightly, "what's called when something *has been blessed*" and it
   becomes something totally different: not a building routine, but a,
   wait for it, *tweaking* routine (or method, or *submethod*, which is
   what it eventually became).
@@ -70,7 +78,7 @@ But this RFC goes a little beyond that, or sideways from that, so it
 In this way, Raku got
   [`TWEAK`](https://docs.raku.org/language/objects#index-entry-TWEAK). RFC
   189 begat BUILD, which creates a nice and bundled object. But
-  *after* this object has been created, and it's nicely wrapped into a
+  *after* this object has been created, and it's solidly wrapped into a
   `self` data structure, you might still need to `TWEAK` it, and do
   stuff that can only be done when and if the object is already
   BUILT. This is what TWEAK is for. And it can be put to good use in
@@ -80,9 +88,9 @@ In this way, Raku got
   to register `self` with some external object, or, actually, anything
   you might want to do with an object that has been aready blessed.
 
-This also says something about the process; an RFC that was rejected
-  eventually ended up as a nice, and interesting, feature of the final
-  language. Because, in the true open source spirits, with many eyes
+This also says something about the process that created Raku; an RFC that was rejected
+  eventually ended up as an useful, and interesting, feature of the final
+  language. Because, in the true open source spirit, with many eyes
   all bugs are shallow, and also many eyes look stuff all over again
   and find its real worth and meaning. Which is what you need when
   designing a 100 year language, I guess.
