@@ -31,4 +31,3 @@ The first article is there as an example of what can be done. Reuse structure, s
 |[p6steve](https://p6steve.github.io)|[54](https://raku.org/archive/rfc/54.html)|Polymorphic comparisons|
 |[coke](https://github.com/coke)|[28](https://raku.org/archive/rfc/28.html)|Perl should stay Perl|
 |moritz|[64](https://raku.org/archive/rfc/64.html)|New pragma 'scope' to change Perl's default scoping
-|[jnthn](https://github.com/jnthn)|[256](https://raku.org/archive/rfc/256.html)|Native support for multimethods|
