@@ -45,11 +45,11 @@ But we avoid going the extent of Java; for example, we don't have to define a cl
 
 > Strong typing does not equal legitimacy.
 
-Similar to the OO approach, we don't *require* typing, but allow you to gradually add it. You can start with an untyped scalar variable, but as you further develop your code, you can add a type to that declared variable, and to parameters to subs & methods. The types can be single classes, subsets, Junctions, where clauses with complicated logic: you can use as much or as little typing as you want. Raku's multi routines (subs or methods with the same name but different arguments) give you a way to spilt up your code based on types that is then optimized by the compiler. But you can use as little or as much of it as you want.
+Similar to the OO approach, we don't *require* typing, but allow you to gradually add it. You can start with an untyped scalar variable, but as you further develop your code, you can add a type to that declared variable, and to parameters to subs & methods. The types can be single classes, subsets, Junctions, where clauses with complicated logic: you can use as much or as little typing as you want. Raku's multi routines (subs or methods with the same name but different arguments) give you a way to split up your code based on types that is then optimized by the compiler. But you can use as little or as much of it as you want.
 
 > Just because Perl has a map operator, this doesn't make it a functional programming language. 
 
-I think Raku stayed true to this point - while there are functional elements, the polygot approach (supporting multiple different paradigms) means that any one of them, including functional, doesn't take over the language. But you can declare routines ```pure```, allowing the compiler to constant fold calls to that routine when the args are known at compiler time.
+I think Raku stayed true to this point - while there are functional elements, the polyglot approach (supporting multiple different paradigms) means that any one of them, including functional, doesn't take over the language. But you can declare routines ```pure```, allowing the compiler to constant fold calls to that routine when the args are known at compile time.
 
 > Perl is really hard for a machine to parse. ... It's meant to be easy for humans to understand. 
 
