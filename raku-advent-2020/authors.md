@@ -14,3 +14,4 @@ reminders.
 * nige: 321 - a Raku powered start up generator
 * JJ: The importance of documentation
 * tmtvl: Literate Programming with Raku
+* Altai-man: placeholder, placeholder
