@@ -15,3 +15,4 @@ reminders.
 * JJ: The importance of documentation
 * tmtvl: Literate Programming with Raku
 * Altai-man: placeholder, placeholder
+* guifa/alabamenhu: Mastering Time
