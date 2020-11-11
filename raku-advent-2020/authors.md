@@ -16,3 +16,4 @@ reminders.
 * tmtvl: Literate Programming with Raku
 * Altai-man: placeholder, placeholder
 * guifa/alabamenhu: Mastering Time
+* melezhik: Multi languages automation using Sparrow and Raku ( could be interesting for people coming from different languages )
