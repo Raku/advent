@@ -21,3 +21,4 @@ reminders.
 * codesections <daniel@codesections.com>: A scaffold for solving
   Advent of Code puzzles in Raku
 * Scimon <simon.proctor@gmail.com> : Something something Junctions Something (more later but I figure a good article about Junctions would be nice).
+* jjatria: Emulating curl with HTTP::Tiny
