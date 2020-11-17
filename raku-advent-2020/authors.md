@@ -22,3 +22,4 @@ reminders.
 * Scimon <simon.proctor@gmail.com> : Something something Junctions Something (more later but I figure a good article about Junctions would be nice).
 * jjatria: Emulating curl with HTTP::Tiny
 * p6steve <p6steve@furnival.net> - Rudolph on Raku : finding a way home to the North pole with Physics::Navigation
+* lizmat: Making the elves at Github Actions do less
