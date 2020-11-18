@@ -23,3 +23,4 @@ reminders.
 * jjatria: Emulating curl with HTTP::Tiny
 * p6steve <p6steve@furnival.net> - Rudolph on Raku : finding a way home to the North pole with Physics::Navigation
 * lizmat: Making the elves at Github Actions do less
+* Kaiepi: Strategies for writing typed Raku
