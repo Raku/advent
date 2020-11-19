@@ -24,3 +24,4 @@ reminders.
 * p6steve <p6steve@furnival.net> - Rudolph on Raku : finding a way home to the North pole with Physics::Navigation
 * lizmat: Making the elves at Github Actions do less
 * Kaiepi: Strategies for writing typed Raku
+* pheix <konstantin@narkhov.pro>: Raku web templating engines: boost up the parsing performance 
