@@ -26,3 +26,4 @@ reminders.
 * Kaiepi: Strategies for writing typed Raku
 * pheix <konstantin@narkhov.pro>: Raku web templating engines: boost up the parsing performance 
 * thibaultduponchelle: My 10 commandments for Raku performances improvements
+* hythm7: Raku & Pakku
