@@ -16,7 +16,7 @@ reminders.
 * tmtvl: Literate Programming with Raku
 * guifa/alabamenhu: Mastering Time
 * melezhik: Multi languages automation using Sparrow and Raku ( could be interesting for people coming from different languages )
-* moritz <moritz.lenz@gmail.com>: Developing declarative APIs in Raku
+* moritz <moritz.lenz@gmail.com>: Developing declarative APIs in Raku, draft in `local-drafts/moritz-declarative-apis.md`
 * codesections <daniel@codesections.com>: A scaffold for solving
   Advent of Code puzzles in Raku
 * Scimon <simon.proctor@gmail.com> : Something something Junctions Something (more later but I figure a good article about Junctions would be nice).
