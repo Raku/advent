@@ -28,3 +28,4 @@ reminders.
 * thibaultduponchelle: My 10 commandments for Raku performances improvements
 * hythm7: Raku & Pakku
 * tbrowder: TWEAKing with Class
+* lizmat: The first release - 5 years ago!  (preferably as the last Advent Post)
