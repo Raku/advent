@@ -11,7 +11,7 @@ Please also send an easy and fast way to contact you at jjmerelo at
 gmail dot com or jjmerelo in Telegram. It will be used mainly for
 reminders.
 
-* nige: 321 - Perl is Dead. Long live Perl and Raku
+* nige: Perl is Dead. Long live Perl and Raku
 * JJ: The importance of documentation
 * tmtvl: Literate Programming with Raku
 * guifa/alabamenhu: Mastering Time
