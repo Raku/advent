@@ -29,4 +29,4 @@ reminders.
 * hythm7: Raku & Pakku
 * tbrowder: TWEAKing with Class
 * lizmat: The first release - 5 years ago!  (preferably as the last Advent Post)
-* wimvanderbauwhede: Writing faster Raku code
+* wimvanderbauwhede: [Writing faster Raku code](https://gist.github.com/wimvanderbauwhede/b33aa79eb35affc08fff835f6b42270e) 
