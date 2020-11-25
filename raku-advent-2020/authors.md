@@ -30,3 +30,4 @@ reminders.
 * tbrowder: [TWEAKing with Class](https://github.com/tbrowder/advent2020/blob/master/article.md)
 * lizmat: The first release - 5 years ago!  (preferably as the last Advent Post)
 * wimvanderbauwhede: [Writing faster Raku code](https://gist.github.com/wimvanderbauwhede/b33aa79eb35affc08fff835f6b42270e) 
+* samebchase <samebchase@gmail.com>: Parsing Clojure namespace forms with Raku grammars
