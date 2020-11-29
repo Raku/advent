@@ -31,3 +31,4 @@ reminders.
 * lizmat: The first release - 5 years ago!  (preferably as the last Advent Post)
 * wimvanderbauwhede: [Writing faster Raku code](https://gist.github.com/wimvanderbauwhede/b33aa79eb35affc08fff835f6b42270e) 
 * samebchase <samebchase@gmail.com>: [[WIP]: Parsing Clojure namespace forms with Raku grammars](https://gist.github.com/samebchase/8d37f7d961ecc981e9ab9a5d36763dd5)
+* ramix: Getting Windows Memory Usage with NativeCall
