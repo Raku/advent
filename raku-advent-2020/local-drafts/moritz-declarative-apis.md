@@ -1,10 +1,12 @@
-# Declarative APIs
+# Declarative APIs, easy peasy with Raku
 
-Out of the box, libraries tend to be pretty neat to use, with named
-arguments and all the other nice features that make Raku code awesome.
+Raku APIs tend to be easy to read, with named arguments alleviating
+the need to remember argument order in method calls, for example.
 
 But sometimes a library author goes above and beyond to produce
-extra nice, declarative APIs. One example is [Cro](https://cro.services/), which allows you to write things like
+extra nice, declarative APIs. One example is [Cro](https://cro.services/),
+a framework for writing HTTP-based services, which allows you to write
+things like
 
     my $application = route {
         get -> 'greet', $name {
@@ -12,19 +14,23 @@ extra nice, declarative APIs. One example is [Cro](https://cro.services/), which
         }
     }
 
-to declare your routes, that is, callbacks that are tied to URL patterns,
-and which Cro calls for you.
+to declare your routes, that is, callbacks that Cro calls for you
+and which Cro calls for you when the user requests URLs that match the
+the pattern introduced by the routes, in this example `/greet/fido` or so.
 
 Today, we'll explore the mechanics that make such declarative APIs work,
-and how you can enable similar interfaces for libraries you write.
+that is, APIs that read naturally and that use as little boilerplate
+as possible.
+
+We'll explore how you can enable similar interfaces for libraries you write.
 
 ## Declarative API Fundamentals
 
 The example above relies on a few major ideas:
 
-* bare words like `route`, `get` and `content` are just functions of the same name, and you can call them simply with their name followed by a space. The rest of the statement is interpreted as arguments to these functions.
-* In `route { ... }`, the `{ ... }` returns a [`Block`](https://docs.raku.org/type/Block), that is, a piece of code like a function.
-* Likewise, `-> 'greet', $name { ... }` is a function, this one with an explicit signature (the `'greet', $name` part). The library code can introspect this signature, that is, find the name of the parameters (`$name`) and the value of the constant string `'greet'`.
+* bare words like `route`, `get` and `content` are just functions with the same name, and you can call them simply with their name followed by a space. The rest of the statement is interpreted as arguments to these functions.
+* In `route { ... }`, the `{ ... }` is a [`Block`](https://docs.raku.org/type/Block), that is, a piece of code like a function.
+* Likewise, `-> 'greet', $name { ... }` is a block, this one with an explicit [signature](https://docs.raku.org/type/Signature) (the `'greet', $name` part). The library code can introspect this signature, that is, find the name of the parameters (`$name`) and the value of the constant string `'greet'`.
 * There is also an invisible mechanism that ties the `get` to the outer `route { ... }` block.
 
 This last point needs some more explanation. In Cro you could have multiple independent `route { }` blocks, like so:
@@ -38,7 +44,7 @@ This last point needs some more explanation. In Cro you could have multiple inde
 
 How does `Cro` know that the `meet` callback belongs to `$app1` and `greet` belongs to `$app2`? The `route` subroutine needs to call the block passed to it to find out what callbacks it declares, so it needs to inject some kind of context into the block. The way to do that is through a [dynamically scoped variable](https://docs.raku.org/language/variables#index-entry-Dynamically_scoped_variables).
 
-In Raku, you can do that by setting a variable with the `*` sigil:
+In Raku, you can do that by declaring a variable with `*` after the [sigil](https://docs.raku.org/language/glossary#index-entry-Sigil).
 
     sub outer(&callback) {
         my @*DYNAMIC;
