@@ -57,23 +57,29 @@ N S are Latitude and E W are Longitude. There's also the notion of M T H for Bea
 Having attended the Greenland Grammar school, he knows that the Raku regex capability and unicode support
 can make short work of degrees, minutes and seconds. Constraints will stop him from flying off at 451 degrees.
 
+Now he can define the Latitude, Longitude and Bearing classes:
+```
+class Latitude is NavAngle is export {
+	has Real  $.value is rw where 0 <= * <= 90; 
+	has Unit  $.units is rw where *.name eq '°';
+	has Str   $.compass is rw where <N S>.any;
 
+	method Str { qq{$deg°$min′ $.compass} }
+}
 
+class Longitude is NavAngle is export {
+	has Real  $.value is rw where 0 <= * <= 180; 
+	has Unit  $.units is rw where *.name eq '°';
+	has Str   $.compass is rw where <E W>.any;
 
+	method Str { qq{$deg°$min′ $.compass} }
+}
 
+class Bearing is NavAngle is export {
+	has Real  $.value is rw where 0 <= * <= 180; 
+	has Unit  $.units is rw where *.name eq '°';
+	has Str   $.compass is rw where <M T H>.any;
 
-
-
-Raku APIs tend to be easy to read, with named arguments alleviating
-the need to remember argument order in method calls, for example.
-
-But sometimes a library author goes above and beyond to produce
-extra nice, declarative APIs. One example is [Cro](https://cro.services/),
-a framework for writing HTTP-based services, which allows you to write
-things like
-
-    my $application = route {
-        get -> 'greet', $name {
-            content 'text/plain', "Hello, $name!";
-        }
-    }
+    method Str { qq{$deg° ($.compass)} }
+}
+```
