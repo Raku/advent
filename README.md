@@ -5,12 +5,14 @@ the spirit of Perl and other projects, consisting of daily articles
 starting on 1 December and ending on 25 December.
 
 Articles up to 2018 can be found in the 
-[Perl 6 Advent Calendar blog](https://perl6advent.wordpress.com/); from 2019 on, new articles will be published in the [Raku Advent Calendar blog](https://rakuadventcalendar.wordpress.com/).
+[Perl 6 Advent Calendar blog](https://perl6advent.wordpress.com/); from 2019 on, new articles will be published in the [Raku Advent Calendar blog](https://raku-advent.blog/).
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions for
 authors.
 
-The current year's schedule is in file
-[raku-advent-2019/schedule](raku-advent-2019/schedule).
+The current year's list of authors is in the file
+[raku-advent-2020/authors.md](raku-advent-2020/authors.md). Add
+yourself to the list via [pull request](/Raku/advent/pulls), and
+contribute your article as soon as it's ready.
 
 ## License: Artistic 2.0
