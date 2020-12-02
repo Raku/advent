@@ -13,7 +13,7 @@ Luckily he has been on a navigation skills course and has learned about how to s
 the globe using a combination of Latitude and Longitude. However, these seem all of a muddle as they 
 are alike and yet different. What Rudi needs is a way to structure his navigation to ensure that he 
 does not mix them up. Even better, he is good friends with Larry and knows that he can trust the 
-Raku type system to get him home.
+Raku [type system][https://docs.raku.org/language/typesystem] to get him home.
 
 Let's see how he does it:
 
