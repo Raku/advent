@@ -169,9 +169,9 @@ $Physics::Navigation::variation = CompassAdjustment.new( value => 7, compass => 
 my $bear ♓️ <43°30′30″M>; say ~$bear;   #OUTPUT 43°30.5 M
 say ~$bear.T;				#OUTPUT 43°37.5 T
 ```
-He can even steer by doing addition/subtraction of the course change Bearing since +/- are already overidden
-for Physics::Measure objects - that's one great benefit of ♓️ unicode operators ... they act as a warning
-that language mutations are active in these code regions.
+Santa can even steer (H=Helm) by doing addition/subtraction of the course change Bearing since +/- are already overidden
+for Physics::Measure objects - that's one benefit of these weird ♓️ unicode operators ... they act as a warning that 
+language mutations are active in these code regions.
 
 And should Santa be bringing home a sleigh full unwanted ferrous Christmas presents (bikes, climbing frames, 
 meccano sets and so on), then this can be accommodated with the ```$Physics::Navigation::deviation``` setting.
@@ -179,3 +179,5 @@ meccano sets and so on), then this can be accommodated with the ```$Physics::Nav
 And finally Santa, Rudolph and the other reindeer can rest their weary bones around the glowing fire at home
 after a long night's work!
 
+Merry Christmas
+p6steve.   (p6 is pronounced "Physics")
