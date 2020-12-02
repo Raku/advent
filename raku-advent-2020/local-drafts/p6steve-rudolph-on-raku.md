@@ -25,13 +25,13 @@ class NavAngle is Angle {
   has Unit  $.units is rw where *.name eq '°';
 	
   multi method new( Str:D $s ) {						say "NA new from Str" if $db; 
-    my ($nominal, $compass) = NavAngle.defn-extract( $s );
+    my ($decimal, $compass) = NavAngle.defn-extract( $s );
     my $type;
     given $compass {
       when <N S>.any   { $type = 'Latitude' }
       when <E W>.any   { $type = 'Longitude' }
       when <M T H>.any { $type = 'Bearing' }
-      default			     { nextsame }
+      default          { nextsame }
     }
     ::($type).new( value => $nominal, compass => $compass );
   }
@@ -42,17 +42,23 @@ class NavAngle is Angle {
     my $deg where 0 <= * < 360 = $0 % 360;
     my $min where 0 <= * <  60 = $1 // 0;
     my $sec where 0 <= * <  60 = $2 // 0;
-    my $nominal = ( ($deg * 3600) + ($min * 60) + $sec ) / 3600;
+    my $decimal = ( ($deg * 3600) + ($min * 60) + $sec ) / 3600;
     my $compass = ~$3;
 
     say "NA extracting «$s»: value is $deg°$min′$sec″, compass is $compass" if $db;
-    return($nominal, $compass)
+    return($decimal, $compass)
+  }
+  
+  method Str {
+    my ( $deg, $min ) = self.dms( :no-secs ); 
+    $deg = sprintf( "%03d", $deg );
+    qq{$deg° $.compass}
   }
 }
-#(real code at https://github.com/p6steve/raku-Physics-Navigation/blob/master/lib/Physics/Navigation.rakumod)
+#real code at https://github.com/p6steve/raku-Physics-Navigation/blob/master/lib/Physics/Navigation.rakumod
 ```
 So Rudi has inherited the Angle type provided by Physics::Unit and created some general methods that 'know' that 
-N S are Latitude and E W are Longitude. There's also the notion of M T H for Bearing.
+N S are Latitude and E W are Longitude. There's also the notion of M T H for Bearing (more on that later).
 
 Having attended the Greenland Grammar school, he knows that the Raku regex capability and unicode support
 can make short work of degrees, minutes and seconds. Constraints will stop him from flying off at 451 degrees.
@@ -61,25 +67,30 @@ Now he can define the Latitude, Longitude and Bearing classes:
 ```
 class Latitude is NavAngle is export {
 	has Real  $.value is rw where 0 <= * <= 90; 
-	has Unit  $.units is rw where *.name eq '°';
 	has Str   $.compass is rw where <N S>.any;
-
-	method Str { qq{$deg°$min′ $.compass} }
 }
-
 class Longitude is NavAngle is export {
 	has Real  $.value is rw where 0 <= * <= 180; 
-	has Unit  $.units is rw where *.name eq '°';
 	has Str   $.compass is rw where <E W>.any;
-
-	method Str { qq{$deg°$min′ $.compass} }
-}
-
-class Bearing is NavAngle is export {
-	has Real  $.value is rw where 0 <= * <= 180; 
-	has Unit  $.units is rw where *.name eq '°';
-	has Str   $.compass is rw where <M T H>.any;
-
-    method Str { qq{$deg° ($.compass)} }
 }
 ```
+See how the constraints are adjusted to reflect the limits of each child class.
+
+Now Rudolph can set his position:
+
+```my $lat1 = Latitude.new( value => 45, compass => <N> ); say ~$lat1; #OUTPUT 43° N```
+
+But this is quite long winded and he is impatient to get home. Raku unicode and operator overrides come
+to the rescue:
+```
+#define the pisces operator to declare and initialise a new instance 
+multi infix:<♓️> ( Any:U $left is rw, Str:D $right ) is equiv( &infix:<=> ) is export {
+    $left = NavAngle.new( $right );
+}
+```
+Now he can quickly hoof in his coordinates:
+```
+my $lat  ♓️ <55°30′30″S>; say ~$lat;   #OUTPUT 55°30.5 S
+my $long ♓️ <45°W>;       say ~$long;  #OUTPUT 45° W
+```
+# Magnetic vs. True North
