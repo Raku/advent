@@ -26,7 +26,7 @@ reminders.
 * pheix <konstantin@narkhov.pro>: Raku web templating engines: boost up the parsing performance 
 * thibaultduponchelle: My 10 commandments for Raku performances improvements
 * hythm7: Raku & Pakku
-* tbrowder: [TWEAKing with Class](https://github.com/tbrowder/advent2020/blob/master/article.md)
+* tbrowder: [Santa Claus TWEAKs with a Class](https://github.com/tbrowder/advent2020/blob/master/article.md)
 * lizmat: The first release - 5 years ago!  (preferably as the last Advent Post)
 * wimvanderbauwhede: [Writing faster Raku code](https://gist.github.com/wimvanderbauwhede/b33aa79eb35affc08fff835f6b42270e) 
 * samebchase <samebchase@gmail.com>: [[WIP]: Parsing Clojure namespace forms with Raku grammars](https://gist.github.com/samebchase/8d37f7d961ecc981e9ab9a5d36763dd5)
