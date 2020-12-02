@@ -55,7 +55,7 @@ class NavAngle is Angle {
     qq{$deg° $.compass}
   }
 }
-#real code at https://github.com/p6steve/raku-Physics-Navigation/blob/master/lib/Physics/Navigation.rakumod
+#real code at https://github.com/p6steve/raku-Physics-Navigation (work in progress)
 ```
 So Rudi has inherited the Angle type provided by Physics::Unit and created some general methods that 'know' that 
 N S are Latitude and E W are Longitude. There's also the notion of M T H for Bearing (more on that later).
