@@ -1,6 +1,6 @@
 # Rudolph on Raku
 
-## finding a way home to the North pole with Physics::Navigation
+## Finding a way home to the North pole with Physics::Navigation
 
 So, Rudolph has been worried about getting Santa and the other reindeer back home to the North Pole 
 after an exhausting flight to visit all the (well-behaved) Children on the Globe.
@@ -93,4 +93,79 @@ Now he can quickly hoof in his coordinates:
 my $lat  ♓️ <55°30′30″S>; say ~$lat;   #OUTPUT 55°30.5 S
 my $long ♓️ <45°W>;       say ~$long;  #OUTPUT 45° W
 ```
-# Magnetic vs. True North
+## Magnetic vs. True North
+Now he knows where he is, Rudolph can set a course to steer home to the North Pole. But wait, how can
+he adjust for the difference between Magnetic north on his Compass and True North, his destination?
+
+He has some more trick up his sleeve:
+```
+class CompassAdjustment { ... }
+
+our $variation = 0;			#optional variation (Compass-Adjustment)
+our $deviation = 0;			#optional deviation (Compass-Adjustment)
+
+#| Bearing embodies the identity 'M = T + Vw', so...
+#| Magnetic = True + Variation-West [+ Deviation-West]
+class Bearing is NavAngle is export {
+	has Real  $.value is rw where 0 <= * <= 360; 
+	has Str   $.compass where <M T>.any;
+
+	method M {
+		if $.compass eq <M> { return( self ) } 
+		else { return( self + ( $variation + $deviation ) ) }
+	}
+	method T {
+		if $.compass eq <T> { return( self ) } 
+		else { return( self - ( $variation + $deviation ) ) }
+	}
+
+   sub check-same( $l, $r ) {
+		if $r ~~ CompassAdjustment { 
+			return 
+		}
+        if ! $l.compass eq $r.compass {
+            die "Cannot combine Bearings of different Types!"
+        }    
+    }  
+    method add( $r is rw ) {
+        my $l = self;
+        check-same( $l, $r );
+        $l.value += $r.value;
+ 	$l.compass( $r.compass );
+        return $l
+    }    
+    method subtract( $r is rw ) {
+        my $l = self;
+        check-same( $l, $r );
+        $l.value -= $r.value; 
+	$l.compass( $r.compass );
+        return $l
+    }
+}
+
+class CompassAdjustment is Bearing is export {
+	has Real  $.value is rw where -180 <= * <= 180; 
+
+	multi method compass {						#get compass
+		given $.value {
+			when * >= 0 { return <W>, 0 }
+			when * < 0  { return <E>, 1 }
+		}
+	}
+	multi method compass( Str $compass ) {				#set compass
+		given $compass {
+			when <W>   { }		#no-op
+			when <E>   { $.value = -$.value }
+			default    { die "Compass-Adjustment must be <W E>.any" }
+		}
+	}
+}
+```
+Now, after setting the compass Variation, Rudolph can enter in his magnetic compass reading and get back the 
+Bearing to True North.
+```
+$Physics::Navigation::variation = CompassAdjustment.new( value => 7, compass => <W> );
+
+my $bear ♓️ <43°30′30″M>; say ~$bear;   #OUTPUT 43°30.5 M
+say ~$bear.T;				#OUTPUT 43°37.5 T
+```
