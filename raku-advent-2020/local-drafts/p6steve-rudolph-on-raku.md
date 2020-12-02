@@ -13,7 +13,8 @@ Luckily he has been on a navigation skills course and has learned about how to s
 the globe using a combination of Latitude and Longitude. However, these seem all of a muddle as they 
 are alike and yet different. What Rudi needs is a way to structure his navigation to ensure that he 
 does not mix them up. Even better, he is good friends with Larry and knows that he can trust the 
-Raku [type system](https://docs.raku.org/language/typesystem) to get him home.
+Raku [type system](https://docs.raku.org/language/typesystem) to get him home. In fact, Raku has a 
+lot of ways to make the life of a reindeer|developer better, find out more at https://www.raku.org.
 
 Let's see how he does it:
 
@@ -179,5 +180,5 @@ meccano sets and so on), then this can be accommodated with the ```$Physics::Nav
 And finally Santa, Rudolph and the other reindeer can rest their weary bones around the glowing fire at home
 after a long night's work!
 
-Merry Christmas
+Merry Christmas to one and all (and any)
 p6steve.   (p6 is pronounced "Physics")
