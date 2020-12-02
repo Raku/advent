@@ -2,19 +2,11 @@
 
 ## Finding a way home to the North pole with Physics::Navigation
 
-So, Rudolph has been worried about getting Santa and the other reindeer back home to the North Pole 
-after an exhausting flight to visit all the (well-behaved) Children on the Globe.
+So, Rudolph has been worried about getting Santa and the other reindeer back home to the North Pole after an exhausting flight to visit all the (well-behaved) Children on the Globe.
 
-He has heard a rumour that the North Pole keeps moving due to the precession of molten iron at 
-the Earth's core and that every year it creeps around a bit with relation to Santa's workshop,
-which lies at the True North Pole.
+He has heard a rumour that the North Pole keeps moving due to the precession of molten iron at the Earth's core and that every year it creeps around a bit with relation to Santa's workshop, which lies at the True North Pole.
 
-Luckily he has been on a navigation skills course and has learned about how to specify a position on
-the globe using a combination of Latitude and Longitude. However, these seem all of a muddle as they 
-are alike and yet different. What Rudi needs is a way to structure his navigation to ensure that he 
-does not mix them up. Even better, he is good friends with Larry and knows that he can trust the 
-Raku [type system](https://docs.raku.org/language/typesystem) to get him home. In fact, Raku has a 
-lot of ways to make the life of a reindeer|developer better, find out more at https://www.raku.org.
+Luckily he has been on a navigation skills course and has learned about how to specify a position on the globe using a combination of Latitude and Longitude. However, these seem all of a muddle as they are alike and yet different. What Rudi needs is a way to structure his navigation to ensure that he does not mix them up. Even better, he is good friends with Larry and knows that he can trust the Raku [type system](https://docs.raku.org/language/typesystem) to get him home. In fact, Raku has a lot of ways to make the life of a reindeer|developer better, find out more at https://www.raku.org.
 
 Let's see how he does it:
 
@@ -58,19 +50,19 @@ class NavAngle is Angle {
 }
 #real code at https://github.com/p6steve/raku-Physics-Navigation (work in progress)
 ```
-So Rudi has inherited the Angle type provided by Physics::Unit and created some general methods that 'know' that 
-N S are Latitude and E W are Longitude. There's also the notion of M T H for Bearing (more on that later).
+So Rudi has created a NavAngle class that inherits the Angle class provided by [Physics::Unit](https://github.com/p6steve/raku-Physics-Unit) 'NavAngle is Angle' and created some general methods that 'know' that <N S> are Latitude and <E W> are Longitude. There's also the notion of <M T H> for Bearing (more on that later).
+	
+This new class 'has' one attribute defined - $.units. The Raku $. [twigil](https://docs.raku.org/language/classtut#index-entry-twigils_accessors) indicates that this is a public attribute and automatically provides accessor get and set methods with no need for extra code. So when you to set the value, the 'where' [constraint](https://docs.raku.org/type/Signature#index-entry-Constraint) checks that $.units.name eq '°'. That way we enforce that our NavAngle objects are specified in degrees '°' and prevent the use of other available Angle units such as radians or grads.
 
-Having attended the Greenland Grammar school, he knows that the Raku regex capability and unicode support
-can make short work of degrees, minutes and seconds. Constraints will stop him from flying off at 451 degrees.
+Having attended the Greenland Grammar school, he knows that the Raku [regex](https://docs.raku.org/language/regexes) capability and [unicode](https://docs.raku.org/language/unicode) support can make short work of degrees, minutes and seconds. Value constraints will stop him from flying off at 451 degrees.
 ## Latitude and Longitude
-Now he can define the Latitude, Longitude and Bearing classes:
+Now the basics are in place, Rudolph can easily define the Latitude and Longitude child classes using [inheritance](https://docs.raku.org/language/classtut#index-entry-classes__inheritance):
 ```
-class Latitude is NavAngle is export {
+class Latitude is NavAngle {
 	has Real  $.value is rw where 0 <= * <= 90; 
 	has Str   $.compass is rw where <N S>.any;
 }
-class Longitude is NavAngle is export {
+class Longitude is NavAngle {
 	has Real  $.value is rw where 0 <= * <= 180; 
 	has Str   $.compass is rw where <E W>.any;
 }
