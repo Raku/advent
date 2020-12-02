@@ -56,7 +56,7 @@ This new class 'has' one attribute defined - $.units. The Raku $. [twigil](https
 
 Having attended the Greenland Grammar school, he knows that the Raku [regex](https://docs.raku.org/language/regexes) capability and [unicode](https://docs.raku.org/language/unicode) support can make short work of degrees, minutes and seconds. Value constraints will stop him from flying off at 451 degrees.
 
-A couple of other nice Raku capabilities are shown here (i) the '::($type)' syntax allows types to be handled as variables and acted on programmatically, (ii) the parameter capture '( Str:D $s )' checks the type and defined-ness of fucntion parameters and (iii) the '= $1 // 0' combination tests for defined-ness and assigns a default value. Rudolph is happy to see that all these tools sit nicely together in a comprehenible language syntax.
+A couple of other nice Raku capabilities are shown here (i) the '::($type)' syntax allows types to be handled as variables and acted on programmatically, (ii) the parameter capture '( Str:D $s )' checks the type and defined-ness of fucntion parameters and (iii) the '= $1 // 0' combination tests for defined-ness and assigns a default value. Rudolph is happy to see that all these tools sit nicely together in a comprehensible language syntax.
 
 ## Latitude and Longitude
 Now the basics are in place, Rudolph can easily define the Latitude and Longitude child classes using [inheritance](https://docs.raku.org/language/classtut#index-entry-classes__inheritance):
@@ -86,9 +86,10 @@ Now he can quickly hoof in his coordinates:
 my $lat  ♓️ <55°30′30″S>; say ~$lat;   #OUTPUT 55°30.5 S
 my $long ♓️ <45°W>;       say ~$long;  #OUTPUT 45° W
 ```
+
 ## Magnetic vs. True North
-Now he knows where he is, Rudolph can set a course to steer home to the North Pole. But wait, how can
-he adjust for the difference between Magnetic north on his Compass and True North, his destination?
+
+Now he knows where he is, Rudolph can set a course to steer home to the North Pole. But wait, how can he adjust for the difference between Magnetic north on his Compass and True North, his destination?
 
 Rudolph has another trick up his (antler) sleeve:
 ```
@@ -154,23 +155,18 @@ class CompassAdjustment is Bearing is export {
 	}
 }
 ```
-Now, after setting the compass variation, Rudolph can enter in their magnetic compass reading and get back the 
-Bearing to True North.
+Now, after setting the compass variation, Rudolph can enter in their magnetic compass reading and get back the  Bearing to True North.
 ```
 $Physics::Navigation::variation = CompassAdjustment.new( value => 7, compass => <W> );
 
 my $bear ♓️ <43°30′30″M>; say ~$bear;   #OUTPUT 43°30.5 M
 say ~$bear.T;				#OUTPUT 43°37.5 T
 ```
-Santa can even steer (H=Helm) by doing addition/subtraction of the course change Bearing since +/- are already overidden
-for Physics::Measure objects - that's one benefit of these weird ♓️ unicode operators ... they act as a warning that 
-language mutations are active in these code regions.
+Santa can even steer (H=Helm) by doing addition/subtraction of the course change Bearing since +/- are already overidden for Physics::Measure objects - that's one benefit of these weird ♓️ unicode operators ... they act as a warning that language mutations are active in these code regions.
 
-And should Santa be bringing home a sleigh full unwanted ferrous Christmas presents (bikes, climbing frames, 
-meccano sets and so on), then this can be accommodated with the ```$Physics::Navigation::deviation``` setting.
+And should Santa be bringing home a sleigh full unwanted ferrous Christmas presents (bikes, climbing frames, Meccano sets and so on), then this can be accommodated with the ```$Physics::Navigation::deviation``` setting.
 
-And finally Santa, Rudolph and the other reindeer can rest their weary bones around the glowing fire at home
-after a long night's work!
+And finally Santa, Rudolph and the other reindeer can rest their weary bones around the glowing fire at home after a long night's work!
 
 Merry Christmas to one and all (and any)
 p6steve.   (p6 is pronounced "Physics")
