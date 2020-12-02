@@ -24,7 +24,7 @@ use Physics::Measure;
 class NavAngle is Angle {
   has Unit  $.units is rw where *.name eq '°';
 	
-  multi method new( Str:D $s ) {						say "NA new from Str" if $db; 
+  multi method new( Str:D $s ) {
     my ($decimal, $compass) = NavAngle.defn-extract( $s );
     my $type;
     given $compass {
@@ -62,7 +62,7 @@ N S are Latitude and E W are Longitude. There's also the notion of M T H for Bea
 
 Having attended the Greenland Grammar school, he knows that the Raku regex capability and unicode support
 can make short work of degrees, minutes and seconds. Constraints will stop him from flying off at 451 degrees.
-
+## Latitude and Longitude
 Now he can define the Latitude, Longitude and Bearing classes:
 ```
 class Latitude is NavAngle is export {
