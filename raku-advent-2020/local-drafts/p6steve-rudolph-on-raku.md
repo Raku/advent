@@ -97,7 +97,7 @@ my $long ♓️ <45°W>;       say ~$long;  #OUTPUT 45° W
 Now he knows where he is, Rudolph can set a course to steer home to the North Pole. But wait, how can
 he adjust for the difference between Magnetic north on his Compass and True North, his destination?
 
-He has some more trick up his sleeve:
+Rudolph has another trick up his (antler) sleeve:
 ```
 class CompassAdjustment { ... }
 
@@ -120,9 +120,9 @@ class Bearing is NavAngle is export {
 	}
 
    sub check-same( $l, $r ) {
-		if $r ~~ CompassAdjustment { 
-			return 
-		}
+	if $r ~~ CompassAdjustment { 
+		return 
+	}
         if ! $l.compass eq $r.compass {
             die "Cannot combine Bearings of different Types!"
         }    
@@ -161,7 +161,7 @@ class CompassAdjustment is Bearing is export {
 	}
 }
 ```
-Now, after setting the compass Variation, Rudolph can enter in his magnetic compass reading and get back the 
+Now, after setting the compass variation, Rudolph can enter in their magnetic compass reading and get back the 
 Bearing to True North.
 ```
 $Physics::Navigation::variation = CompassAdjustment.new( value => 7, compass => <W> );
@@ -169,3 +169,11 @@ $Physics::Navigation::variation = CompassAdjustment.new( value => 7, compass => 
 my $bear ♓️ <43°30′30″M>; say ~$bear;   #OUTPUT 43°30.5 M
 say ~$bear.T;				#OUTPUT 43°37.5 T
 ```
+He can even steer by doing addition/subtraction of the course change Bearing.
+
+And should Santa be bringing home a sleigh full unwanted ferrous Christmas presents (bikes, climbing frames, 
+meccano sets and so on), then this can be accommodated with the ```$Physics::Navigation::deviation``` setting.
+
+And finally Santa, Rudolph and the other reindeer can rest their weary bones around the glowing fire at home
+after a long night's work!
+
