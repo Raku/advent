@@ -50,11 +50,14 @@ class NavAngle is Angle {
 }
 #real code at https://github.com/p6steve/raku-Physics-Navigation (work in progress)
 ```
-So Rudi has created a NavAngle class that inherits the Angle class provided by [Physics::Unit](https://github.com/p6steve/raku-Physics-Unit) 'NavAngle is Angle' and created some general methods that 'know' that <N S> are Latitude and <E W> are Longitude. There's also the notion of <M T H> for Bearing (more on that later).
+So Rudi has created a NavAngle class that inherits the Angle class provided by [Physics::Unit](https://github.com/p6steve/raku-Physics-Unit) by writing 'NavAngle is Angle' and created some general methods that 'know' that <N S> are Latitude and <E W> are Longitude. There's also the notion of <M T H> for Bearing (more on that later). Here y9ou can see that Raku has a very flexible [switch](https://docs.raku.org/language/control#index-entry-switch_(given)) that uses 'given-when-default' keywords to specify control flow.
 	
 This new class 'has' one attribute defined - $.units. The Raku $. [twigil](https://docs.raku.org/language/classtut#index-entry-twigils_accessors) indicates that this is a public attribute and automatically provides accessor get and set methods with no need for extra code. So when you to set the value, the 'where' [constraint](https://docs.raku.org/type/Signature#index-entry-Constraint) checks that $.units.name eq '°'. That way we enforce that our NavAngle objects are specified in degrees '°' and prevent the use of other available Angle units such as radians or grads.
 
 Having attended the Greenland Grammar school, he knows that the Raku [regex](https://docs.raku.org/language/regexes) capability and [unicode](https://docs.raku.org/language/unicode) support can make short work of degrees, minutes and seconds. Value constraints will stop him from flying off at 451 degrees.
+
+A couple of other nice Raku capabilities are shown here (i) the '::($type)' syntax allows types to be handled as variables and acted on programmatically, (ii) the parameter capture '( Str:D $s )' checks the type and defined-ness of fucntion parameters and (iii) the '= $1 // 0' combination tests for defined-ness and assigns a default value. Rudolph is happy to see that all these tools sit nicely together in a comprehenible language syntax.
+
 ## Latitude and Longitude
 Now the basics are in place, Rudolph can easily define the Latitude and Longitude child classes using [inheritance](https://docs.raku.org/language/classtut#index-entry-classes__inheritance):
 ```
@@ -67,17 +70,14 @@ class Longitude is NavAngle {
 	has Str   $.compass is rw where <E W>.any;
 }
 ```
-See how the constraints are adjusted to reflect the limits of each child class.
+The constraints are adjusted - now the children have their own $.value and $.compass attributes - to reflect the different value limits of each child class. The <N S> brackets are equivalent to ('N', 'S') - they are quicker to type since you do not have to use [quotes](https://docs.raku.org/routine/%3C%20%3E) around every word.
 
-Now Rudolph can set his position:
+Rudolph can set his Latitude position by creating a new instance of the Latitude class with the standard Raku constructor:
+```my $lat = Latitude.new( value => 45, compass => <N> ); say ~$lat; #OUTPUT 43° N```
 
-```my $lat1 = Latitude.new( value => 45, compass => <N> ); say ~$lat1; #OUTPUT 43° N```
-
-But this is quite long winded and he is impatient to get home. Raku unicode and operator overrides come
-to the rescue:
+But this is quite long winded and he is impatient to get home. Great news, he can create a Raku [custom operator](https://docs.raku.org/language/optut) to let him easily specify and initialise new instances from a quoted string. In this case, he decides to use a unicode pisces 'emoji' - ♓️ ...
 ```
-#define the pisces operator to declare and initialise a new instance 
-multi infix:<♓️> ( Any:U $left is rw, Str:D $right ) is equiv( &infix:<=> ) is export {
+multi infix:<♓️> ( Any:U $left is rw, Str:D $right ) {
     $left = NavAngle.new( $right );
 }
 ```
