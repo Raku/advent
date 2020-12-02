@@ -50,7 +50,7 @@ class NavAngle is Angle {
 }
 #real code at https://github.com/p6steve/raku-Physics-Navigation (work in progress)
 ```
-So Rudi has created a NavAngle class that inherits the Angle class provided by [Physics::Unit](https://github.com/p6steve/raku-Physics-Unit) by writing 'NavAngle is Angle' and created some general methods that 'know' that <N S> are Latitude and <E W> are Longitude. There's also the notion of <M T H> for Bearing (more on that later). Here y9ou can see that Raku has a very flexible [switch](https://docs.raku.org/language/control#index-entry-switch_(given)) that uses 'given-when-default' keywords to specify control flow.
+So Rudi has created a NavAngle class that inherits the Angle class provided by [Physics::Unit](https://github.com/p6steve/raku-Physics-Unit) by writing 'NavAngle is Angle' and created some general methods that 'know' that ```<N S>``` are Latitude and ```<E W>``` are Longitude. There's also the notion of ```<M T H>``` for Bearing (more on that later). Here you can also see that Raku has a very flexible [switch](https://docs.raku.org/language/control#index-entry-switch_(given)) that uses 'given-when-default' keywords to specify control flow.
 	
 This new class 'has' one attribute defined - $.units. The Raku $. [twigil](https://docs.raku.org/language/classtut#index-entry-twigils_accessors) indicates that this is a public attribute and automatically provides accessor get and set methods with no need for extra code. So when you to set the value, the 'where' [constraint](https://docs.raku.org/type/Signature#index-entry-Constraint) checks that $.units.name eq '°'. That way we enforce that our NavAngle objects are specified in degrees '°' and prevent the use of other available Angle units such as radians or grads.
 
@@ -93,34 +93,39 @@ Now he knows where he is, Rudolph can set a course to steer home to the North Po
 
 Rudolph has another trick up his (antler) sleeve:
 ```
-class CompassAdjustment { ... }
+class CompassAdjustment { ... }         #predeclare since we want to refer to this class before we write it
 
+#keyword 'our' used to declare package-wide variables
 our $variation = 0;			#optional variation (Compass-Adjustment)
 our $deviation = 0;			#optional deviation (Compass-Adjustment)
 
 #| Bearing embodies the identity 'M = T + Vw', so...
 #| Magnetic = True + Variation-West [+ Deviation-West]
-class Bearing is NavAngle is export {
-	has Real  $.value is rw where 0 <= * <= 360; 
-	has Str   $.compass where <M T>.any;
+class Bearing is NavAngle {
+	has Real  $.value is rw where 0 <= * <= 360;	#must be between 0 and 360 degrees
+	has Str   $.compass where <M T>.any;		#either Magnetic or True
 
-	method M {
+	method M {			#output method always returns the Magnetic Bearing
 		if $.compass eq <M> { return( self ) } 
 		else { return( self + ( $variation + $deviation ) ) }
 	}
-	method T {
+	method T {			#output method always returns the True Bearing
 		if $.compass eq <T> { return( self ) } 
 		else { return( self - ( $variation + $deviation ) ) }
 	}
 
-   sub check-same( $l, $r ) {
+   sub check-same( $l, $r ) {		#can only add/subtract where both are Magnetic or both are True
 	if $r ~~ CompassAdjustment { 
 		return 
 	}
         if ! $l.compass eq $r.compass {
             die "Cannot combine Bearings of different Types!"
         }    
-    }  
+    }
+    
+    #these math methods override the ones provided by Physics::Measure::Angle
+    #they handle the custom +/- infix operators defined in Physics::Measure
+    #they extend the (grand)parent methods with logic to handle the $.compass attributes
     method add( $r is rw ) {
         my $l = self;
         check-same( $l, $r );
@@ -137,9 +142,16 @@ class Bearing is NavAngle is export {
     }
 }
 
-class CompassAdjustment is Bearing is export {
-	has Real  $.value is rw where -180 <= * <= 180; 
+# now we can finally write our CompassAdjustment class
+# we had to wait until now since is also is a child of Bearing
 
+class CompassAdjustment is Bearing {
+	has Real  $.value is rw where -180 <= * <= 180;			#the adjustment is up to 180 degrees either way
+
+	#we override the parent compass accessors since we want to provide extra logic for <W E>
+	#we want add/subtract to add W variations and subtract E variations
+	#we do this by storing the value as a signed Real and negating the return value when its <E>
+	
 	multi method compass {						#get compass
 		given $.value {
 			when * >= 0 { return <W>, 0 }
@@ -162,7 +174,7 @@ $Physics::Navigation::variation = CompassAdjustment.new( value => 7, compass => 
 my $bear ♓️ <43°30′30″M>; say ~$bear;   #OUTPUT 43°30.5 M
 say ~$bear.T;				#OUTPUT 43°37.5 T
 ```
-Santa can even steer (H=Helm) by doing addition/subtraction of the course change Bearing since +/- are already overidden for Physics::Measure objects - that's one benefit of these weird ♓️ unicode operators ... they act as a warning that language mutations are active in these code regions.
+Santa could even steer to starboard or port by doing addition or subtraction of the course change Bearing. It can be surprising to have non standard behaviour of +/-  depending on the object type - that's one benefit of ♓️ unicode operators ... they act as a warning that language mutations are lurking in these code regions.
 
 And should Santa be bringing home a sleigh full unwanted ferrous Christmas presents (bikes, climbing frames, Meccano sets and so on), then this can be accommodated with the ```$Physics::Navigation::deviation``` setting.
 
