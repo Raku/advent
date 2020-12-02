@@ -56,7 +56,7 @@ This new class 'has' one attribute defined - $.units. The Raku $. [twigil](https
 
 Having attended the Greenland Grammar school, he knows that the Raku [regex](https://docs.raku.org/language/regexes) capability and [unicode](https://docs.raku.org/language/unicode) support can make short work of degrees, minutes and seconds. Value constraints will stop him from flying off at 451 degrees.
 
-A couple of other nice Raku capabilities are shown here (i) the '::($type)' syntax allows types to be handled as variables and acted on programmatically, (ii) the parameter capture '( Str:D $s )' checks the type and defined-ness of fucntion parameters and (iii) the '= $1 // 0' combination tests for defined-ness and assigns a default value. Rudolph is happy to see that all these tools sit nicely together in a comprehensible language syntax.
+A couple of other nice Raku capabilities are shown here (i) the '::($type)' [name interpolation](https://docs.raku.org/language/packages#index-entry-::($c).m) allows types to be handled as variables and acted on programmatically, (ii) the [parameter capture](https://docs.raku.org/type/Capture) '( Str:D $s )' checks the type and defined-ness of function parameters and (iii) the '= $1 // 0' combination tests for [defined-ness](https://docs.raku.org/routine/$SOLIDUS$SOLIDUS) and thus assigns a default value. Rudolph is happy to see that all these tools sit nicely together in a comprehensible language syntax.
 
 ## Latitude and Longitude
 Now the basics are in place, Rudolph can easily define the Latitude and Longitude child classes using [inheritance](https://docs.raku.org/language/classtut#index-entry-classes__inheritance):
