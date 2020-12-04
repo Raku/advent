@@ -28,6 +28,7 @@ reminders.
 * hythm7: Raku & Pakku
 * tbrowder: [Santa Claus TWEAKs with a Class](https://github.com/tbrowder/advent2020/blob/master/article.md)
 * lizmat: The first release - 5 years ago!  (preferably as the last Advent Post)
-* wimvanderbauwhede: [Writing faster Raku code](https://gist.github.com/wimvanderbauwhede/b33aa79eb35affc08fff835f6b42270e) 
+* wimvanderbauwhede: [Writing faster Raku code Part 1](https://gist.github.com/wimvanderbauwhede/55de5815a091a6e8b5c369eb33fbfd2b
+) and [Writing faster Raku code Part 2](https://gist.github.com/wimvanderbauwhede/58fb069de423cd766e9bdd0bbe1c6dec)
 * samebchase <samebchase@gmail.com>: [[WIP]: Parsing Clojure namespace forms with Raku grammars](https://gist.github.com/samebchase/8d37f7d961ecc981e9ab9a5d36763dd5)
 * ramix: Getting Windows Memory Usage with NativeCall
