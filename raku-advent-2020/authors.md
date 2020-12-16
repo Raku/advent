@@ -32,4 +32,4 @@ reminders.
 ) and [Writing faster Raku code Part 2](https://gist.github.com/wimvanderbauwhede/58fb069de423cd766e9bdd0bbe1c6dec)
 * samebchase <samebchase@gmail.com>: [[WIP]: Parsing Clojure namespace forms with Raku grammars](https://gist.github.com/samebchase/8d37f7d961ecc981e9ab9a5d36763dd5)
 * ramix: Getting Windows Memory Usage with NativeCall
-* zaucker: [Christmas Tale About a Shitty Raku Program](https://github.com/zaucker/agrammon/blob/Advent/Advent2020/shitty-program.md) preliminary location, will merge to the Agrammon repo once reviewed
+* zaucker: [A Raku in the Wild](https://github.com/zaucker/agrammon/blob/Advent/Advent2020/raku-in-the-wild.md) preliminary location, will merge to the Agrammon repo once reviewed
