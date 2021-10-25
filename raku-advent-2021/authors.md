@@ -12,4 +12,5 @@ gmail dot com or jjmerelo in Telegram. It will be used mainly for
 reminders.
 
 * JJ: 3 levels of meta
+* Elizabeth Mattijsen: making a historical resource work for you!
 * <!-- add yours -->
