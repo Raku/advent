@@ -14,4 +14,5 @@ reminders.
 * JJ: 3 levels of meta
 * Elizabeth Mattijsen: making a historical resource work for you!
 * Elizabeth Mattijsen: saving the past to save the future
-* <!-- add yours -->
+* Ramiro Encinas: Rotation of Log files in a nutshell
+<!-- add yours -->
