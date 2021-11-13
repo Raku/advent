@@ -15,4 +15,5 @@ reminders.
 * Elizabeth Mattijsen: making a historical resource work for you!
 * Elizabeth Mattijsen: saving the past to save the future
 * Ramiro Encinas: Rotation of Log files in a nutshell
+* Brian Duggan: "batteries included: better image thumbnail generation"
 <!-- add yours -->
