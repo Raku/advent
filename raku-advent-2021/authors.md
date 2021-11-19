@@ -17,5 +17,5 @@ reminders.
 * Ramiro Encinas: Rotation of Log files in a nutshell
 * Brian Duggan: "batteries included: better image thumbnail generation"
 * JJ Atria: generating and publishing coverage reports
-* tbrowder: Santa Claus is Rakuing On
+* tbrowder: Santa Claus is Rakuing Along
 <!-- add yours -->
