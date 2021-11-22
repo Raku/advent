@@ -18,4 +18,5 @@ reminders.
 * Brian Duggan: "batteries included: better image thumbnail generation"
 * JJ Atria: generating and publishing coverage reports
 * tbrowder: Santa Claus is Rakuing Along
+* pheix: A long journey to ethereum signatures
 <!-- add yours -->
