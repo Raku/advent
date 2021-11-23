@@ -19,4 +19,7 @@ reminders.
 * JJ Atria: generating and publishing coverage reports
 * tbrowder: Santa Claus is Rakuing Along
 * pheix: A long journey to ethereum signatures
+* codesections: Following the Unix philosophy without getting leftPad
+* codesections: Some thoughts on (not) handling errors 
+  - note: ^^^^ isn't related to the previous one and can run latter (it probably won't be ready by Dec. 1)
 <!-- add yours -->
