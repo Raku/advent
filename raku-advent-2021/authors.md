@@ -17,7 +17,8 @@ reminders.
 * Ramiro Encinas: Rotation of Log files in a nutshell
 * Brian Duggan: "batteries included: better image thumbnail generation"
 * JJ Atria: generating and publishing coverage reports
-* tbrowder: Santa Claus is Rakuing Along
+* tbrowder: Santa Claus is Rakuing Along [Part 1 of 2]
+* tbrowder: Santa Claus is Rakuing Along [Part 2 of 2]
 * pheix: A long journey to ethereum signatures
 * codesections: Following the Unix philosophy without getting leftPad
 * codesections: Some thoughts on (not) handling errors 
