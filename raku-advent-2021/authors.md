@@ -18,7 +18,7 @@ reminders.
 * Brian Duggan: "batteries included: better image thumbnail generation"
 * JJ Atria: generating and publishing coverage reports
 * tbrowder: Santa Claus is Rakuing Along [Part 1 of 2]
-* tbrowder: Santa Claus is Rakuing Along [Part 2 of 2]
+* tbrowder: Santa Claus is Rakuing Along [Part 2 of 2] # won't be ready til ~ 7 dec or later
 * pheix: A long journey to ethereum signatures
 * codesections: Following the Unix philosophy without getting leftPad
 * codesections: Some thoughts on (not) handling errors 
