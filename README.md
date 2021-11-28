@@ -11,7 +11,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions for
 authors.
 
 The current year's list of authors is in the file
-[raku-advent-2020/authors.md](raku-advent-2020/authors.md). Add
+[raku-advent-2020/authors.md](raku-advent-2021/authors.md). Add
 yourself to the list via [pull request](/Raku/advent/pulls), and
 contribute your article as soon as it's ready.
 
