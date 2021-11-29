@@ -25,4 +25,5 @@ Total: 11/24..25
 * codesections: Following the Unix philosophy without getting leftPad
 * codesections: Some thoughts on (not) handling errors 
   - note: ^^^^ isn't related to the previous one and can run latter (it probably won't be ready by Dec. 1)
+* vrurg: Coloring your tools(crossed) holidays
 <!-- add yours -->
