@@ -11,7 +11,7 @@ Please also send an easy and fast way to contact you at jjmerelo at
 gmail dot com or jjmerelo in Telegram. It will be used mainly for
 reminders.
 
-Total: 11/24..25
+Total: 12/24..25
 
 * JJ: 3 levels of meta
 * Elizabeth Mattijsen: making a historical resource work for you!
