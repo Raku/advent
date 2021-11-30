@@ -20,7 +20,7 @@ Total: 13/24..25
 * Ramiro Encinas: Rotation of Log files in a nutshell
 * Brian Duggan: "batteries included: better image thumbnail generation"
 * JJ Atria: generating and publishing coverage reports
-* tbrowder: Santa Claus is Rakuing Along [Part 1 - The Elven Journals] (in draft on Wordpress, ready as it'll ever be, thaks to lizmat)
+* tbrowder: Santa Claus is Rakuing Along [Part 1 - The Elven Journals] (in draft on Wordpress, ready as it'll ever be, thanks to lizmat!)
 * tbrowder: Santa Claus is Rakuing Along [Part 2 - The Santa Claus Reports] # won't be ready til ~ 10 dec or later MAYBE NEVER
 * pheix: A long journey to ethereum signatures
 * codesections: Following the Unix philosophy without getting leftPad
