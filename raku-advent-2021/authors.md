@@ -21,6 +21,7 @@ Total: 13/24..25
 * Brian Duggan: "batteries included: better image thumbnail generation"
 * JJ Atria: generating and publishing coverage reports
 * tbrowder: Santa Claus is Rakuing Along [Part 1 - The Elven Journals] (will be on Wordpress or a gist by 1200 CST today)
+* * OOPS, INADVERTENTLY PUBLISHED IT--WOE IS MOI
 * tbrowder: Santa Claus is Rakuing Along [Part 2 - The Santa Claus Reports] # won't be ready til ~ 10 dec or later
 * pheix: A long journey to ethereum signatures
 * codesections: Following the Unix philosophy without getting leftPad
