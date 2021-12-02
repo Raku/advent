@@ -28,3 +28,4 @@ Total: 13/24..25
   - note: ^^^^ isn't related to the previous one and can run latter (it probably won't be ready by Dec. 1)
 * vrurg: Coloring your tools(crossed) holidays
 <!-- add yours -->
+* tbrowder: Convert existing **mi6** CPAN modules to Zef 
