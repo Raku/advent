@@ -1,0 +1,123 @@
+## Following the Unix philosophy without getting left-pad
+
+The [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) famously holds that you should write software that "does one thing, and does it well".  There are other tenants as well, but I'm focusing on the core idea expressed in [Programming Design in the UNIX Environment](http://harmful.cat-v.org/cat-v/unix_prog_design.pdf):
+
+> Whenever one needs a way to perform a new function, one faces the choice of whether to add a new option or write a new program….  The guiding principle for making the choice should be that each program does one thing. 
+
+For instance, if you're writing a program that produces text in one format, don't _also_ have it print the text in eight alternative formats.  Instead, leave that task for a different [specialized program](https://pandoc.org/) that can process your program's output.  Or, put differently, fight against your program's inherent tendency to "attempt to expand until it can read mail" ([Zawinski's law](http://www.catb.org/jargon/html/Z/Zawinskis-Law.html)). 
+
+Of course, you don't want to follow the Unix philosophy off a cliff, and programmers have been arguing about exactly where to draw the line since well before [Rob Pike complained](http://harmful.cat-v.org/cat-v/unix_prog_design.pdf) that "cat(1) came back from Berkley waiving flags"  40 years ago.  Nevertheless, the do-one-thing-and-do-it-well approach is well worth aiming for.
+
+In the context of writing libraries, the Unix philosophy encourages the practice of writing micro-packages: small libraries, intentionally limited in scope, that serve exactly one purpose.  Some programming language communities have this as an explicit goal; for example, one of the leading Node.js developers [explicitly invoked the Unix philosophy](https://blog.izs.me/2013/04/unix-philosophy-and-nodejs/) in their advice to programmers:
+
+> Write modules that do one thing well. Write a new module rather than complicate an old one.
+
+This practice of writing micro packages contrasts sharply with the practice of writing [omnibus packages](https://jquery.com/) that attempt to provide a single, coherent API that aims to  solve any problem a developer might encounter.  And micro packages benefit from all the advantages that have made the Unix philosophy such good advice for 50 years.  Most notably, micro packages tend to be simple enough (and **small** enough) that you can personally inspect the code – and, if necessary, debug any issues that come up.
+
+### The downside of micro packages
+
+As this post's title probably gave away, the problem with overusing micro packages is that it can lead to what happened with left-pad.  Without rehashing [all the details](https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program/), there was an 11-line JavaScript package (left-pad) that did nothing other than pad each line of a string with a specified amount of whitespace.  Yet, somehow, a huge percentage of the JavaScript ecosystem depended on this simple function – either directly or more commonly indirectly.  As a result, when the developer removed the package (in a way that couldn't happen anymore for reasons not relevant here), that same fraction of the JavaScript ecosystem fell over.  I'm not sure exactly how many builds failed, but [one source](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/) estimated that over 2.4 _million_ software builds depended on left-pad every month.  So not a small number.
+
+In other wordsSo, basically, someone finally pulled out thate one domino that the entire Internet depend on:
+
+[![xkcd 2347. [A tower of blocks is shown. The upper half consists of many tiny blocks balanced on top of one another to form smaller towers, labeled:]  All modern digital infrastructure  [The blocks rest on larger blocks lower down in the image, finally on a single large block. This is balanced on top of a set of blocks on the left, and on the right, a single tiny block placed on its side. This one is labeled:]  A project some random person in Nebraska has been thanklessly maintaining since 2003.  {alt-text:} Someday ImageMagick will finally break for good and we'll have a long period of scrambling as we try to reassemble civilization from the rubble.](https://codesections.com/xkcd_2347.png)](https://xkcd.com/2347/)
+
+And while left-pad may be an extreme example, the [direct consequence of JavaScript's embrace of the Unix philosophy](https://www.chevtek.io/why-i-think-micro-packages-are-a-good-thing/) is that JavaScript programs commonly depend on huge numbers of micro packages.
+
+A [2020 study](https://i.blackhat.com/USA-20/Wednesday/us-20-Edwards-The-Devils-In-The-Dependency-Data-Driven-Software-Composition-Analysis.pdf) found that the typical JavaScript program depends on 377 packages (here, "typical" means "at the geometric mean", which reduces the impact of outliers).  And a full 10% depend on over 1,400 third-party libraries.  Many of these dependencies are admirably tiny: one of the most depended-on packages (used by 86% of JavaScript packages – literally tens of millions of developers is [essentially just one line of code](https://github.com/juliangruber/isarray/blob/master/index.js).   It's hard to take "do just one thing" to any greater extreme.
+
+And yet.
+
+And yet, I don't believe that any developer can reasonably comprehend a system made up of hundreds (thousands?) of independent packages.  It's not just a matter of the total lines of code climbing to incomprehensible levels (though that [famously happens](https://devhumor.com/media/node-modules-1) and certainly doesn't help).  But even if the total lines of code were manageable, the interaction effects simply aren't – remember, these packages weren't designed to form a coherent whole, so they can and will make inconsistent assumptions or create inconsistent effects.
+
+The many different problems that can arise from this abundance of micro packages leads some people to conclude that you should [kill your dependencies](https://www.mikeperham.com/2016/02/09/kill-your-dependencies/).  Or, as Joel Spolsky [put it](https://www.joelonsoftware.com/2001/10/14/in-defense-of-not-invented-here-syndrome/)
+
+> “Find the dependencies — and eliminate them.” When you’re working on a really, really good team with great programmers, everybody else’s code, frankly, is bug-infested garbage, and nobody else knows how to ship on time. When you’re a cordon bleu chef and you need fresh lavender, you grow it yourself instead of buying it in the farmers’ market, because sometimes they don’t have fresh lavender or they have old lavender which they pass off as fresh.
+> … 
+> This principle, unfortunately, seems to be directly in conflict with the ideal of “code reuse good — reinventing wheel bad.”
+
+### A wild dilemma appears
+
+At this point, I hope the tension is pretty clear: on the one hand, it's great to keep components small, simple, and composable.  On the other hand, it's terrible to bury yourself in a tangle of different packages, no matter how tiny they are.  The Unix philosophy and killing your dependencies pull in opposite directions.
+
+Of course, this is hardly a new insight.  It's a point many people have made over the years; I particularly enjoyed how Rust-evangelist extraordinaire Steve Klabnik put it a couple of years ago:
+
+[![tweet by Steve Klabnik with the text "developers are like 'The UNIX philosophy, the pinnacle of software dev: Make each program to one thing well.'  'lol your project has tons of tiny dependencies? leftpad lolol'" and an image of the Daily Struggle meme (https://knowyourmeme.com/memes/daily-struggle)](https://codesections.com/steveklabnik-tweet-re-unix-vs-leftpad.png)](https://twitter.com/steveklabnik/status/1100978262875037701)
+
+But I want to do more than note the tension: I want to provide a solution (or at least an outline of what I view the solution to be).  Before I do so, however, I need to mention a few non-solutions that I reject.
+
+First, I don't think that we should resolve this dilemma by fully choosing one side or the other.  Like [Russ Cox](https://queue.acm.org/detail.cfm?id=3344149), I acknowledge that installing a dependency entails allowing your "program's execution [to] literally depend[] on code downloaded from [some] stranger on the Internet"; I don't believe that doing so thousands of times will ever be a recipe for crafting robust software.  As much wisdom as there is in the Unix philosophy, it simply won't do to accept it 100% and embrace the micro-package dystopia.
+
+At the same time, I also cannot fully embrace the "kill your dependencies" extreme.  While it would be appealing to live in an ideal world where, like [one developer I admire](https://drewdevault.com/2020/02/06/Dependencies-and-maintainers.html), "I [could] list the entire dependency graph, including transitive dependencies, off of the top of my head", I don't believe that's a tenable solution.  For one thing, the code reuse and code sharing that micro packages enable is a huge part of what gives open source and free software developers superpowers: If a project can only be done by a team of dozens, it will almost certainly be built by a for-profit company.  But if relying on existing packages lets one or two hackers, working alone, create that software – well, then, there's an excellent chance that we'll have a free software version of the program.  (Remember, mega-projects like Linux are very much the exception, not the rule – the median number of maintainers for free software projects is 1, as I've [discussed at length](https://archive.fosdem.org/2021/schedule/event/programming_lang_for_free_software/) elsewhere.)
+
+Even setting aside the practical benefits of code reuse, I _still_ wouldn't agree that we should jettison micro packages.  The inconvenient reality is that the Unix philosophy is just plain correct: for any given volume of code/features, it'll be easier to reason about the system if it's composed of many small, independent modules instead of being one massive blob.  Killing our dependencies and replacing that code with our own implementation would, in many cases, just make a bad situation worse.  So I reject the idea that we can "solve" this problem by picking one extreme or the other.
+
+But I also view a naive compromise between the extremes to be a non-solution. Both extremes have real problems, but that doesn't provide any guarantee that splitting the baby will be any better.  Indeed, there's a real risk that it'll be worse: if you take a program that depends on 500 micro packages and re-architect it to instead depend on 200 larger packages, then you **still** have far too many packages to manually review and maintain.  But now you are _also_ dealing with packages that are each harder to understand when you do need to start debugging.  [Nice job breaking it, hero](https://tvtropes.org/pmwiki/pmwiki.php/Main/NiceJobBreakingItHero).
+
+### A less naive compromise
+
+Having just rejected both extremes and a simple compromise, it's clearly on me to come up with a better way to strike this balance.  What we need is a way to limit the _number_ of dependencies for any given software project without leading to a corresponding increase in the _average size_ of each dependency.  I have some ideas about how we can do so at the programming language level.  (I'm going to discuss this in the context of my programming language of choice, [Raku](https://docs.raku.org), but I believe these prescriptions to be more broadly relevant.)
+
+I believe that a programming language/community can balance the Unix philosophy and dependency minimization by following three steps.  In order from most to least fundamental, the programming language should:
+* maximize the language's expressiveness;
+* have a great standard library; and
+* embrace a utility package (or a few utility packages).
+
+I'll discuss each of these in turn and then conclude with a few thoughts about more individual actions we can all take to protect our own code.
+
+#### Maximize expressiveness
+
+At first blush, "language expressiveness" may seem like an odd place to start.  If the goal is to write libraries that "do just one thing", then it seems like the number of words that it takes to implement that "one thing" shouldn't really matter.
+
+But what this ignores is that "one thing" is not well defined.  Consider the output from the `ls` command.
+
+![colorized output from `ls` printed in three columns](https://codesections.com/ls-out.png)
+
+Pretty much every Unix-based OS currently takes the view that `ls` is best thought of as "one thing".  But in that original [Unix Environment](http://harmful.cat-v.org/cat-v/unix_prog_design.pdf) paper, Pike and Kernighan argued that it is really two things: (1) listing the files and (2) formatting the output into columns.  But I could see an argument for adding a third (colorizing the output) or even a fourth (determining whether the program is being run interactively or in a script).
+
+My point isn't that `ls` is "really" four things instead of one – it's that there isn't a single correct way to divide `ls` into packages that do only one thing each.  Any division will inherently leave room for at least a bit of subjective judgment.
+
+Moreover, that's exactly what we should want: when we say "a library should do only one thing", that's a convenient shorthand but doesn't need to be taken 100% literally.  (Even Pike and Kernighan agree that it's _sometimes_ correct to add options to an existing program.)  And when deciding what level of functionality to consider as "one thing", we should 
+(and inevitably do) consider factors such as code complexity and code length; a library that takes only 30 lines likely strikes many developers as accomplishing "one thing" in a way that the same functionality in a 3,000 line library might not.
+
+This is especially true because one of the main reasons we want to follow the Unix philosophy is to write bug-free code – and as [studies](https://steve-yegge.blogspot.com/2007/12/codes-worst-enemy.html) [have shown](https://www.mayerdan.com/ruby/2012/11/11/bugs-per-line-of-code-ratio) [over](https://blog.codinghorror.com/diseconomies-of-scale-and-lines-of-code/)  and [over again](https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670), longer code gives bugs more places to hide.  This means that a library with only a few lines is much more likely to be correct – and thus can be said to better follow the Unix philosophy of doing just one thing.
+
+As a result, the language's overall support for writing concise, expressive code matters quite a bit.  Highly expressive languages are less likely to need deep dependency graphs to keep each package to a Unix-philosophy-compliant size; packages can be "micro" in size (and complexity) without being "micro" in power.   Fortunately for those of us writing Raku, it's one of the [most expressive languages](https://www.codesections.com/blog/raku-manifesto/), so we're off to a strong start.
+### Great standard library
+
+Next (and more obviously) you can avoid an abundance of left-pad-like micro packages by using a language with a great standard library.  Standard libraries have an obvious direct impact: when a function is built into the standard library, no one needs to rely on a package that provides that function.  As a concrete example: no one would ever write a `left-pad` package in Raku because the standard library already has [sprintf](https://docs.raku.org/routine/sprintf) and `'%5s'.sprintf($str)` already does the job of `left-pad($str, 5)`.
+
+The direct effects of the standard library are fairly limited – each standard library function can only _directly_ replace a single micro package.  Fortunately, a great standard library can have a much larger indirect effect.   If a standard library has many small, composable functions that can be put together in different ways, then a vast majority of "micro packages" can be trivially replaced with a simple call to two or three standard library functions – which means that those micro packages never get written in the first place.  Again, this is an area where Rakoons are in luck, since we benefit from exactly that sort of composable standard library (which was the topic of my [2021 Raku Conf talk](https://conf.raku.org/talk/149)).
+
+One note on the subject of standard libraries: It's very helpful for a language to have a great standard library, but that doesn't mean it needs a _huge_ one.  It certainly doesn't need a "batteries included" standard library – after all, when a standard library includes too many batteries, they [tend to leak battery acid](https://pyfound.blogspot.com/2019/05/amber-brown-batteries-included-but.html?m=1) or at least [need replacing](https://www.python.org/dev/peps/pep-0594/).  The difference between a "great" standard library and a "batteries included" one is that a great standard library includes all the composable functions you need to avoid left-pad-like micro packages, whereas a batteries-included standard library attempts to include non-micro packages (e.g., a web server) in the core standard library.
+
+
+### Utility package(s)
+
+The final way for a language to reduce the size of dependency trees without giving up on the Unix philosophy is to collectively agree on a utility package that replaces numerous micro packages.  I've listed this after "an expressive language" and "a great standard library" both because it's a less ideal solution and because it can build on the foundations provided by the language and standard library.
+
+For example, despite the somewhat harsh words I had for JavaScript earlier in this post, JS has some _excellent_ utility packages.  The current market leader, [lowdash](https://lodash.com/), is a direct or indirect dependency of nearly [9 out of 10 JS packages](https://i.blackhat.com/USA-20/Wednesday/us-20-Edwards-The-Devils-In-The-Dependency-Data-Driven-Software-Composition-Analysis.pdf) and does a very good job of aggregating many common functions that might otherwise be micro packages.  As large as the dependency trees are in JavaScript-land, they'd doubtless be even larger without lowdash, [underscore](https://underscorejs.org/), and similar utility packages.
+
+Lowdash is, however, hamstrung a bit by JavaScript having a standard library that is (for various [historical and standards-related reasons](https://www.infoworld.com/article/3048833/brendan-eich-javascript-standard-library-will-stay-small.html)) somewhere between "small" and "non-existent".  This makes the job of a JavaScript utility library harder in two ways: first, it needs to devote a good chunk of its code just to implementing functions that would have been in  deeper standard library to begin with (or that would have been trivially derivable from standard library functions).  And second, because a JavaScript utility library cannot itself use functions missing from JavaScript's standard library, it's limited in what it can concisely express.  Despite these limitations, lowdash enrichs the JavaScript ecosystem and helps to contain the explosion of micro packages.
+
+Or does it?  I can already hear some of you objecting that lowdash is just [a collection of independent files](https://github.com/lodash/lodash).  You might reasonably ask whether replacing two dozen micro packages with one package consisting of two dozen files really provides much benefit.  While that is a reasonable question, it also has a reasonable answer.
+
+This sort of consolidation provides at least three benefits:  First, part of the complexity from micro-package multiplicity arises from packages that approach the same basic problem from inconsistent (or just confusingly different) directions.  This could be anything from wanting to be called with arguments in a different order to providing data that's in the wrong shape for another package.  In either case, the cause is the same: because each micro package was developed independently, there's no reason for either package to fit with the other.  In contrast, with a utility package there's a guarantee that each function within the package has been designed with the goal of fitting with the other utility functions any misfit represents a bug in the package.  And even though other packages don't have any _obligation_ to fit with the utility package, there's a much greater chance that they will choose to do so (assuming that, as in lowdash's case, the package genuinely is widely used) than there is that two random micro packages will be designed to work well together.
+
+The second advantage of consolidating micro packages into a utility package is that it avoids one of the big threats of micro packages: [zombie dependencies](https://dlorenc.medium.com/zombie-dependencies-77c34740a7a8).  The problem is that, because a micro package is (by definition) pretty small, it's possible for the package maintainer to disappear without the users noticing, at least for a while.  But that results in a zombie package, shambling along without anyone to fix any bugs that do come up, or to even merge any bug fixes others may submit.  In the worst case, this can result in a package being left with known security vulnerabilities or even [being turned over to a malicious actor](https://snyk.io/blog/a-post-mortem-of-the-malicious-event-stream-backdoor/).  By consolidating micro packages into a utility package, you avoid this risk.  (Of course, you trade it for the risk that _all_ of the maintainers of the utility package could disappear at the same time.  But for a major package like lowdash, that's both much less likely to happen and much more likely to be something you'd hear about if it did happen.) 
+
+Finally, consolidating micro packages provides a third benefit that's cultural rather than technical – but perhaps all the more important for that reason.  By keeping the total number of dependencies low, utility packages make the act of adding new dependencies more psychologically meaningful.  If  codebase currently depends on two modules then most developers will put at least a bit of thought into whether  should add  third dependency.  But if  codebase already has a dozen dependencies, making that a baker's dozen is much more likely to feel like a rounding 
+error.  I'm not against people adding dependencies, but I am against them doing so thoughtlessly – so I like the idea of a utility package keeping total dependency count low enough that we'll all think a bit more about each dependency we add.
+
+Given these advantages, I think consolidating functionality into utility packages is a very good thing, and I think the JavaScript ecosystem is better off for the existence of packages like lowdash.  And I'm sad to say that the Raku ecosystem doesn't have anything quite like that.
+
+… or at least it doesn't **today**.  But check back **tomorrow**, for part 2 of this post, where I'll be announcing a new utility package for Raku (!).
+
+### Conclusion
+
+Both the Unix philosophy ("do one thing and do it well") and the idea of killing your dependencies have merit – but they pull in opposite directions.  They're not 100% incompatible, but at the language level, it takes a great deal of thought to grow an ecosystem where libraries tend to follow the Unix philosophy without devolving into left-pad-like micro-package multiplicity.  Three good ways to do so (again at the language level) are to prioritize language expressiveness; to have a great and composable standard library; and to embrace a utility package.  Of these three, Raku currently does very well on the first two but is missing the third, at least today.
+
+Of course, much of the job of balancing the Unix philosophy with the avoidance of left-pad cannot be handled at the collective level of the language or ecosystem – it needs to be handled at the individual level.  In the code trenches, it's always up to the author of each program to decide whether any particular dependency is worth adding or is better to rewrite (thought heuristics like the ones in [Surviving Software Dependencies](https://queue.acm.org/detail.cfm?id=3344149) may help).  But with a bit of care at the language level, Raku can help make correctly striking this balance just a bit easier and, more importantly, just a bit more of the community norm. 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE3MTUyNzMyMDldfQ==
+-->
