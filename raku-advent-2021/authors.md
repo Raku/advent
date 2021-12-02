@@ -11,7 +11,7 @@ Please also send an easy and fast way to contact you at jjmerelo at
 gmail dot com or jjmerelo in Telegram. It will be used mainly for
 reminders.
 
-Total: 13/24..25
+Total: 15/24..25
 
 * JJ: 3 levels of meta
 * Elizabeth Mattijsen: making a historical resource work for you!
@@ -24,8 +24,10 @@ Total: 13/24..25
 * tbrowder: Santa Claus is Rakuing Along [Part 2 - The Santa Claus Reports] # won't be ready til ~ 10 dec
 * pheix: A long journey to ethereum signatures
 * codesections: Following the Unix philosophy without getting leftPad
+* codesections: Following the Unix philosophy without getting leftPad. part 2
 * codesections: Some thoughts on (not) handling errors 
   - note: ^^^^ isn't related to the previous one and can run latter (it probably won't be ready by Dec. 1)
 * vrurg: Coloring your tools(crossed) holidays
-<!-- add yours -->
+
 * tbrowder: Convert existing **mi6** CPAN modules to Zef 
+<!-- add yours -->
