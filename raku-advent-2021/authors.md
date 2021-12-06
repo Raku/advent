@@ -30,4 +30,5 @@ Total: 15/24..25
   - note: ^^^^ isn't related to the previous one and can run latter (it probably won't be ready by Dec. 1)
 * vrurg: Coloring your tools(crossed) holidays
 * Altai-man: (something about Comma)
+* atroxaper (Mikhail Khorkov): "Java Annotations in Raku" (https://gist.github.com/atroxaper/55622cd708793d88d82e2d8f7e4bb927)
 <!-- add yours -->
