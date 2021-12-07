@@ -20,8 +20,8 @@ Total: 15/24..25
 * Ramiro Encinas: Rotation of Log files in a nutshell
 * Brian Duggan: "batteries included: better image thumbnail generation"
 * JJ Atria: generating and publishing coverage reports
-* tbrowder: Santa Claus is Rakuing Along [Part 1 - The Elven Journals] (in draft on Wordpress, ready as it'll ever be, thanks to lizmat!)
-* tbrowder: Santa Claus is Rakuing Along [Part 2 - Santa Moves from CPAN to Zef with App::Mi6] will be ready tomorrow (7 dec) in draft on WP by 1500 CST
+* tbrowder: Santa Claus is Rakuing Along [Part 1 - The Elven Journals] published as Day 5
+* tbrowder: Santa Claus is Rakuing Along [Part 2 - Santa Moves from CPAN to Zef with App::Mi6] now in draft on WP
 * tbrowder: Santa Claus is Rakuing Along [Part 3 - The Santa Claus Reports] # won't be ready til ~ 15dec
 * pheix: A long journey to ethereum signatures
 * codesections: Following the Unix philosophy without getting leftPad
