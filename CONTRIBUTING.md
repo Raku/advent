@@ -21,7 +21,7 @@ See current and previous Advent article entries
    tools here (see para 2 for an important note before using one of
    these tools):
 
-   * Raku module Acme::Advent::Highlighter [may get errors]
+   * Raku module Acme::Advent::Highlighter
 
    * [tools/p6advent-md2html.p6](tools/p6advent-md2html.p6) Execute it
      without an argument to see instructions.
