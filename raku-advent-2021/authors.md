@@ -32,4 +32,5 @@ Total: 18/24..25 (entries numbered for ease of tracking, not in order of publica
 16. Altai-man: (something about Comma)
 17. atroxaper (Mikhail Khorkov): "Java Annotations in Raku" (please, review in the repo)
 18. polettix: practice on Advent of Code
+19. jnthn: What's new in Cro during 2021
 <!-- add yours -->
