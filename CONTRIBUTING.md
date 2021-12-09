@@ -18,21 +18,24 @@ See current and previous Advent article entries
    inside html text content)**.
 
    * An easier way is to write the article in Raku Pod, then transform
-     it to Markdown by executing:
-
-~~~
-     $ raku --doc=Markdown my-article.pod > my-article.md
-~~~ 
-
+     it to Markdown by using Raku's built-in converter.
      A great advantage of this method is multiple lines in
      paragraphs are collapsed into single lines automatically.
 
+     ~~~
+     $ raku --doc=Markdown my-article.pod > my-article.md
+     ~~~ 
+
 3. Convert the file to Wordpress html format using one of the two
    tools here (see para 2 for an important note before using one of
-   these tools):
+   these tools). The first method is currently the easiest
+   to use and gives much better results.
 
    * Raku module **Acme::Advent::Highlighter** See intructions at its
      repository [here](https://github.com/raku-community-modules/Acme-Advent-Highlighter).
+     Note the html output has two embedded html comments telling the
+     user where to delete lines before inserting the remainder into
+     Wordpress.
 
    * [tools/raku-advent-md2html.raku](tools/raku-advent-md2html.raku) Execute it
      without an argument to see instructions.
