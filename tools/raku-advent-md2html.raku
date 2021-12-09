@@ -1,11 +1,11 @@
-#!/usr/bin/env perl6
+#!/usr/bin/env raku
 use v6;
 use LWP::Simple;
 
 # from the original script from Zoffix, November 2017
 
-#| Converts a github gist to Advent calender format
-#| Works best when the text paragraphs are one line,
+#| Converts a github gist to Advent calender format.
+#| Works best when the text paragraphs are one line.
 multi sub MAIN(
     Str $gist-url,          #= URL of gist to download and modifiy
     Str $out='advent.html'  #= Filename to write output to (defaults to "advent.html")
