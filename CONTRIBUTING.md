@@ -33,5 +33,5 @@ See current and previous Advent article entries
    will schedule its live publication at the proper time.
 
 **For detailed *Wordpress* instructions see
-  [this](https://codex.wordpress.org/Posts#Best_Practices_For_Posting)
+  [this](https://wordpress.org/support/article/writing-posts)
   article.**
