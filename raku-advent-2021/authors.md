@@ -34,5 +34,5 @@ Total: 18/24..25 (entries numbered for ease of tracking, not in order of publica
 18. polettix: practice on Advent of Code
 19. jnthn: What's new in Cro during 2021
 20. Arne Sommer: Reindeer Express
-21. p6steve: Santa and the Magic Tree (M-Tree)
+21. p6steve: Santa and the Magic Tree (M-Tree)   [https://wordpress.com/post/raku-advent.blog/1684]
 <!-- add yours -->
