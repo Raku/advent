@@ -22,7 +22,7 @@ Total: 18/24..25 (entries numbered for ease of tracking, not in order of publica
 7. JJ Atria: generating and publishing coverage reports
 8. tbrowder: Santa Claus is Rakuing Along [Part 1 - The Elven Journals] published as Day 5
 9. tbrowder: Santa Claus is Rakuing Along [Part 2 - Santa Moves from CPAN to Zef with App::Mi6] now in draft on WP
-10. tbrowder: Santa Claus is Rakuing Along [Part 3 - The Santa Claus Reports] # won't be ready til ~ 15dec
+10. tbrowder: Santa Claus is Rakuing Along [Part 3 - The Santa Claus Reports] # won't be ready til ~ ?
 11. pheix: A long journey to ethereum signatures
 12. codesections: Following the Unix philosophy without getting leftPad
 13. codesections: Following the Unix philosophy without getting leftPad. part 2
