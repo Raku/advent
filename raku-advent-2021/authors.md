@@ -26,8 +26,7 @@ Total: 18/24..25 (entries numbered for ease of tracking, not in order of publica
 11. pheix: A long journey to ethereum signatures
 12. codesections: Following the Unix philosophy without getting leftPad
 13. codesections: Following the Unix philosophy without getting leftPad. part 2
-14. codesections: Some thoughts on (not) handling errors
-    - note: ^^^^ isn't related to the previous one and can run latter (it probably won't be ready by Dec. 1)
+14. codesections: [Withdrawn]
 15. vrurg: Coloring your tools(crossed) holidays
 16. Altai-man: (something about Comma)
 17. atroxaper (Mikhail Khorkov): "Java Annotations in Raku" (please, review in the repo)
