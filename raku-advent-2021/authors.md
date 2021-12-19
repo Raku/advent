@@ -1,6 +1,6 @@
 # Raku Advent Calendar 2021 authors and articles.
 
-Please add your name (IRC #raku nickname preferred) and topic or
+Please add your name (IRC #raku nickname preferred) and topic orl
 topics (if you want to write more than one article). Your article will
 need to be ready and posted as a draft in this repository, in a gist or in the Raku Advent
 Calendar site if you already have permissions, by December 1st 2021,
@@ -22,7 +22,7 @@ Total: 18/24..25 (entries numbered for ease of tracking, not in order of publica
 7. JJ Atria: generating and publishing coverage reports
 8. tbrowder: Santa Claus is Rakuing Along [Part 1 - The Elven Journals] published as Day 5
 9. tbrowder: Santa Claus is Rakuing Along [Part 2 - Santa Moves from CPAN to Zef with App::Mi6] now in draft on WP
-10. tbrowder: Santa Claus is Rakuing Along [Part 3 - Santa Takes a Breath] # won't be ready til ~ ?
+10. tbrowder: Santa Claus is Rakuing Along [Part 3 - Santa Takes a Break] # won't be ready til ~ ?
 11. pheix: A long journey to ethereum signatures
 12. codesections: Following the Unix philosophy without getting leftPad
 13. codesections: Following the Unix philosophy without getting leftPad. part 2
