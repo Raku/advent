@@ -35,3 +35,4 @@ Total: 18/24..25 (entries numbered for ease of tracking, not in order of publica
 20. Arne Sommer: Reindeer Express
 21. p6steve: Santa and the Magic Tree (M-Tree)   [https://wordpress.com/post/raku-advent.blog/1684]
 <!-- add yours -->
+22. tbrowder: Santa Claus is Rakuing Along [Part 4 - The Santa Report] now in draft on WP (but not really finished yet!)
