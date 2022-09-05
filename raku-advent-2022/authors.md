@@ -1,6 +1,6 @@
 # Raku Advent Calendar 2022 authors and articles.
 
-Please add your name (IRC #raku nickname preferred) and topic orl
+Please add your name (IRC #raku nickname preferred) and topic or
 topics (if you want to write more than one article).
 
 Your article will
