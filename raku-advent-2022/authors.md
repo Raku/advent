@@ -8,7 +8,7 @@ need to be **ready and posted** as a draft in this repository, in a gist or in t
 Calendar](https://raku-advent.blog) site if you already have permissions, by **December 1st 2022**,
 and it will be scheduled the most convenient day by the calendar
 editors.
-f
+
 Please also send an easy and fast way to contact you at jjmerelo at
 gmail dot com or jjmerelo in Telegram. It will be used mainly for
 reminders.
