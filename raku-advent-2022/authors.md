@@ -14,5 +14,6 @@ gmail dot com or jjmerelo in Telegram. It will be used mainly for
 reminders.
 
 1. JJ: 3 levels of meta
+2. tbrowder: Scissors, Paper, Raku
 <!-- add yours -->
 
