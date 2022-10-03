@@ -16,5 +16,5 @@ reminders.
 1. JJ: 3 levels of meta
 2. tbrowder: Scissors, Paper, Raku
 3. lizmat: Rak on!
-<!-- add yours -->
+<!-- add your presentation here -->
 
