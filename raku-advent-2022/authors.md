@@ -18,4 +18,5 @@ reminders.
 3. lizmat: Rak on!
 <!-- add your presentation here -->
 4. nige: O(flow)
+5. melezhik: SparrowCI pipelines for everything 
 
