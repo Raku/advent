@@ -19,4 +19,5 @@ reminders.
 <!-- add your presentation here -->
 4. nige: O(flow)
 5. melezhik: SparrowCI pipelines for everything 
+6. wimvanderbauwhede: immutable datastructures and reduction
 
