@@ -20,4 +20,5 @@ reminders.
 4. nige: O(flow)
 5. melezhik: SparrowCI pipelines for everything 
 6. wimvanderbauwhede: immutable datastructures and reduction
+7. massa: “`.hyper` and `Cro`” or “How (not) to pound your production server (and bring on the wrath of the ops)”
 
