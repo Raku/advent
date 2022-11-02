@@ -14,7 +14,7 @@ gmail dot com or jjmerelo in Telegram. It will be used mainly for
 reminders.
 
 1. JJ: 3 levels of meta
-2. tbrowder: Scissors, Paper, Raku
+2. tbrowder: Santa and the Powerful Pod Genie
 3. lizmat: Rak on!
 <!-- add your presentation here -->
 4. nige: O(flow)
