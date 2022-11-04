@@ -21,4 +21,4 @@ reminders.
 5. melezhik: SparrowCI pipelines for everything 
 6. wimvanderbauwhede: immutable datastructures and reduction
 7. massa: “`.hyper` and `Cro`” or “How (not) to pound your production server (and bring on the wrath of the ops)”
-
+8. pheix: `Trove` testing suite — yet another TAP harness
