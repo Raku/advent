@@ -22,4 +22,4 @@ reminders.
 6. wimvanderbauwhede: immutable datastructures and reduction
 7. massa: “`.hyper` and `Cro`” or “How (not) to pound your production server (and bring on the wrath of the ops)”
 8. pheix: `Trove` testing suite — yet another TAP harness
-9. jnthn: AA recipe for database migrations and testing in Raku
+9. jnthn: A recipe for database migrations and testing in Raku
