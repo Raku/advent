@@ -23,3 +23,4 @@ reminders.
 7. massa: “`.hyper` and `Cro`” or “How (not) to pound your production server (and bring on the wrath of the ops)”
 8. pheix: `Trove` testing suite — yet another TAP harness
 9. jnthn: A recipe for database migrations and testing in Raku
+10. guifa: He's making a list(maker), he's making it twice.
