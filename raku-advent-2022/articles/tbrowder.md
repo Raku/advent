@@ -14,7 +14,7 @@ Side note: Conversion between various digital document formats has been a fruitf
 
   * HTML
 
-Other non-Raku converters include [https://pandoc.org](Pandoc) and [https://sphinx-doc.org](Sphinx) which strive to be *universal* converters with varying degrees of fidelity depending upon the input or output formats chosen.
+Other non-Raku converters include [Pandoc](https://pandoc.org) and [Sphinx](https://sphinx-doc.org) which strive to be *universal* converters with varying degrees of fidelity depending upon the input or output formats chosen.
 
 But back to the immediate situation: getting Markdown transformed to PDF.
 
@@ -62,7 +62,7 @@ TO BE ADDED
 
 Finally, a prettier version of PDF is produced. More features could be added with more detailed, but more complex, processing with other `PDF::*` modules, but that project is for another day--Santa's archivist Elves are happy for now!
 
-And the product is a present from Santa to all the Raku-using folks around the world: the two-part article from Tony O'Dell (AKA @tony-o) for creating an Apache website with Jonathon's Raku `Cro` libraries! (See the original posts at [https://deathbykeystroke.com/articles/20220224-building-a-cro-app-part-1.html](Part1) and [https://deathbykeystroke.com/articles/20220923-building-a-cro-app-part-b.html](Part2).)
+And the product is a present from Santa to all the Raku-using folks around the world: the two-part article from Tony O'Dell (AKA @tony-o) for creating an Apache website with Jonathon's Raku `Cro` libraries! (See the original posts at [Part1](https://deathbykeystroke.com/articles/20220224-building-a-cro-app-part-1.html) and [Part2](https://deathbykeystroke.com/articles/20220923-building-a-cro-app-part-b.html).)
 
 Santa's Epilogue
 ----------------
