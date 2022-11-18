@@ -17,7 +17,6 @@ service and share results with others.
 
 Let's create some new year gift module and then build it:
 
-
 ```bash
 mkdir SparrowBird
 cd SparrowBird
@@ -31,7 +30,7 @@ cat << HERE > META6.json
   "license" : "Artistic-2.0",
   "name" : "Sparrow Bird",
   "provides" : {
-    "Teddy::Bear" : "lib/Sparrow/Bird.pm6"
+    "Sparrow::Bird" : "lib/Sparrow/Bird.rakumod"
   },
   "version" : "0.0.1"
 }
@@ -58,7 +57,7 @@ tasks:
     code: |
       set -e
       cd source/
-      zef test .
+      zef install .
 HERE
 ```
 
@@ -84,13 +83,13 @@ Go to "my repos", then a repository you want to build - https://github.com/melez
 Now it's time to see the very first new gift wrapped in a holiday paper, 
 please allow SparrowCI a minute do his job, as he is being very busy wrapping up other holiday gifts.
 
-Finally, we will see something like this:
+Finally, we will [see](https://ci.sparrowhub.io/report/1849) something like this:
 
 ![report](https://raw.githubusercontent.com/melezhik/advent/master/images/sparrowci/report.jpeg)
 
 # That is it?
 
-Well, this is a small new year story not pretending to be a boring too technical stuff. 
-But as the title say - SparrowCI pipelines for _everything_,  not just for building Raku modules ...
+Well, this is a small new year story not pretending to be a boring technical stuff. But as the title say - SparrowCI pipelines for _everything_, 
+not just for building Raku modules ...
 
-So, checkout https://ci.sparrowhub.io to see all fun SparrowCI features and happy holidays!
+Checkout https://ci.sparrowhub.io to see all fun SparrowCI features and happy holidays!
