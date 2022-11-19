@@ -1,6 +1,6 @@
 # SparrowCI pipelines for everything
 
-New year is a fun time when the whole family gets together by dinner table and eat holiday dinner.
+New year is a fun time when the whole family gets together by a table and eat holiday dinner.
 
 Let me introduce some fun and young member of a Raku family - a guy named SparrowCI - super flexible and fun to use CI service.
 
