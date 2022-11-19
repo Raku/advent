@@ -92,4 +92,4 @@ Finally, we will [see](https://ci.sparrowhub.io/report/1849) something like this
 Well, this is a small new year story not pretending to be a boring technical stuff. But as the title says - SparrowCI pipelines for _everything_, 
 not just for building Raku modules ...
 
-This, check out https://ci.sparrowhub.io to see all fun SparrowCI features and happy holidays!
+Thus, check out https://ci.sparrowhub.io to see all fun SparrowCI features and happy holidays!
