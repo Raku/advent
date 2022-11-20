@@ -1,4 +1,5 @@
-# Santa and the Rakupod Wranglers
+Santa and the Rakupod Wranglers
+===============================
 
 Santa's world was increasingly going high-tech, and his IT department was polishing off its new process that could take the millions of letters received from boys and girls around the world, scan them into digital form with state-of-the-art optical character recognition hardware, and produce outputs that could greatly streamline the Santa Corporation's production for Christmas delivery.
 
@@ -75,3 +76,4 @@ Footnotes
 ---------
 
 1. *A Christmas Carol*, a short story by Charles Dickens (1812-1870), a well-known and popular Victorian author whose many works include *The Pickwick Papers*, *Oliver Twist*, *David Copperfield*, *Bleak House*, *Great Expectations*, and *A Tale of Two Cities*.
+
