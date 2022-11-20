@@ -15,8 +15,7 @@ reminders.
 
 1. JJ: 3 levels of meta
 2. tbrowder: Santa and the Rakupod Wranglers
-3. lizmat: Rak on!
-<!-- add your presentation here -->
+3. lizmat: Migrations are on!
 4. nige: O(flow)
 5. melezhik: SparrowCI pipelines for everything 
 6. wimvanderbauwhede: immutable datastructures and reduction
@@ -24,3 +23,5 @@ reminders.
 8. pheix: `Trove` testing suite — yet another TAP harness
 9. jnthn: A recipe for database migrations and testing in Raku
 10. guifa: He's making a list(maker), he's making it twice.
+11. lizmat: Rak on!
+<!-- add your presentation here -->
