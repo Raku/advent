@@ -87,7 +87,7 @@ Finally, we will [see](https://ci.sparrowhub.io/report/1849) something like this
 
 ![report](https://raw.githubusercontent.com/melezhik/advent/master/images/sparrowci/report.jpeg)
 
-Hurrah! Or gift packed and ready to be sent by Santa.
+Hurrah! Our gift packed and ready to be sent by Santa.
 
 # That is it?
 
