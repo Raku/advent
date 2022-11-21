@@ -4,7 +4,7 @@ New year is a fun time when the whole family gets together by a table and eat ho
 
 Let me introduce some fun and young member of a Raku family - a guy named SparrowCI - super flexible and fun to use CI service.
 
-To find SparrowCI lad - go to https://ci.sparrowhub.io web site and get a login using your GitHub credentials:
+To find SparrowCI lad - go to https://ci.sparrowhub.io web site and get your login using GitHub credentials:
 
 ![login](https://raw.githubusercontent.com/melezhik/advent/master/images/sparrowci/login.jpeg)
 
@@ -61,7 +61,7 @@ tasks:
 HERE
 ```
 
-And finally let's commit everything (aka send to Santa):
+And finally let's commit everything to some git repo (aka send to Santa):
 
 ```bash
 git add .
@@ -72,24 +72,28 @@ git branch -M main
 git push -u origin main
 ```
 
-Once the module in the GitHub land (aka Lapland), let's register it in SparrowCI:
+Once our module in the GitHub land (aka Lapland), let's register it in SparrowCI:
 
-Go to "my repos", then a repository you want to build - https://github.com/melezhik/sparrow-bird :
+Go to "my repos", then add the repository you want to build - https://github.com/melezhik/sparrow-bird :
 
 ![add repo](https://raw.githubusercontent.com/melezhik/advent/master/images/sparrowci/add-repo.png)
 
 # The Gift packaged 
 
-Now it's time to see the very first new gift wrapped in a holiday paper, 
-please allow SparrowCI a minute do his job, as he is being very busy wrapping up other holiday gifts.
+Now it's time to see the very first new year gift wrapped in a holiday paper, 
+please allow SparrowCI a minute do his job, as he is being very busy wrapping up other gifts.
 
 Finally, we will [see](https://ci.sparrowhub.io/report/1849) something like this:
 
 ![report](https://raw.githubusercontent.com/melezhik/advent/master/images/sparrowci/report.jpeg)
 
+Hurrah! Or gift packed and ready to be sent by Santa.
+
 # That is it?
 
-Well, this is a small new year story not pretending to be a boring technical stuff. But as the title says - SparrowCI pipelines for _everything_, 
+Well, this is a small new year story not pretending to be a boring technical stuff. But as the title says - SparrowCI pipelines _for everything_, 
 not just for building Raku modules ...
 
-Thus, check out https://ci.sparrowhub.io to see all fun SparrowCI features and happy holidays!
+Thus, check out https://ci.sparrowhub.io to see all fun SparrowCI features. 
+
+And ... happy holidays!
