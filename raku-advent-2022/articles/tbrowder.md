@@ -87,7 +87,7 @@ Footnotes
 
 2. Code used in this article is available at [raku-advent-extras](https://github.com/tbrowder/raku-advent-extras/blob/master/2022)
 
-3. There is a bug in the POD-to-PDF tool chain that causes some characters in a `=begin code / =end code` block not to be rendered. For example, this input in Tony's article, Part 1, in the pod source is
+3. There is a bug in the POD-to-PDF tool chain that causes some characters in a `=begin code / =end code` block not to be rendered. For example, this input in Tony's article, Part 1, in the pod source is erroneously rendered here as
 
     .
     +-- bin
@@ -107,5 +107,5 @@ and it renders in PDF as
      resources
      templates
 
-An issue has been filed with `Pod::To::PDF::Lite`.
+An issue has been filed with `Pod::To::PDF::Lite`, but David thinks the issue may be with the core Rakupod converter. The investigation continues.
 
