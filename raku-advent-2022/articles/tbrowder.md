@@ -71,7 +71,7 @@ In summary, developers finally have a direct and robust way to convert complex d
 
 But that project is for another day--Santa's archivist Elves are happy for now!
 
-The final product of a real-world test of the Markdown-to-PDF work flow is a present from Santa to all the Raku-using folks around the world: a PDF version of the two-part article from Tony O'Dell (AKA @tony-o) for creating an Apache website with Jonathon's Raku `Cro` libraries! (See the original posts at [Part1](https://deathbykeystroke.com/articles/20220224-building-a-cro-app-part-1.html) and [Part2](https://deathbykeystroke.com/articles/20220923-building-a-cro-app-part-b.html).) See the PDF document at [An Apache/Cro Web Server](https://github.com/tbrowder/raku-advent-extras/blob/2022/an-apache-cro-web-server.pdf). (See also Footnote 3 about a lurking bug in the POD-to-PDF tool chain.)
+The final product of a real-world test of the Markdown-to-PDF work flow is a present from Santa to all the Raku-using folks around the world: a PDF version of the two-part article from Tony O'Dell (AKA @tony-o) for creating an Apache website with Jonathon's Raku `Cro` libraries! (See the original posts at [Part1](https://deathbykeystroke.com/articles/20220224-building-a-cro-app-part-1.html) and [Part2](https://deathbykeystroke.com/articles/20220923-building-a-cro-app-part-b.html).) See the PDF document at [An Apache/Cro Web Server](https://github.com/tbrowder/raku-advent-extras/blob/master/2022/an-apache-cro-web-server.pdf). (See also Footnote 3 about a lurking bug in the POD-to-PDF tool chain.)
 
 Santa's Epilogue
 ----------------
@@ -85,7 +85,7 @@ Footnotes
 
 1. *A Christmas Carol*, a short story by Charles Dickens (1812-1870), a well-known and popular Victorian author whose many works include *The Pickwick Papers*, *Oliver Twist*, *David Copperfield*, *Bleak House*, *Great Expectations*, and *A Tale of Two Cities*.
 
-2. Code used in this article is available at [raku=advent-extras](https://github.com/tbrowder/raku-advent-extras/blob/2022)
+2. Code used in this article is available at [raku-advent-extras](https://github.com/tbrowder/raku-advent-extras/blob/2022)
 
 3. There is a bug in the POD-to-PDF tool chain that causes some characters in a `=begin code / =end code` block not to be rendered. For example, this input in Tony's article, Part 1, in the pod source is
 
