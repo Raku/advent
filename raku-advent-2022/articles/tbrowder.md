@@ -85,7 +85,7 @@ Footnotes
 
 1. *A Christmas Carol*, a short story by Charles Dickens (1812-1870), a well-known and popular Victorian author whose many works include *The Pickwick Papers*, *Oliver Twist*, *David Copperfield*, *Bleak House*, *Great Expectations*, and *A Tale of Two Cities*.
 
-2. Code used in this article is available at [raku-advent-extras](https://github.com/tbrowder/raku-advent-extras/blob/2022)
+2. Code used in this article is available at [raku-advent-extras](https://github.com/tbrowder/raku-advent-extras/blob/master/2022)
 
 3. There is a bug in the POD-to-PDF tool chain that causes some characters in a `=begin code / =end code` block not to be rendered. For example, this input in Tony's article, Part 1, in the pod source is
 
