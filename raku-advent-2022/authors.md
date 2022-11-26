@@ -24,4 +24,5 @@ reminders.
 9. jnthn: A recipe for database migrations and testing in Raku
 10. guifa: He's making a list(maker), he's making it twice.
 11. lizmat: Rak on!
+12. jns: I'll let you know later (sic.)
 <!-- add your presentation here -->
