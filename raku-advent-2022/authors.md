@@ -25,4 +25,5 @@ reminders.
 10. guifa: He's making a list(maker), he's making it twice.
 11. lizmat: Rak on!
 12. jns: I'll let you know later (sic.)
+13. [terceranexus6](https://gitlab.com/terceranexus6)
 <!-- add your presentation here -->
