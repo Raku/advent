@@ -26,6 +26,6 @@ reminders.
 11. lizmat: Rak on!
 12. jns: I'll let you know later (sic.)
 13. [terceranexus6](https://gitlab.com/terceranexus6)
-14. Sigils are an underappreciated programming technology
-15. An update on immutable data structures in Raku [won't be ready until ~Dec. 20, sorry]
+14. codesections: Sigils are an underappreciated programming technology
+15. codesections: An update on immutable data structures in Raku [won't be ready until ~Dec. 20, sorry]
 <!-- add your presentation here -->
