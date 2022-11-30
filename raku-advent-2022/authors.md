@@ -28,4 +28,5 @@ reminders.
 13. [terceranexus6](https://gitlab.com/terceranexus6)
 14. codesections: Sigils are an underappreciated programming technology
 15. codesections: An update on immutable data structures in Raku [won't be ready until ~Dec. 20, sorry]
+16. melezhik: SparrowCI pipelines cascades of fun
 <!-- add your presentation here -->
