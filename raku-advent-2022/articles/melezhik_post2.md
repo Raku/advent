@@ -5,7 +5,7 @@ Remember the young in the previous SparrowCI story? We have not finished with hi
 
 Because New Year time is coming and brings us a lot of fun, or we can say cascades of fun ...
 
-So, our awesome SparrowCI pipelines plumber guy is busy with sending a gift to his nephew:
+So, our awesome SparrowCI pipelines plumber guy is busy with sending [the gift](https://github.com/melezhik/rakudist-teddy-bear) to his nephew:
 
 `sparrow.yaml`:
 
