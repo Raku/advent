@@ -1,4 +1,4 @@
-#RedFactory
+# RedFactory
 
 Recently I had the experience of playing with Ruby and its tools. One of the tools I liked to learn about was `factory_bot`.
 
