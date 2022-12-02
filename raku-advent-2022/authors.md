@@ -30,4 +30,5 @@ reminders.
 15. codesections: An update on immutable data structures in Raku [won't be ready until ~Dec. 20, sorry]
 16. melezhik: SparrowCI pipelines cascades of fun
 17. p6steve: Day XX [Santa CL::AWS](https://wordpress.com/post/raku-advent.blog/2047) --- ready to go ... please change the Day XX in the title
+18. smokemachine: RedFactory
 <!-- add your presentation here -->
