@@ -109,7 +109,7 @@ class JTransformer is Mu does Callable is repr<Uninstantiable> { ... }
 A practical example of a `JTransformer`-like class is the internal `class
 Refine` that backs my [`Kind`](https://raku.land/zef:Kaiepi/Kind) subsets'
 refinements (`where` clauses) as of
-[v1.0.2](https://github.com/Kaiepi/ra-Kind/blob/v1.0.2/lib/Kind.pm6#L45-L74).
+[v1.0.3](https://github.com/Kaiepi/ra-Kind/blob/v1.0.3/lib/Kind.pm6#L45-L74).
 Because it's dabbling in metaobjects, `Any` cannot be assumed (e.g. `Mu`,
 `Junction`), but junctions can allow for complex checks against multiple
 metaroles. If a metaobject threaded by its `ACCEPTS` call cannot typecheck as
