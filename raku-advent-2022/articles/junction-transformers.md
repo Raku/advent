@@ -9,8 +9,8 @@ say any 0..9; # OUTPUT: any(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 This carries `'any'` as a type of operation and `0..9` as a list of
 *eigenstates* internally. In a smartmatch context, this can match against any
-object that can smartmatch against any digit. The list of eigenstates is not
-exposed, but there is a means of processing them individually.
+object that can smartmatch against any digit. Its list of eigenstates is not
+exposed, but there is a means of processing its contents.
 
 The `~~` smartmatch operator delegates to the `ACCEPTS` method on the RHS prior
 to a `Bool` coercion on its result. For example, we'll depend on `Code.ACCEPTS`
@@ -24,25 +24,26 @@ sub sum(Mu $topic is raw) {
     $sum
 }
 
-say sum 2;                 # OUTPUT: 2
-say sum 2 | 2;             # OUTPUT: 4
-say sum 0 & 4 & 0 & 4 & 0; # OUTPUT: 8
+say sum any 0..9;        # OUTPUT: 45
+say sum 0 & (9 ^ 9) & 0; # OUTPUT: 18
 ```
 
 In this case, it forwards a single argument (its "topic") to an invokation of
-itself, allowing us to take a sum of eigenstates. We give `&sum` a closure to
-give us fresh `$sum` for each call. Because the `$topic` of the inner `&sum`
-has no type, it carries a `Mu` type like the outer `$topic`, but will
-*autothread* a `Junction:D` argument over `Any` eigenstates. Because the outer
-`$topic` is explicitly typed `Mu` and `is raw`, it will leave both junctions
-and containers on input alone.
+itself, allowing us to take a sum of eigenstates.
+
+We give `&sum` a closure to give us fresh `$sum` for each call. Because the
+`$topic` of the inner `&sum` has no type, it carries a `Mu` type like the outer
+`$topic`, but will *autothread* a `Junction:D` argument over `Any` eigenstates.
+Because the outer `$topic` is explicitly typed `Mu` and `is raw` however, it
+will leave both junctions and containers on input alone. Note that
+autothreading recurses over `Junction:D` eigenstates.
 
 If we're going to just accept one argument given a junction, it could just as
-well be a `Mu` eigenstate instead of the junction itself. Like `Mu.ACCEPTS` can
-*thread* its topic over `Mu` given a type object invocant (instances are NYI;
-they default to `&[===]` on `Any`), `Junction.CALL-ME` threads its invocant
-over `Mu`. Because this will *not* shortcircuit, these can be chained to
-traverse each of the eigenstates of a junction in sequence:
+well be a `Mu` eigenstate instead of the junction itself. `Mu.ACCEPTS` can
+*thread* its topic over `Mu` instead of `Any` given a `Mu:U` invocant (`Mu:D`
+is NYI; `Any:D` defaults to `&[===]`). Similarly, `Junction.CALL-ME` threads
+its invocant over `Mu`. Because a junction will *not* shortcircuit as it is
+threaded, these can be chained to traverse one's eigenstates:
 
 ```raku
 class JMap does Callable {
@@ -64,24 +65,21 @@ class JMap does Callable {
     }
 }
 
-given JMap(any 0..9) -> &digits {
-    say 0 ~~ &digits;  # OUTPUT: True
-    say 10 ~~ &digits; # OUTPUT: False
-    say digits 2 ** *; # OUTPUT: any(1, 2, 4, 8, 16, 32, 64, 128, 256, 512)
-}
+say JMap(any 0..9)(*[]);       # OUTPUT: any(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+say JMap(any 0..9)(2 ** *);    # OUTPUT: any(1, 2, 4, 8, 16, 32, 64, 128, 256, 512)
+say JMap(0 & (9 ^ 9) & 0)(?*); # OUTPUT: all(False, one(True, True), False)
 ```
 
 `JMap` gets its one chance to thread a `Junction:D` as a type object, so we
-forward the junction to map before its `Callable`. Should more junctions be
-considered, more type objects or a means of typing them for `ACCEPTS` would be
-necessary. After a `CALL-ME`, we wind up with either a callable or a new
-junction of callables that is invokable, but does not qualify as `Callable`
-itself. Though `ACCEPTS` makes matters complicated, we can drop the `Any` bound
-autothreading enforces this way.
+forward the junction to map before its `Callable`. After a `CALL-ME`, we wind
+up with either a callable or a new junction of callables that is invokable, but
+does not qualify as `Callable` itself. Despite `ACCEPTS` being typed with a
+`Mu` topic over `JMap`, the threading of junctions still wins in a dispatch.
 
 `JMap` can process the eigenstates of a junction generically, but carries
-overhead in its threading as a result. If you have a particular `Callable` in
-mind with which to map, this `JTransformer` template can be followed:
+overhead in a second round of threading prior to any smartmatching against the
+result. If you have a particular `Callable` in mind with which to map, this
+`JTransformer` template can be followed:
 
 ```raku
 class JTransformer does Callable is repr<Uninstantiable> {
