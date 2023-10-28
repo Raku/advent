@@ -15,6 +15,5 @@ Please also send an easy and fast way to contact you at jjmerelo at
 gmail dot com or jjmerelo in Telegram. It will be used mainly for
 reminders.
 
-1. tbrowder: Calendaring for Christmas: Aids for Calendar Creators
-2. tbrowder: PDF Creations
+1. tbrowder: Rocking Raku Meets Stodgy Debian
 <!-- add your presentation here -->
