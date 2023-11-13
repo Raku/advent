@@ -5,7 +5,7 @@ Since 2019 the Raku project has hosted [Raku Advent Caledar](https://raku-advent
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions for
 authors.
 
-The current year's list of authors is in the file [authors.md][]. Add yourself
+The current year's list of authors is in the file [authors.md](raku-advent-2023/authors.md). Add yourself
 to the list via [pull request](/Raku/advent/pulls), and contribute your article
 as soon as it's ready.
 
