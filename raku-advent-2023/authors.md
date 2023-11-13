@@ -11,8 +11,7 @@ already have permissions, by
 and it will be scheduled the most convenient day by the calendar
 editors.
 
-Please also send an easy and fast way to contact you at jjmerelo at
-gmail dot com or jjmerelo in Telegram. It will be used mainly for
+Please also send an easy and fast way to contact you to liz at raku.rocks. It will be used mainly for
 reminders.
 
 1. tbrowder: Rocking Raku Meets Stodgy Debian
