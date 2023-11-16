@@ -15,4 +15,5 @@ Please also send an easy and fast way to contact you to liz at raku.rocks. It wi
 reminders.
 
 1. tbrowder: Rocking Raku Meets Stodgy Debian
+2. lizmat: Raku for all the kids in the world
 <!-- add your presentation here -->
