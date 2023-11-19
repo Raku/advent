@@ -16,4 +16,5 @@ reminders.
 
 1. tbrowder: Rocking Raku Meets Stodgy Debian
 2. lizmat: Raku for all the kids in the world
+3. ab5tract: Snowfall 2.0
 <!-- add your presentation here -->
