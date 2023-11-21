@@ -17,4 +17,5 @@ reminders.
 1. tbrowder: Rocking Raku Meets Stodgy Debian
 2. lizmat: Raku for all the kids in the world
 3. ab5tract: Snowfall 2.0
+4. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
 <!-- add your presentation here -->
