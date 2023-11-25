@@ -18,4 +18,5 @@ reminders.
 2. lizmat: Raku for all the kids in the world
 3. ab5tract: Snowfall 2.0
 4. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
+5. nige: pex - please explain this code
 <!-- add your presentation here -->
