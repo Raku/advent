@@ -21,3 +21,4 @@ reminders.
 5. ab5tract: Snowfall 2.0
 6. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
 <!-- add your presentation here -->
+25. lizmat: Rakudo 2023 Review
