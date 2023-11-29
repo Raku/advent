@@ -15,7 +15,8 @@ Please also send an easy and fast way to contact you to liz at raku.rocks. It wi
 reminders.
 
 1. tbrowder: Rocking Raku Meets Stodgy Debian
-2. lizmat: Raku for all the kids in the world
-3. ab5tract: Snowfall 2.0
-4. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
+2. jjatria: An update on raku.land
+3. lizmat: Raku for all the kids in the world
+4. ab5tract: Snowfall 2.0
+5. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
 <!-- add your presentation here -->
