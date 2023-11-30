@@ -17,8 +17,9 @@ reminders.
 1. tbrowder: Rocking Raku Meets Stodgy Debian
 2. jjatria: An update on raku.land
 3. heyajulia: Helping the Elves Sort Their Mail
-4. lizmat: Raku for all the kids in the world
-5. ab5tract: Snowfall 2.0
-6. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
+4. Wim Vanderbauwhede: Embedding a stack-based programming language in Raku
+5. lizmat: Raku for all the kids in the world
+6. ab5tract: Snowfall 2.0
+7. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
 <!-- add your presentation here -->
 25. lizmat: Rakudo 2023 Review
