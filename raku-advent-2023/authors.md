@@ -21,5 +21,6 @@ reminders.
 5. lizmat: Raku for all the kids in the world
 6. ab5tract: Snowfall 2.0
 7. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
+8. librasteve: The Elves go to Grammar School
 <!-- add your presentation here -->
 25. lizmat: Rakudo 2023 Review
