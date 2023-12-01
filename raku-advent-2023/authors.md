@@ -23,4 +23,6 @@ reminders.
 7. lizmat: Raku for all the kids in the world
 8. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
 <!-- add your presentation here -->
+15. librasteve: An Object Lesson for the Elven
+<!-- add your presentation here -->
 25. lizmat: Rakudo 2023 Review
