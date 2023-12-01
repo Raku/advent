@@ -23,4 +23,5 @@ reminders.
 7. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
 8. librasteve: The Elves go to Grammar School
 <!-- add your presentation here -->
+15. librasteve: An Object Lesson for the Elven
 25. lizmat: Rakudo 2023 Review
