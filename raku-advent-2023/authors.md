@@ -20,9 +20,10 @@ reminders.
 4. Wim Vanderbauwhede: Embedding a stack-based programming language in Raku
 5. librasteve: The Elves go to Grammar School
 6. Kay Rhodes: The Future Of POD6
-7. ab5tract: Snowfall 2.0
-8. lizmat: Raku for all the kids in the world
-9. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
+7. lizmat: The Magic Of $/
+8. ab5tract: Snowfall 2.0
+9. lizmat: Raku for all the kids in the world
+10. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
 <!-- add your presentation here -->
 15. librasteve: An Object Lesson for the Elven
 <!-- add your presentation here -->
