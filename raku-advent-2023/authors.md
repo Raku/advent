@@ -23,7 +23,7 @@ reminders.
 7. lizmat: The Magic Of $/
 8. ab5tract: Snowfall 2.0
 9. japhb: Networks Roasting on an Open Fire (Part 1)
-10. lizmat: Raku for all the kids in the world
+10. lizmat: The Magic of Q
 11. japhb: Networks Roasting on an Open Fire (Part 2)
 12. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
 13. japhb: Networks Roasting on an Open Fire (Part 3)
