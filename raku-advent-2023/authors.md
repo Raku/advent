@@ -23,11 +23,12 @@ reminders.
 7. lizmat: The Magic Of $/
 8. ab5tract: Snowfall 2.0
 9. japhb: Networks Roasting on an Open Fire (Part 1)
-10. lizmat: The Magic of Q
+10. lizmat: The Magic Of Q
 11. japhb: Networks Roasting on an Open Fire (Part 2)
-12. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
+12. finanalyst: Perspectives on RakuDoc Version 2
 13. japhb: Networks Roasting on an Open Fire (Part 3)
-<!-- add your presentation here -->
+14. lizmat: The Magic Of Q (Part 2)
 15. librasteve: An Object Lesson for the Elven
+16. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
 <!-- add your presentation here -->
 25. lizmat: Rakudo 2023 Review
