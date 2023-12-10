@@ -30,5 +30,5 @@ reminders.
 14. lizmat: The Magic Of Q (Part 2)
 15. librasteve: An Object Lesson for the Elven
 16. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
-<!-- add your presentation here -->
+21. ab5tract: Raku + Zig: A new frontier for Raku throughput
 25. lizmat: Rakudo 2023 Review
