@@ -30,7 +30,8 @@ reminders.
 14. lizmat: The Magic Of Q (Part 2)
 15. librasteve: An Object Lesson for the Elven
 16. vrurg: It's Too Generic; Please Instantiate!
-17. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
+17. Coke: Writing some horrible Raku code this Christmas!
+18. pheix: Dissecting the Geth (Go-Ethereum) keystore files using Raku tools
 <!-- insert here -->
 21. ab5tract: Raku + Zig: A new frontier for Raku throughput
 <!-- insert here -->
