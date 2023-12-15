@@ -33,5 +33,6 @@ reminders.
 17. Coke: Writing some horrible Raku code this Christmas!
 <!-- insert here -->
 21. ab5tract: Raku + Zig: A new frontier for Raku throughput
+22. vushu: Autogenerating Raku bindings!
 <!-- insert here -->
 25. lizmat: Rakudo 2023 Review
