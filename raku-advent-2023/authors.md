@@ -31,6 +31,7 @@ reminders.
 15. librasteve: An Object Lesson for the Elven
 16. vrurg: It's Too Generic; Please Instantiate!
 17. Coke: Writing some horrible Raku code this Christmas!
+18. pheix: Dissecting the Go-Ethereum keystore files using Raku tools
 <!-- insert here -->
 21. ab5tract: Raku + Zig: A new frontier for Raku throughput
 22. vushu: Autogenerating Raku bindings!
