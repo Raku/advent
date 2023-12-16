@@ -35,5 +35,6 @@ reminders.
 <!-- insert here -->
 21. ab5tract: Raku + Zig: A new frontier for Raku throughput
 22. vushu: Autogenerating Raku bindings!
+23. librasteve: Craggy Christmas Chronicles
 <!-- insert here -->
 25. lizmat: Rakudo 2023 Review
