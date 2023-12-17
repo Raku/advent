@@ -33,9 +33,7 @@ reminders.
 17. Coke: Writing some horrible Raku code this Christmas!
 18. pheix: Dissecting the Go-Ethereum keystore files using Raku tools
 19. vushu: Autogenerating Raku bindings!
-<!-- insert here -->
+20. librasteve: Craggy Christmas Chronicles
 21. ab5tract: Raku + Zig: A new frontier for Raku throughput
-<!-- insert here -->
-23. librasteve: Craggy Christmas Chronicles
 <!-- insert here -->
 25. lizmat: Rakudo 2023 Review
