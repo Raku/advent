@@ -35,5 +35,6 @@ reminders.
 19. vushu: Autogenerating Raku bindings!
 20. librasteve: Craggy Christmas Chronicles
 21. ab5tract: Raku + Zig: A new frontier for Raku throughput
+22. antononcube: Using DALL-E models in Raku
 <!-- insert here -->
 25. lizmat: Rakudo 2023 Review
