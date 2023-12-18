@@ -37,4 +37,5 @@ reminders.
 21. ab5tract: Raku + Zig: A new frontier for Raku throughput
 22. antononcube: Using DALL-E models in Raku
 <!-- insert here -->
+24. antononcube: Streamlining AI vision workflows with Raku
 25. lizmat: Rakudo 2023 Review
