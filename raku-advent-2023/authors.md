@@ -36,6 +36,6 @@ reminders.
 20. librasteve: Craggy Christmas Chronicles
 21. antononcube: Using DALL-E models in Raku
 22. ab5tract: Raku + Zig: A new frontier for Raku throughput
-<!-- insert here -->
+23. lizmat: The Magic of hyper
 24. antononcube: Streamlining AI vision workflows with Raku
 25. lizmat: Rakudo 2023 Review
