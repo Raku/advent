@@ -23,7 +23,7 @@ reminders.
 7.
 8.
 9.
-10.
+10. lizmat: Hypering away by all methods
 11.
 12.
 13.
@@ -38,4 +38,4 @@ reminders.
 22.
 23.
 24.
-
+25. lizmat: Raku 2024 Review
