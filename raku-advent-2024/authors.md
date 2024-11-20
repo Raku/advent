@@ -15,7 +15,7 @@ Please also send an easy and fast way to contact you to liz at raku.rocks. It wi
 reminders.
 
 1. tbrowder: Santa's Print Shop
-2.
+2. nige: WAT do you want for Christmas?  
 3.
 4.
 5.
@@ -29,7 +29,7 @@ reminders.
 13.
 14.
 15.
-16. nige: WAT do you want for Christmas?  
+16. 
 17.
 18.
 19.
