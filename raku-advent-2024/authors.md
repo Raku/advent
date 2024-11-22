@@ -20,7 +20,7 @@ reminders.
 4. antononcube: Don't use Forsyth-Edwards Notation to play chess with LLMs
 5. coleman: Generating an HTML dashboard with Raku
 6.
-7.
+7. rogue/landyacht: Conditionally Writeable Attributes
 8.
 9.
 10. lizmat: Hypering away by all methods
