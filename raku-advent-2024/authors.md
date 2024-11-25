@@ -29,7 +29,7 @@ reminders.
 13.
 14. hythm: Content Storage For Raku Distributions
 15.
-16.
+16. pheix: Step-by-Step with Raku – mastering KZG commitments and Ethereum v3 transactions
 17.
 18.
 19.
