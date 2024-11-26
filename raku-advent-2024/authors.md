@@ -26,15 +26,15 @@ reminders.
 10. lizmat: Hypering away by all methods
 11.
 12. antononcube: Graphs in Raku
-13.
+13. massa: Counting Votes - but not really, just download the numbers
 14. hythm: Content Storage For Raku Distributions
 15.
 16. pheix: Step-by-Step with Raku – mastering KZG commitments and Ethereum v3 transactions
-17.
+17. massa: Using RakuChatbook as my REPL
 18.
 19.
 20. antononcube: Chebyshev polynomials and fitting workflows
-21.
+21. 
 22.
 23.
 24.
