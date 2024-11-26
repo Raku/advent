@@ -22,7 +22,7 @@ reminders.
 6. codesections: How to give a Raku presentation at TPRC – and why you should
 7. rogue/landyacht: Conditionally Writeable Attributes
 8. finanalyst: A RakuDoc V2 renderer finished in time for Christmas
-9.
+9. martimm: The end of the year
 10. lizmat: Hypering away by all methods
 11.
 12. antononcube: Graphs in Raku
