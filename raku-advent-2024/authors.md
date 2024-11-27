@@ -24,7 +24,7 @@ reminders.
 8. finanalyst: A RakuDoc V2 renderer finished in time for Christmas
 9. martimm: The end of the year
 10. lizmat: Hypering away by all methods
-11.
+11. ohnowendigo: Counting up concurrency
 12. antononcube: Graphs in Raku
 13. massa: Counting Votes - but not really, just download the numbers
 14. hythm: Content Storage For Raku Distributions
