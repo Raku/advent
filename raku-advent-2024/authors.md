@@ -28,7 +28,7 @@ reminders.
 12. antononcube: Graphs in Raku
 13. massa: Counting Votes - but not really, just download the numbers
 14. hythm: Content Storage For Raku Distributions
-15.
+15. ab5tract: Revision Gating for API Evolution and Continuity
 16. pheix: Step-by-Step with Raku – mastering KZG commitments and Ethereum v3 transactions
 17. massa: Using RakuChatbook as my REPL
 18.
