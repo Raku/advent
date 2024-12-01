@@ -1,4 +1,4 @@
-= Generating an HTML Dashboard With Vanilla Raku =
+# Generating an HTML Dashboard With Vanilla Raku 
 
 The goal of this post is to demonstrate some Raku features by accomplishing
 something useful in about 100 lines of Raku. We're going to avoid using
@@ -22,25 +22,25 @@ to the official documentation where appropriate.
 
 The repos we will be concerned with are
 
-* https://github.com/raku/doc-website[raku/doc-website] - tools that generate HTML, CSS, and JavaScript
-  for https://docs.raku.org[docs.raku.org], the official docs website 
-* https://github.com/raku/doc[raku/doc] - content for the docs website 
-* https://github.com/moarvm/moarvm[moarvm/moarvm] - virtual machine in C that Rakudo targets
-* https://github.com/rakudo/rakudo[rakudo/rakudo] - flagship Raku implementation
-* https://github.com/raku/nqp[raku/nqp] - the "not quite perl" intermediate representations
+* [raku/doc-website](https://github.com/raku/doc-website) - tools that generate HTML, CSS, and JavaScript
+  for [docs.raku.org](https://docs.raku.org), the official docs website
+* [raku/doc](https://github.com/raku/doc) - content for the docs website
+* [moarvm/moarvm](https://github.com/moarvm/moarvm) - virtual machine in C that Rakudo targets
+* [rakudo/rakudo](https://github.com/rakudo/rakudo) - flagship Raku implementation
+* [raku/nqp](https://github.com/raku/nqp) - the "not quite perl" intermediate representations
 
 Let's get started.
 
-=== Part 1: Calling Another Program ===
+### Part 1: Calling Another Program
 
 The command line utility we'll use is the GitHub CLI.
 
 The GitHub CLI can fetch up to 1000 issues at a time with a command
 like the following. 
 
-----
+```
 gh issue list -R raku/doc-website --state closed,open --search 'sort:updated-desc'
-----
+```
 
 We're only going to concern ourselves with 50, and sort
 them by recently updated. We include the closed as well as the open issues,
@@ -50,8 +50,8 @@ contributors.
 The only argument we need to parameterize is `-R`. We have 5 repos we'll need to 
 pass to `-R`, so lets make an array.
 
-[source,raku]
-----
+
+```raku
 my @repos = <<
   raku/doc-website
   raku/doc
@@ -59,24 +59,24 @@ my @repos = <<
   rakudo/rakudo
   raku/nqp
 >>;
-----
+```
 
-Next, let's loop through that array and shell out to gh with the https://docs.raku.org/routine/run[run builtin subroutine].
+Next, let's loop through that array and shell out to `gh` with the [`run` builtin subroutine](https://docs.raku.org/routine/run).
 
-[source,raku]
-----
+
+```raku
 for @repos -> $repo {
   say "getting issues for $repo";
   run("gh", "issue", "list", "-R", "$repo", "--search", "sort:updated-desc", 
       "--limit", "50", "--state", "all");
 }
-----
+```
 
 This would be enough if we wanted to run this script locally and look at the
 output in our own terminal, but we.
 
 
-=== Part 2: Program Structure ===
+### Part 2: Program Structure
 
 To keep our script organized, we'll break it up into functions, or _subroutines_
 as Raku calls them. For now we're going to leave some details out and focus on the
@@ -85,59 +85,59 @@ program's structure.
 We'll start by defining `sub MAIN()`, a special subroutine that specifies the
 entrypoint to our program. Yes, it's all caps.
 
-[source,raku]
-----
+
+```raku
 #!/usr/bin/env raku
 
 sub MAIN() {
   # program starts here...
 }
-----
+```
 
 We can define another function `get-issues` that takes a repo name as a
 parameter. We'll be calling this inside a loop. This function will call
 `gh`, parse its output, and return structured data.
 
-[source,raku]
-----
+
+```raku
 sub get-issues($repo) {
   # encapsulate calling gh and parsing output
 }
-----
+```
 
 Finally, we'll create a `write-document` function that accepts an open
 file handle and a hash of all the data we've gathered into memory.
 
-[source,raku]
-----
+
+```raku
 sub write-document($h, %data) {
   # Iterate our data and write it to a file handle
 }
-----
+```
 
 So far, I've avoided specifying types on either parameters or return
 values. Raku allows gradual typing, and enforces types with a mix of
 compile-time and run-time checks. We'll add some types later.
 
 
-=== Part 3: Capturing Output ===
+### Part 3: Capturing Output
 
 Let's explore the implementation of the `get-issues` function. We need
 to capture the output of `gh`. Previously we shelled out like this.
 
-[source,raku]
-----
+
+```raku
 run("gh", "issue", "list", "-R", "$repo", "--search", "sort:updated-desc", 
     "--limit", "50", "--state", "all");
-----
+```
 
 That dumps output to our terminal. Let's clean this up and capture the output.
 
-[source,raku]
-----
+
+```raku
 my @cmd-line = << gh issue list -R $repo --search "sort:updated-desc" --limit 50 --state "all" >>;  
 my Proc $proc = run @cmd-line, :out;
-----
+```
 
 Our `@cmd-line` variable uses the `<< >>` array style, which will still let us
 interpolate `$repo`, but use space-separated elements.
@@ -153,23 +153,23 @@ Now it's time to do something with the output. The default output of
 `gh issue list` is newline-delimited. The `lines` method transforms our
 output into an array of strings. One line of output for each issue.
 
-[,raku]
-----
+
+```raku
 my @lines = $proc.out.lines;
-----
+```
 
 Each line of output looks like this.
 
-----
+```
 4536	OPEN	Run and Edit examples	docs, wishlist	2024-12-01T00:04:33Z
-----
+```
 
 Conveniently, the output is tab-delimited. 
 
 Let's put it all together and finish our `get-issues` function.
 
-[source,raku]
-----
+
+```raku
 sub get-issues($repo) {
 
   my @cmd-line = << gh issue list -R $repo --search "sort:updated-desc" --limit 50 --state "all" >>;  
@@ -195,22 +195,22 @@ sub get-issues($repo) {
 
   return @issues;
 }
-----
+```
 
 To summarize, we shell out to `gh issue list`, loop through all the output,
-and accumulate the data into an array of hashes. See the https://docs.raku.org/type/Hash[Hash]
+and accumulate the data into an array of hashes. See the [Hash](https://docs.raku.org/type/Hash)
 documentation for all the wonderful ways to build and manipulate hashes.
 
 For good measure, we've coerced `id` into an `Int`
 (with an `.Int` method call) and parsed the `updated-at` date string into 
-the builtin https://docs.raku.org/type/DateTime[DateTime type] (with the `new`
+the builtin [DateTime type](https://docs.raku.org/type/DateTime) (with the `new`
 class constructor).
 
 Back in our `MAIN`, we can make use of our fully-implemented `get-issues` routine.
 For each $repo, we add to our `%data` object. 
 
-[,raku]
-----
+
+```raku
 my @repos = <<
   raku/doc-website
   raku/doc
@@ -225,60 +225,60 @@ for @repos -> $repo {
    my @issues = get-issues($repo);
    %data{$repo} = @issues;
 }
-----
+```
 
 Our `%data` hash ends up with the keys being the repo name, and the associated
 value is the array of issues for that repo.
 
 
-=== Part 4: Rendering an HTML File ===
+### Part 4: Rendering an HTML File
 
 We have our data. Let's template it as HTML and write it to a file.
 
 There are many ways to open a file in Raku, but they're all going
-to give you back https://docs.raku.org/type/IO/Handle[an `IO::Handle` object].
+to give you back [an `IO::Handle` object](https://docs.raku.org/type/IO/Handle).
 
-For no particular reason, we'll use the https://docs.raku.org/type/independent-routines#sub_open[standalone builtin `open`].
+For no particular reason, we'll use the [standalone builtin `open`](https://docs.raku.org/type/independent-routines#sub_open).
 The `:w` symbol here will open the file for writing, and truncate the
 file if it already exists.
 
-[,raku]
-----
+
+```raku
 my $filename = "report.html";
 my $fh = open $filename, :w;
 write-document($fh, %data)
 $fh.close;
-----
+```
 
 Actually, on second thought, let's spice things up. We can do the same thing but 
-use https://docs.raku.org/syntax/given[given], which lets us avoid naming our
-file handle, and instead access it as the https://docs.raku.org/language/variables#The_$__variable[topic variable $_]. 
+use [given](https://docs.raku.org/syntax/given), which lets us avoid naming our
+file handle, and instead access it as the [topic variable `$_`](https://docs.raku.org/language/variables#The_$__variable).
 
-[,raku]
-----
+
+```raku
 given open $filename, :w {
    write-document($_, %data);
    .close
 }
-----
+```
 
 All that's left to do is implement `write-document`.
 
 The responsibility of our `write-document` routine is to write html to a
 file, and there are several ways of writing to a file. We will use
-the standalone https://docs.raku.org/type/independent-routines#sub_spurt[spurt routine].
+the standalone [spurt routine](https://docs.raku.org/type/independent-routines#sub_spurt).
 The first argument to `spurt` will be our `IO::Handle` to the open
 file, and the second argument will be strings, our fragments of
 templated HTML.
 
 Since the start of our HTML document is a fairly long string, we can
-use https://docs.raku.org/language/quoting[HEREDOC style quoting].
+use [HEREDOC style quoting](https://docs.raku.org/language/quoting).
 The various quoting constructs that Raku provides give us much
 of the power of string templating languages without requiring
 and additional libraries.
 
-[,raku]
-----
+
+```raku
 # document start
 spurt $h, q:to/END/;
 <!DOCTYPE html>
@@ -292,7 +292,7 @@ spurt $h, q:to/END/;
 </head>
 <body id="body" class="dark-mode">
 END
-----
+```
 
 Everything between `q:to/END` and the closing `END` is treated as a single
 string argument to `spurt`. We used the `q:to` form since we didn't need 
@@ -304,8 +304,8 @@ wrap our variables in curly brackets.
 Let's loop through our nested `%data` hash to fill out the templated middlep
 part of our HTML document. We'll see `qq:to` and data interplolation in action.
 
-[,raku]
-----
+
+```raku
 for %data.kv -> $repo, @issues {
   spurt $h, qq:to/END/;
   <section>
@@ -342,11 +342,11 @@ for %data.kv -> $repo, @issues {
       <hr/>
   END
 }
-----
+```
 
 We also did a little bit of HTML escaping on the `$summary` string. Note that 
 the `.=` is an in-place modification of the `$summary` string, 
-using https://docs.raku.org/type/Str#method_subst[method call assignment].
+using [method call assignment](https://docs.raku.org/type/Str#method_subst).
 Every `Str` has a `subst` method, and we're just calling that and assigning
 to ourselves in one go. The reason we need to do that is to escape some
 characters that will frequently appear in issue summaries, but are bad news
@@ -355,20 +355,19 @@ good enough for our purposes.
 
 Finally we can end our `write-document` routine with closing tags.
 
-[,raku]
-----
+
+```raku
 # footer
 spurt $h, q:to/END/;
     </body>
 </html>
 END
-----
+```
 
-== Conclusion ==
+## Conclusion
 
 I've published the results at https://envs.net/~coleman/raku/report.html
 
 To keep something like this up to date, we will need to use `cron`, systemd timers,
 or some other scheduler, but that's beyond our scope here.
-
 
