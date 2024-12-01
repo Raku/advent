@@ -21,7 +21,7 @@ reminders.
 5. coleman: Generating an HTML dashboard with Raku (ready for WP sheduling)
 6. codesections: How to give a Raku presentation at TPRC – and why you should
 7. rogue/landyacht: Conditionally Writeable Attributes
-8. 
+8. nahita: Yet More Abilities for Iterables
 9. martimm: The end of the year (scheduled)
 10. lizmat: Hypering away by all methods
 11. ohnowendigo: Counting up concurrency (scheduled)
