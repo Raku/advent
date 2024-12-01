@@ -18,7 +18,7 @@ reminders.
 2. nige: WAT LLM coding tool do you want for Christmas? (scheduled)
 3. librasteve: Merry Cromas (ready for WP scheduling)
 4. antononcube: Don't use Forsyth-Edwards Notation to play chess with LLMs
-5. coleman: Generating an HTML dashboard with Raku
+5. coleman: Generating an HTML dashboard with Raku (ready for WP sheduling)
 6. codesections: How to give a Raku presentation at TPRC – and why you should
 7. rogue/landyacht: Conditionally Writeable Attributes
 8. 
