@@ -32,7 +32,7 @@ reminders.
 16. pheix: Step-by-Step with Raku – mastering KZG commitments and Ethereum v3 transactions
 17. massa: Using RakuChatbook as my REPL
 18. tbrowder: Santa's Print Shop
-19.
+19. samebchase: Creating a presentation hosted on a Gemini capsule (scheduled)
 20. antononcube: Chebyshev polynomials and fitting workflows
 21. librasteve: Happy TM Xmas
 22.
