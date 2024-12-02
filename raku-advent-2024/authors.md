@@ -14,14 +14,14 @@ editors.
 Please also send an easy and fast way to contact you to liz at raku.rocks. It will be used mainly for
 reminders.
 
-1. finanalyst: Rendering down for Christmas (scheduled)
-2. nige: WAT LLM coding tool do you want for Christmas? (scheduled)
+1. finanalyst: Rendering down for Christmas (published)
+2. nige: WAT LLM coding tool do you want for Christmas? (published)
 3. librasteve: Merry Cromas (scheduled)
 4. antononcube: Don't use Forsyth-Edwards Notation to play chess with LLMs
 5. coleman: Generating an HTML dashboard with Raku (scheduled)
 6. codesections: How to give a Raku presentation at TPRC – and why you should
 7. rogue/landyacht: Conditionally Writeable Attributes
-8. nahita: Yet More Abilities for Iterables
+8. nahita: Yet More Abilities for Iterables (scheduled)
 9. martimm: The end of the year (scheduled)
 10. lizmat: Hypering away by all methods
 11. ohnowendigo: Counting up concurrency (scheduled)
