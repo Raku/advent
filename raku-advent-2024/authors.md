@@ -35,7 +35,7 @@ reminders.
 19. samebchase: Creating a presentation hosted on a Gemini capsule (scheduled)
 20. antononcube: Chebyshev polynomials and fitting workflows
 21. librasteve: Happy TM Xmas
-22.
+22. finanalyst: Playing around with the new documentation components (scheduled)
 23.
 24.
 25. lizmat: Raku 2024 Review
