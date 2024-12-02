@@ -37,5 +37,5 @@ reminders.
 21. librasteve: Happy TM Xmas
 22. finanalyst: Playing around with the new documentation components (scheduled)
 23.
-24.
+24. donaldh: In Search of the Essence of Raku
 25. lizmat: Raku 2024 Review
