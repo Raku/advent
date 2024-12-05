@@ -20,7 +20,7 @@ reminders.
 4. antononcube: Don't use Forsyth-Edwards Notation to play chess with LLMs (scheduled)
 5. coleman: Generating an HTML dashboard with Raku (scheduled)
 6. samebchase: Creating a presentation hosted on a Gemini capsule (scheduled)
-7. rogue/landyacht: Conditionally Writeable Attributes
+7. rogue/landyacht: Conditionally Writeable Attributes (scheduled)
 8. nahita: Yet More Abilities for Iterables (scheduled)
 9. martimm: The end of the year (scheduled)
 10. lizmat: Hypering away by all methods
