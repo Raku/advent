@@ -19,7 +19,7 @@ reminders.
 3. librasteve: Merry Cromas (scheduled)
 4. antononcube: Don't use Forsyth-Edwards Notation to play chess with LLMs (scheduled)
 5. coleman: Generating an HTML dashboard with Raku (scheduled)
-6. codesections: How to give a Raku presentation at TPRC – and why you should
+6. samebchase: Creating a presentation hosted on a Gemini capsule (scheduled)
 7. rogue/landyacht: Conditionally Writeable Attributes
 8. nahita: Yet More Abilities for Iterables (scheduled)
 9. martimm: The end of the year (scheduled)
@@ -32,10 +32,10 @@ reminders.
 16. pheix: Step-by-Step with Raku – mastering KZG commitments and Ethereum v3 transactions
 17. massa: Using RakuChatbook as my REPL
 18. tbrowder: Santa's Print Shop
-19. samebchase: Creating a presentation hosted on a Gemini capsule (scheduled)
+19. 
 20. antononcube: Chebyshev polynomials and fitting workflows
 21. librasteve: Happy TM Xmas
 22. finanalyst: Playing around with the new documentation components (scheduled)
-23.
+23. codesections: How to give a Raku presentation at TPRC – and why you should
 24. donaldh: In Search of the Essence of Raku (scheduled)
 25. lizmat: Raku 2024 Review
