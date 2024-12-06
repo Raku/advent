@@ -23,7 +23,7 @@ reminders.
 7. rogue/landyacht: Conditionally Writeable Attributes (scheduled)
 8. nahita: Yet More Abilities for Iterables (scheduled)
 9. martimm: The end of the year (scheduled)
-10. lizmat: Hypering away by all methods
+10. codesections: How to give a Raku presentation at TPRC – and why you should (scheduled)
 11. ohnowendigo: Counting up concurrency (scheduled)
 12. antononcube: Graphs in Raku
 13. massa: Counting Votes - but not really, just download the numbers
@@ -32,10 +32,10 @@ reminders.
 16. pheix: Step-by-Step with Raku – mastering KZG commitments and Ethereum v3 transactions
 17. massa: Using RakuChatbook as my REPL
 18. tbrowder: Santa's Print Shop
-19. 
+19. lizmat: Hypering away by all methods
 20. antononcube: Chebyshev polynomials and fitting workflows
 21. librasteve: Happy TM Xmas
 22. finanalyst: Playing around with the new documentation components (scheduled)
-23. codesections: How to give a Raku presentation at TPRC – and why you should
+23. 
 24. donaldh: In Search of the Essence of Raku (scheduled)
 25. lizmat: Raku 2024 Review
