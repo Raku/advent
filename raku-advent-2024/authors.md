@@ -25,7 +25,7 @@ reminders.
 9. martimm: The end of the year (scheduled)
 10. codesections: How to give a Raku presentation at TPRC – and why you should (scheduled)
 11. ohnowendigo: Counting up concurrency (scheduled)
-12. antononcube: Graphs in Raku
+12. antononcube: Graphs in Raku (scheduled)
 13. massa: Counting Votes - but not really, just download the numbers
 14. hythm: Content Storage For Raku Distributions (scheduled)
 15. ab5tract: Revision Gating for API Evolution and Continuity
