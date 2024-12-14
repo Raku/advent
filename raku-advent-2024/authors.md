@@ -28,11 +28,11 @@ reminders.
 12. antononcube: Graphs in Raku (scheduled)
 13. hythm: Content Storage For Raku Distributions (scheduled)
 14. finanalyst: Playing around with the new documentation components (scheduled)
-15. ab5tract: Revision Gating for API Evolution and Continuity
-16. pheix: Step-by-Step with Raku – mastering KZG commitments and Ethereum v3 transactions
-17. massa: Using RakuChatbook as my REPL
-18. tbrowder: Santa's Print Shop
-19. lizmat: Hypering away by all methods
+15. lizmat: Matching Maps (scheduled)
+16. ab5tract: Revision Gating for API Evolution and Continuity
+17. pheix: Step-by-Step with Raku – mastering KZG commitments and Ethereum v3 transactions
+18. massa: Using RakuChatbook as my REPL
+19. tbrowder: Santa's Print Shop
 20. antononcube: Chebyshev polynomials and fitting workflows
 21. librasteve: Happy TM Xmas
 22. finanalyst: Wrapping a Christmas Present (scheduled)
