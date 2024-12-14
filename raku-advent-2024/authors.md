@@ -35,7 +35,7 @@ reminders.
 19. lizmat: Hypering away by all methods
 20. antononcube: Chebyshev polynomials and fitting workflows
 21. librasteve: Happy TM Xmas
-22. finanalyst: Wrapping a Christmas Present
+22. finanalyst: Wrapping a Christmas Present (scheduled)
 23. massa: Counting Votes - but not really, just download the numbers
 24. donaldh: In Search of the Essence of Raku (scheduled)
 25. lizmat: Raku 2024 Review
