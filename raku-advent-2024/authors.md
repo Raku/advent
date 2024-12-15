@@ -30,12 +30,12 @@ reminders.
 14. finanalyst: Playing around with the new documentation components (scheduled)
 15. lizmat: Matching Maps (scheduled)
 16. ab5tract: Revision Gating for API Evolution and Continuity (scheduled)
-17. pheix: Step-by-Step with Raku – mastering KZG commitments and Ethereum v3 transactions
-18. massa: Using RakuChatbook as my REPL
+17. 
+18. 
 19. tbrowder: Santa's Print Shop
 20. antononcube: Chebyshev polynomials and fitting workflows (scheduled)
 21. librasteve: Happy TM Xmas
 22. finanalyst: Wrapping a Christmas Present (scheduled)
-23. massa: Counting Votes - but not really, just download the numbers
+23. 
 24. donaldh: In Search of the Essence of Raku (scheduled)
 25. lizmat: Raku 2024 Review
