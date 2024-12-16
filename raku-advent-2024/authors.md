@@ -30,10 +30,10 @@ reminders.
 14. finanalyst: Playing around with the new documentation components (scheduled)
 15. lizmat: Matching Maps (scheduled)
 16. ab5tract: Revision Gating for API Evolution and Continuity (scheduled)
-17. 
+17. antononcube: Chebyshev polynomials and fitting workflows (scheduled)
 18. 
 19. tbrowder: Santa's Print Shop
-20. antononcube: Chebyshev polynomials and fitting workflows (scheduled)
+20. 
 21. librasteve: Happy TM Xmas
 22. finanalyst: Wrapping a Christmas Present (scheduled)
 23. 
