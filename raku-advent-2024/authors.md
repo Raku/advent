@@ -31,10 +31,10 @@ reminders.
 15. lizmat: Matching Maps (scheduled)
 16. ab5tract: Revision Gating for API Evolution and Continuity (scheduled)
 17. antononcube: Chebyshev polynomials and fitting workflows (scheduled)
-18. 
+18. librasteve: Happy TM Xmas
 19. tbrowder: Santa's Print Shop
 20. 
-21. librasteve: Happy TM Xmas
+21. 
 22. finanalyst: Wrapping a Christmas Present (scheduled)
 23. 
 24. donaldh: In Search of the Essence of Raku (scheduled)
