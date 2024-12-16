@@ -36,6 +36,6 @@ reminders.
 20. 
 21. 
 22. finanalyst: Wrapping a Christmas Present (scheduled)
-23. 
+23. librasteve: Dam Mega Christmas
 24. donaldh: In Search of the Essence of Raku (scheduled)
 25. lizmat: Raku 2024 Review
