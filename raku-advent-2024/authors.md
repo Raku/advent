@@ -31,7 +31,7 @@ reminders.
 15. lizmat: Matching Maps (scheduled)
 16. ab5tract: Revision Gating for API Evolution and Continuity (scheduled)
 17. antononcube: Chebyshev polynomials and fitting workflows (scheduled)
-18. librasteve: Happy TM Xmas
+18. librasteve: Happy TM Xmas (ready for scheduling)
 19. tbrowder: Santa's Print Shop
 20. ab5tract: Dispatching Lessons from the `is item` trait / Re-introducing a Raku plugin for IntelliJ
 21. patrickb: Wrapping scripts
