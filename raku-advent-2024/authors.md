@@ -32,9 +32,9 @@ reminders.
 16. ab5tract: Revision Gating for API Evolution and Continuity (scheduled)
 17. antononcube: Chebyshev polynomials and fitting workflows (scheduled)
 18. librasteve: Happy TM Xmas (scheduled)
-19. tbrowder: Santa's Print Shop
+19. patrickb: Wrapping scripts (scheduled)
 20. ab5tract: Dispatching Lessons from the `is item` trait / Re-introducing a Raku plugin for IntelliJ
-21. patrickb: Wrapping scripts (scheduled)
+21. tbrowder: Santa's Print Shop
 22. finanalyst: Wrapping a Christmas Present (scheduled)
 23. librasteve: Dam Mega Christmas
 24. donaldh: In Search of the Essence of Raku (scheduled)
