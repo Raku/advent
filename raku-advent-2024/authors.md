@@ -36,6 +36,6 @@ reminders.
 20. ab5tract: Dispatching Lessons from the `is item` trait / Re-introducing a Raku plugin for IntelliJ
 21. tbrowder: Santa's Print Shop
 22. finanalyst: Wrapping a Christmas Present (scheduled)
-23. librasteve: Dam Mega Christmas
+23. librasteve: Dam Mega Christmas (scheduled)
 24. donaldh: In Search of the Essence of Raku (scheduled)
 25. lizmat: Raku 2024 Review
