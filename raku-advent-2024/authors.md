@@ -33,7 +33,7 @@ reminders.
 17. antononcube: Chebyshev polynomials and fitting workflows (scheduled)
 18. librasteve: Happy TM Xmas (scheduled)
 19. patrickb: Wrapping scripts (scheduled)
-20. ab5tract: Dispatching Lessons from the `is item` trait / Re-introducing a Raku plugin for IntelliJ
+20. ab5tract: Re-introducing a Raku plugin for IntelliJ
 21. tbrowder: Santa's Print Shop
 22. finanalyst: Wrapping a Christmas Present (scheduled)
 23. librasteve: Dam Mega Christmas (scheduled)
