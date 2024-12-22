@@ -36,6 +36,6 @@ reminders.
 20. ab5tract: Re-introducing a Raku plugin for IntelliJ
 21. librasteve: Dam Mega Christmas (scheduled)
 22. finanalyst: Wrapping a Christmas Present (scheduled)
-23. tbrowder: Santa's Print Shop
+23. tbrowder: Santa's Print Shop (scheduled)
 24. donaldh: In Search of the Essence of Raku (scheduled)
 25. lizmat: Raku 2024 Review
