@@ -14,8 +14,8 @@ editors.
 Please also send an easy and fast way to contact you to liz at raku.rocks and librasteve at furnival.net. It will be used mainly for
 reminders.
 
-1. yourname: Your Title
-2. ..
+1. tbrowder: Santa's Finance Department
+2. yourname: Your Title
 3. ..
 4. ..
 5. ..
