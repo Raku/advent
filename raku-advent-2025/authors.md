@@ -15,10 +15,10 @@ Please also send an easy and fast way to contact you to liz at raku.rocks and li
 reminders.
 
 1. tbrowder: Santa's Finance Department
-2. yourname: Your Title
-3. ..
-4. ..
-5. ..
+2. antononcube: Doing Data Science with Raku
+3. antononcube: Robust code generation combining grammars and LLMs
+4. antononcube: Monadic programming examples
+5. yourname: Your Title
 6. ..
 7. ..
 8. ..
