@@ -14,11 +14,11 @@ editors.
 Please also send an easy and fast way to contact you to liz at raku.rocks and librasteve at furnival.net. It will be used mainly for
 reminders.
 
-1. yourname: Your Title
+1. tbrowder: Santa's Finance Department
 2. antononcube: Doing Data Science with Raku
 3. antononcube: Robust code generation combining grammars and LLMs
 4. antononcube: Monadic programming examples
-5. ..
+5. yourname: Your Title
 6. ..
 7. ..
 8. ..
