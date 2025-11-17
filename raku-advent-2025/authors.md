@@ -15,9 +15,9 @@ Please also send an easy and fast way to contact you to liz at raku.rocks and li
 reminders.
 
 1. yourname: Your Title
-2. ..
-3. ..
-4. ..
+2. antononcube: Doing Data Science with Raku
+3. antononcube: Robust code generation combining grammars and LLMs
+4. antononcube: Monadic programming examples
 5. ..
 6. ..
 7. ..
