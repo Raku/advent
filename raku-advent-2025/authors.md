@@ -18,8 +18,8 @@ reminders.
 2. antononcube: Doing Data Science with Raku
 3. antononcube: Robust code generation combining grammars and LLMs
 4. antononcube: Monadic programming examples
-5. yourname: Your Title
-6. ..
+5. nige: Dancer, Dasher and Dosh (DO SHell) - LLM-powered shell commands
+6. yourname: Your Title
 7. ..
 8. ..
 9. ..
