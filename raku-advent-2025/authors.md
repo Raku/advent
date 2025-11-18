@@ -14,11 +14,11 @@ editors.
 Please also send an easy and fast way to contact you to liz at raku.rocks and librasteve at furnival.net. It will be used mainly for
 reminders.
 
-1. tbrowder: Santa's Finance Department
-2. antononcube: Doing Data Science with Raku
-3. antononcube: Robust code generation combining grammars and LLMs
-4. antononcube: Monadic programming examples
-5. nige: Dancer, Dasher and Dosh (DO SHell) - LLM-powered shell commands
+1. antononcube: Doing Data Science with Raku
+2. nige: Dancer, Dasher and Dosh (DO SHell) - LLM-powered shell commands
+3. tbrowder: Santa's Finance Department
+4. antononcube: Robust code generation combining grammars and LLMs
+5. antononcube: Monadic programming examples
 6. yourname: Your Title
 7. ..
 8. ..
