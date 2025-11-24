@@ -19,8 +19,8 @@ reminders.
 3. tbrowder: Santa's Finance Department
 4. antononcube: Robust code generation combining grammars and LLMs
 5. antononcube: Monadic programming examples
-6. yourname: Your Title
-7. ..
+6. lizmat: Allowing for fewer dollars
+7. yourname: Your Title
 8. ..
 9. ..
 10. ..
@@ -38,4 +38,5 @@ reminders.
 22. ..
 23. ..
 24. ..
-25. lizmat: Raku 2025 Review
+25. ..
+26. lizmat: Raku 2025 Review
