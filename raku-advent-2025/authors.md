@@ -38,5 +38,4 @@ reminders.
 22. ..
 23. ..
 24. ..
-25. ..
-26. lizmat: Raku 2025 Review
+25. lizmat: Raku 2025 Review
