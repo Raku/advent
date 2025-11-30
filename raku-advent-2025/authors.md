@@ -22,7 +22,7 @@ reminders.
 6. lizmat: Allowing for fewer dollars
 7. antononcube: Monadic programming examples
 8. librasteve: Elf Services
-9. ..
+9. morayj: Create your own 2026 PDF journal
 10. ..
 11. yourname: Your Title
 12. ..
