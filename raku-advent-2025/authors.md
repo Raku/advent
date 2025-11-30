@@ -14,8 +14,8 @@ editors.
 Please also send an easy and fast way to contact you to liz at raku.rocks and librasteve at furnival.net. It will be used mainly for
 reminders.
 
-1. antononcube: Doing Data Science with Raku
-2. nige: Dancer, Dasher and Dosh (DO SHell) - LLM-powered shell commands
+1. nige: Dancer, Dasher and Dosh (DO SHell) - LLM-powered shell commands - scheduled
+2. antononcube: Doing Data Science with Raku
 3. tbrowder: Santa's Finance Department
 4. librasteve: Christmas Crunching
 5. antononcube: Robust code generation combining grammars and LLMs
@@ -27,7 +27,7 @@ reminders.
 11. yourname: Your Title
 12. ..
 13. ..
-14. ..
+14. ..  
 15. ..
 16. ..
 17. ..
