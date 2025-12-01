@@ -16,18 +16,18 @@ reminders.
 
 1. nige: Dancer, Dasher and Dosh (DO SHell) - LLM-powered shell commands - scheduled
 2. antononcube: Doing Data Science with Raku
-3. tbrowder: Santa's Finance Department
-4. librasteve: Christmas Crunching
-5. antononcube: Robust code generation combining grammars and LLMs
-6. lizmat: Allowing for fewer dollars
-7. antononcube: Monadic programming examples
-8. librasteve: Elf Services
-9. morayj: Create your own 2026 PDF journal
+3. librasteve: Christmas Crunching
+4. antononcube: Robust code generation combining grammars and LLMs
+5. lizmat: Allowing for fewer dollars
+6. antononcube: Monadic programming examples
+7. librasteve: Elf Services
+8. morayj: Create your own 2026 PDF journal
+9. tbrowder: Santa's Finance Department
 10. ..
 11. yourname: Your Title
 12. ..
-13. ..
-14. ..  
+13. ..  
+14. ..
 15. ..
 16. ..
 17. ..
@@ -37,5 +37,4 @@ reminders.
 21. ..
 22. ..
 23. ..
-24. ..
-25. lizmat: Raku 2025 Review
+24. lizmat: Raku 2025 Review
