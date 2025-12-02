@@ -18,16 +18,16 @@ reminders.
 2. antononcube: Doing Data Science with Raku - published
 3. librasteve: Christmas Crunching
 4. morayj: Create your own 2026 PDF journal - scheduled
-5. antononcube: Robust code generation combining grammars and LLMs
-6. lizmat: Allowing for fewer dollars
-7. antononcube: Monadic programming examples
-8. librasteve: Elf Services
-9. tbrowder: Santa's Finance Department
-10. ..
-11. yourname: Your Title
-12. ..
-13. ..  
-14. ..
+5. marcel: Tools for Gnome::Gtk4 - scheduled
+6. antononcube: Robust code generation combining grammars and LLMs
+7. lizmat: Allowing for fewer dollars
+8. antononcube: Monadic programming examples
+9. librasteve: Elf Services
+10. tbrowder: Santa's Finance Department
+11. ..
+12. yourname: Your Title
+13. ..
+14. ..  
 15. ..
 16. ..
 17. ..
@@ -37,4 +37,5 @@ reminders.
 21. ..
 22. ..
 23. ..
-24. lizmat: Raku 2025 Review
+24. ..
+25. lizmat: Raku 2025 Review
