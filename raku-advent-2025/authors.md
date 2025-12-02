@@ -16,7 +16,7 @@ reminders.
 
 1. nige: Dancer, Dasher and Dosh (DO SHell) - LLM-powered shell commands - published
 2. antononcube: Doing Data Science with Raku - published
-3. librasteve: Christmas Crunching
+3. librasteve: Christmas Crunching Part I - scheduled
 4. morayj: Create your own 2026 PDF journal - scheduled
 5. marcel: Tools for Gnome::Gtk4 - scheduled
 6. antononcube: Robust code generation combining grammars and LLMs
