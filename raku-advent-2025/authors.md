@@ -16,13 +16,13 @@ reminders.
 
 1. nige: Dancer, Dasher and Dosh (DO SHell) - LLM-powered shell commands - published
 2. antononcube: Doing Data Science with Raku - published
-3. librasteve: Christmas Crunching Part I - scheduled
-4. morayj: Create your own 2026 PDF journal - scheduled
-5. marcel: Tools for Gnome::Gtk4 - scheduled
-6. antononcube: Robust code generation combining grammars and LLMs
+3. librasteve: Christmas Crunching Part I - published
+4. morayj: Create your own 2026 PDF journal - published
+5. marcel: Tools for Gnome::Gtk4 - published
+6. antononcube: Robust code generation combining grammars and LLMs - scheduled
 7. lizmat: Allowing for fewer dollars
-8. antononcube: Monadic programming examples
-9. librasteve: Elf Services
+8. librasteve: Elf Services
+9. antononcube: Monadic programming examples
 10. tbrowder: Santa's Finance Department
 11. arunvickram: Touch the Stars with DataStar
 12. yourname: Your Title
