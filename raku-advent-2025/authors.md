@@ -19,9 +19,9 @@ reminders.
 3. librasteve: Christmas Crunching Part I - published
 4. morayj: Create your own 2026 PDF journal - published
 5. marcel: Tools for Gnome::Gtk4 - published
-6. antononcube: Robust code generation combining grammars and LLMs - scheduled
-7. lizmat: Allowing for fewer dollars
-8. librasteve: Elf Services
+6. antononcube: Robust code generation combining grammars and LLMs - published
+7. lizmat: Allowing for fewer dollars - scheduled
+8. librasteve: HARC the Herald Angels Sing Part I
 9. antononcube: Monadic programming examples
 10. tbrowder: Santa's Finance Department
 11. arunvickram: Touch the Stars with DataStar
