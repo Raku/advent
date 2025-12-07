@@ -26,9 +26,9 @@ reminders.
 10. tbrowder: Santa's Finance Department
 11. arunvickram: Touch the Stars with DataStar
 12. ab5tract: Feeds For Fun and Joy
-13. yourname: Your Title
-14. ..  
-15. ..
+13. randyl: Mathematician's Yahtzee
+14. yourname: Your Title
+15. ..  
 16. ..
 17. ..
 18. ..
@@ -36,6 +36,7 @@ reminders.
 20. ..
 21. ..
 22. ..
-23. antononcube: Whose has the better highlighter now?
-24. ..
-25. lizmat: Raku 2025 Review
+23. ..
+24. antononcube: Whose has the better highlighter now?
+25. ..
+26. lizmat: Raku 2025 Review
