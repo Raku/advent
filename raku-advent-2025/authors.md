@@ -35,8 +35,6 @@ reminders.
 19. ..
 20. ..
 21. ..
-22. ..
+22. antononcube: Whose has the better highlighter now?
 23. ..
-24. antononcube: Whose has the better highlighter now?
-25. ..
-26. lizmat: Raku 2025 Review
+24. lizmat: Raku 2025 Review
