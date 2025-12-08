@@ -20,9 +20,9 @@ reminders.
 4. morayj: Create your own 2026 PDF journal - published
 5. marcel: Tools for Gnome::Gtk4 - published
 6. antononcube: Robust code generation combining grammars and LLMs - published
-7. lizmat: Allowing for fewer dollars - scheduled
-8. librasteve: HARC the Herald Angels Sing Part I
-9. antononcube: Monadic programming examples
+7. lizmat: Allowing for fewer dollars - published
+8. librasteve: HARC the Herald Angels Sing Part I - published
+9. antononcube: Monadic programming examples - scheduled
 10. tbrowder: Santa's Finance Department
 11. arunvickram: Touch the Stars with DataStar
 12. ab5tract: Feeds For Fun and Joy
