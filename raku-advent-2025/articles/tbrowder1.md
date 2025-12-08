@@ -97,9 +97,9 @@ For processing the data we handle several types which are identified in the expe
 
 Type 3 is not yet handled.
 
-The collected data is parsed by type and the pertinent output is placed in CSV tables for bookkeeping purposes. Such tables can be used as source for Linux bookkeeping programs like [GnuCash](https://gnucash.org). The department has been using that program sincs the big Linux/Debian transition.
+The collected data is parsed by type and the pertinent output is placed in CSV tables for bookkeeping purposes. Such tables can be used as source for Linux accounting programs like [GnuCash](https://gnucash.org). The department has been using that program sincs the big Linux/Debian transition.
 
-Emails which cannot be evaluated by machine are routed to clerks to handle manually.
+Emails which cannot be evaluated by machine are automatically forwarded to designated department staff to handle manually.
 
 Other work
 ----------
@@ -113,9 +113,15 @@ The products mentioned above are still works-in-progress, but their development 
 
 + [Email::Monitor](https://github.com/tbrowder/Email-Monitor)
 
+An automated email interrogator for known sendees.
+
 + [Checkwriter](https://github.com/tbrowder/Checkwriter)
 
+A program to print a business-size check on a standard single-check form available from ?
+
 + [CarolynDB](https://github.com/tbrowder/CarolynDB)
+
+An Access-like relational database management system capable of using CSV tables as a backing store.
 
 Epilogue
 --------
