@@ -22,14 +22,14 @@ reminders.
 6. antononcube: Robust code generation combining grammars and LLMs - published
 7. lizmat: Allowing for fewer dollars - published
 8. librasteve: HARC the Herald Angels Sing Part I - published
-9. antononcube: Monadic programming examples - scheduled
-10. tbrowder: Santa's Finance Department
-11. arunvickram: Touch the Stars with DataStar
-12. ab5tract: Feeds For Fun and Joy
-13. randyl: Mathematician's Yahtzee
-14. yourname: Your Title
-15. ..  
-16. ..
+9. antononcube: Monadic programming examples - published
+10. tbrowder: Santa's Finance Department - scheduled
+11. arunvickram: Touch the Stars with DataStar - scheduled
+12. randyl: Mathematician's Yahtzee - scheduled
+13. librasteve: Christmas Crunching Part II
+14. ab5tract: Feeds For Fun and Joy
+15. yourname: Your Title
+16. ..  
 17. ..
 18. ..
 19. ..
