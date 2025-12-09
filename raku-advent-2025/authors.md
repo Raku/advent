@@ -28,13 +28,13 @@ reminders.
 12. randyl: Mathematician's Yahtzee - scheduled
 13. librasteve: Christmas Crunching Part II
 14. ab5tract: Feeds For Fun and Joy
-15. yourname: Your Title
-16. ..  
+15. korvo: An expression language for Vixen
+16. yourname: Your Title
 17. ..
 18. ..
 19. ..
 20. ..
 21. ..
 22. antononcube: Whose has the better highlighter now?
-23. ..
+23. korvo: LangJam debrief (title TBD)
 24. lizmat: Raku 2025 Review
