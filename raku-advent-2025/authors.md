@@ -26,7 +26,7 @@ reminders.
 10. tbrowder: Santa's Finance Department - published
 11. arunvickram: Raku to the Stars - published
 12. randyl: Mathematician's Yahtzee - published
-13. librasteve: Christmas Crunching Part II - wip
+13. librasteve: Christmas Crunching Part II - scheduled
 14. patrickb: article 1
 15. ab5tract: Feeds For Fun and Joy
 16. korvo: An expression language for Vixen
