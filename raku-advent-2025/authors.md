@@ -23,18 +23,18 @@ reminders.
 7. lizmat: Allowing for fewer dollars - published
 8. librasteve: HARC the Herald Angels Sing Part I - published
 9. antononcube: Monadic programming examples - published
-10. tbrowder: Santa's Finance Department - scheduled
-11. arunvickram: Raku to the Stars - scheduled
-12. randyl: Mathematician's Yahtzee - scheduled
-13. librasteve: Christmas Crunching Part II
-14. ab5tract: Feeds For Fun and Joy
-15. korvo: An expression language for Vixen
-16. yourname: Your Title
-17. ..
+10. tbrowder: Santa's Finance Department - published
+11. arunvickram: Raku to the Stars - published
+12. randyl: Mathematician's Yahtzee - published
+13. librasteve: Christmas Crunching Part II - wip
+14. patrickb: article 1
+15. ab5tract: Feeds For Fun and Joy
+16. korvo: An expression language for Vixen
+17. yourname: Your Title
 18. ..
 19. ..
 20. ..
-21. ..
+21. patrickb: article 2
 22. antononcube: Whose has the better highlighter now?
 23. korvo: LangJam debrief (title TBD)
 24. lizmat: Raku 2025 Review
