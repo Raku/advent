@@ -27,9 +27,9 @@ reminders.
 11. arunvickram: Raku to the Stars - published
 12. randyl: Mathematician's Yahtzee - published
 13. librasteve: Christmas Crunching Part II - published
-14. patrickb: Taming Concurrency - scheduled
-15. ab5tract: Feeds For Fun and Joy
-16. korvo: An expression language for Vixen
+14. patrickb: Taming Concurrency - published
+15. korvo: An expression language for Vixen - scheduled
+16. ab5tract: Feeds For Fun and Joy 
 17. yourname: Your Title
 18. ..
 19. ..
