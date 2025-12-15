@@ -28,11 +28,11 @@ reminders.
 12. randyl: Mathematician's Yahtzee - published
 13. librasteve: Christmas Crunching Part II - published
 14. patrickb: Taming Concurrency - published
-15. korvo: An expression language for Vixen - scheduled
-16. ab5tract: Feeds For Fun and Joy 
-17. yourname: Your Title
+15. korvo: An expression language for Vixen - published
+16. yourname: Your Title 
+17. ..
 18. ..
-19. ..
+19. ab5tract: Feeds For Fun and Joy
 20. librasteve: We're Walking On The Air
 21. patrickb: article 2
 22. antononcube: Whose has the better highlighter now?
