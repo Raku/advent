@@ -31,7 +31,7 @@ reminders.
 15. korvo: An expression language for Vixen - published
 16. sawyerx: Melian and the Helpers of Evergreen
 17. lizmat: Foreign, yet familiar  
-18. ...
+18. habere-et-dispertire: Hallo, Wêreld!
 19. ab5tract: Feeds For Fun and Joy
 20. librasteve: We're Walking On The Air
 21. patrickb: article 2
