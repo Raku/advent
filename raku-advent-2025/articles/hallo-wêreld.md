@@ -6,7 +6,7 @@ The first elf language is the sharing of emotions.
 Next comes their mother tongue.
 When elves start speaking their first programming language, then they are already on their third language!
 
-Santa imagine `raku` draws inspiration from many principles of [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) (wikipedia.org).
+Santa imagines `raku` draws inspiration from many principles of [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) (wikipedia.org).
 In particular, localization of `raku` plays into the [robustness principle](https://en.wikipedia.org/wiki/Robustness_principle) (wikipedia.org).
 
 When writing to Santa, it doesn't matter which language you write your wishlist in -- for Santa is learning all the languages he can:
