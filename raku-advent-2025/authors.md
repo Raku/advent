@@ -35,6 +35,6 @@ reminders.
 19. ab5tract: Welcome to the Megadungeon
 20. librasteve: We're Walking On The Air
 21. patrickb: article 2
-22. antononcube: Whose has the better highlighter now?
+22. antononcube: (Numerically) 2026 is unremarkable yet happy
 23. korvo: LangJam debrief (title TBD)
 24. lizmat: Raku 2025 Review
