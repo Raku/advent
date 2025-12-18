@@ -181,3 +181,5 @@ Santa wondered if his de-escalations mattered:
 | snitch  | aanskou   | to witness             |
 
 But was rather happy to express himself.
+
+![An Afrikaans word cloud in the shape of the Camelia butterfly, the raku mascot.](af-wordcloud.svg)
