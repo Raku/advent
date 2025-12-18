@@ -4,7 +4,7 @@
 
 The first elf language is the sharing of emotions.
 Next comes their mother tongue.
-When elves start speaking their first programming language, then they are already on their third language!
+When elves start speaking their first programming language, then they are already onto their third language!
 
 Santa imagines `raku` draws inspiration from many principles of [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) (wikipedia.org).
 In particular, localization of `raku` plays into the [robustness principle](https://en.wikipedia.org/wiki/Robustness_principle) (wikipedia.org).
