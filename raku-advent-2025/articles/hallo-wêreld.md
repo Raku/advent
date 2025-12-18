@@ -16,7 +16,7 @@ say 'Hello, World!' # English, or
 sê 'Hallo, Wêreld!' # Afrikaans
 ~~~~
 
-It is kinder thought Santa -- especially to those writing their first list -- to get their feet wet by writing in a language closer to their heart.
+It is kinder thought Santa — especially to those writing their first list — to get their feet wet by writing in a language closer to their heart.
 
 
 # TLDR
