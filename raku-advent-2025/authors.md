@@ -30,11 +30,12 @@ reminders.
 14. patrickb: Taming Concurrency - published
 15. korvo: An expression language for Vixen - published
 16. sawyerx: Melian and the Helpers of Evergreen - published
-17. lizmat: An issue with evaluation - scheduled  
-18. habere-et-dispertire: Hallo, Wêreld!
-19. ab5tract: Welcome to the Megadungeon
-20. librasteve: We're Walking On The Air
-21. patrickb: article 2
-22. antononcube: (Numerically) 2026 is unremarkable yet happy
+17. lizmat: An issue with evaluation - published  
+18. habere-et-dispertire: Hallo, Wêreld! - published
+19. ab5tract: Welcome to the Megadungeon - published
+20. librasteve: We're Walking On The Air - published
+21. patrickb: A Terminal's Tale - published
+22. antononcube: (Numerically) 2026 is unremarkable yet happy - scheduled
 23. korvo: LangJam debrief (title TBD)
-24. lizmat: Raku 2025 Review
+24. *the final OPEN slot*!
+25. lizmat: Raku 2025 Review
