@@ -36,6 +36,6 @@ reminders.
 20. librasteve: We're Walking On The Air - published
 21. patrickb: A Terminal's Tale - published
 22. antononcube: (Numerically) 2026 is unremarkable yet happy - scheduled
-23. korvo: A Day Late and A Fish Short - drafted
+23. korvo: A Day Late and A Fish Short - published
 24. *the final OPEN slot*!
-25. lizmat: Raku 2025 Review
+25. lizmat: Raku 2025 Review - being drafted
