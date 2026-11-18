@@ -7,7 +7,7 @@ See current and previous Advent article entries
 
 ## Instructions
 
-1. Get a Raku Wordpress account from an admin on IRC #raku or #raku-dev (librasteve, timotimo, moritz, tbrowder ...).
+1. Get a Raku Wordpress account from an admin on IRC #raku or #raku-dev (tbrowder, [Coke], ...).
 
 2. Write your article as a DRAFT on the Raku Advent Wordpress site.
 
