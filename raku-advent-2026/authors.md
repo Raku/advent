@@ -14,14 +14,14 @@ editors.
 Please also send an easy and fast way to contact you to will at coleda.com. It will be used mainly for
 reminders.
 
-1. 
-2.
+1. antononcube: Chasing the Moon (charting the Artemis II flight)
+2. 
 3.
 4.
 5.
 6.
 7.
-8.
+8. antononcube: Coloring complexity
 9.
 10.
 11.
@@ -33,7 +33,7 @@ reminders.
 17.
 18.
 19.
-20.
+20. antononcube: 2027 is prime year!
 21.
 22.
 23.
