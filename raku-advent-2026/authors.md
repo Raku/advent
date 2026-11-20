@@ -34,7 +34,7 @@ reminders.
 18.
 19.
 20. antononcube: 2027 is prime year!
-21. nige:   
+21. nige: From 3, 2, 1 to 1, 2, 3: Finding Human Flow with Raku and AI Agents
 22.
 23.
 24.
