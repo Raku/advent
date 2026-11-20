@@ -20,7 +20,7 @@ reminders.
 4.
 5.
 6.
-7.
+7. nige: HAL NO! Reining in Santa's new Reindeer  
 8. antononcube: Coloring complexity
 9.
 10.
@@ -34,7 +34,7 @@ reminders.
 18.
 19.
 20. antononcube: 2027 is prime year!
-21.
+21. nige:   
 22.
 23.
 24.
