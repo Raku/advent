@@ -24,7 +24,7 @@ reminders.
 8. antononcube: Coloring complexity
 9.
 10.
-11.
+11. ash: Raku++ 101
 12.
 13.
 14.
