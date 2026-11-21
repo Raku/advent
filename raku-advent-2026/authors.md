@@ -24,18 +24,18 @@ reminders.
 8. antononcube: Coloring complexity
 9.
 10.
-11.
+11. ash: Raku++ 101: What, Why and How
 12.
 13.
 14.
 15.
 16.
-17.
+17. ash: The Raku Carol
 18.
 19.
 20. antononcube: 2027 is prime year!
 21. nige: From 3, 2, 1 to 1, 2, 3: Finding Human Flow with Raku and AI Agents
-22.
+22. ash: Gifts Raku Gave Away
 23.
 24.
 25. lizmat: Raku 2026 Review
