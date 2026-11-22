@@ -15,7 +15,7 @@ Please also send an easy and fast way to contact you to will at coleda.com. It w
 reminders.
 
 1. antononcube: Chasing the Moon (charting the Artemis II flight)
-2. 
+2. finanalyst: Web page greetings
 3.
 4.
 5.
