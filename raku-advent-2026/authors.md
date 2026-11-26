@@ -16,7 +16,7 @@ reminders.
 
 1. antononcube: Chasing the Moon (charting the Artemis II flight)
 2. finanalyst: Web page greetings
-3.
+3. lizmat: 6.e so near, and then what?
 4.
 5.
 6.
