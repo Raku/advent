@@ -14,7 +14,7 @@ editors.
 Please also send an easy and fast way to contact you to will at coleda.com. It will be used mainly for
 reminders.
 
-1. antononcube: Chasing the Moon (charting the Artemis II flight)
+1. antononcube: [Chasing the Moon](https://github.com/antononcube/RakuForPrediction-blog/blob/main/Articles/Chasing-the-Moon.md) (scheduled)
 2. finanalyst: Web page greetings
 3. lizmat: 6.e so near, and then what?
 4.
