@@ -19,7 +19,7 @@ reminders.
 3. lizmat: 6.e so near, and then what?
 4.
 5.
-6.
+6. ash: Raku beyond Roast: is it enough?
 7. nige: HAL NO! Reining in Santa's new Reindeer  
 8. antononcube: Coloring complexity
 9.
