@@ -15,8 +15,8 @@ Please also send an easy and fast way to contact you to will at coleda.com. It w
 reminders.
 
 1. antononcube: Chasing the Moon (charting the Artemis II flight)
-2. 
-3.
+2. finanalyst: Web page greetings
+3. lizmat: 6.e so near, and then what?
 4.
 5.
 6.
@@ -27,15 +27,15 @@ reminders.
 11. ash: Raku++ 101: What, Why and How
 12.
 13.
-14.
+14. ash: Raku for the web
 15.
 16.
-17.
+17. ash: The Raku Carol
 18.
 19.
 20. antononcube: 2027 is prime year!
 21. nige: From 3, 2, 1 to 1, 2, 3: Finding Human Flow with Raku and AI Agents
-22.
+22. ash: Gifts Raku Gave Away
 23.
 24.
 25. lizmat: Raku 2026 Review
